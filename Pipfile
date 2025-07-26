@@ -12,6 +12,7 @@ hyperopt = "*"
 setuptools = "*"
 mlflow = "*"
 boto3 = "*"
+prefect = "*"
 
 [dev-packages]
 ipykernel = "*"
