@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "d28d78542fc66e784ab25ad4637f6109f5f5237426b1f93e63679ae4ca1d87cc"
+            "sha256": "1dd259ff4a50f6273da20c2a1b291c47dd509f2ef79df2f30c079a4ad4eacda4"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -47,6 +47,23 @@
             ],
             "markers": "python_version >= '3.9'",
             "version": "==1.9.0"
+        },
+        "boto3": {
+            "hashes": [
+                "sha256:82c6868cad18c3bd4170915e9525f9af5f83e9779c528417f8863629558fc2d0",
+                "sha256:fabb16360a93b449d5241006485bcc761c26694e75ac01009f4459f114acc06e"
+            ],
+            "index": "pypi",
+            "markers": "python_version >= '3.9'",
+            "version": "==1.39.14"
+        },
+        "botocore": {
+            "hashes": [
+                "sha256:4ed551c77194167b7e8063f33059bc2f9b2ead0ed4ee33dc7857273648ed4349",
+                "sha256:7fc44d4ad13b524e5d8a6296785776ef5898ac026ff74df9b35313831d507926"
+            ],
+            "markers": "python_version >= '3.9'",
+            "version": "==1.39.14"
         },
         "cachetools": {
             "hashes": [
@@ -507,6 +524,14 @@
             ],
             "markers": "python_version >= '3.7'",
             "version": "==3.1.6"
+        },
+        "jmespath": {
+            "hashes": [
+                "sha256:02e2e4cc71b5bcab88332eebf907519190dd9e6e82107fa7f83b1003a6252980",
+                "sha256:90261b206d6defd58fdd5e85f478bf633a2901798906be2ad389150c5c60edbe"
+            ],
+            "markers": "python_version >= '3.7'",
+            "version": "==1.0.1"
         },
         "joblib": {
             "hashes": [
@@ -1342,6 +1367,14 @@
             "markers": "python_version >= '3.6' and python_version < '4'",
             "version": "==4.9.1"
         },
+        "s3transfer": {
+            "hashes": [
+                "sha256:a981aa7429be23fe6dfc13e80e4020057cbab622b08c0315288758d67cabc724",
+                "sha256:c3fdba22ba1bd367922f27ec8032d6a1cf5f10c934fb5d68cf60fd5a23d936cf"
+            ],
+            "markers": "python_version >= '3.9'",
+            "version": "==0.13.1"
+        },
         "scikit-learn": {
             "hashes": [
                 "sha256:10679f7f125fe7ecd5fad37dd1aa2daae7e3ad8df7f3eefa08901b8254b3e12c",
@@ -1575,7 +1608,7 @@
                 "sha256:3fc47733c7e419d4bc3f6b3dc2b4f890bb743906a30d56ba4a5bfa4bbff92760",
                 "sha256:e6b01673c0fa6a13e374b50871808eb3bf7046c4b125b216f6bf1cc604cff0dc"
             ],
-            "markers": "python_version >= '3.9'",
+            "markers": "python_version >= '3.10'",
             "version": "==2.5.0"
         },
         "uvicorn": {
