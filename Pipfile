@@ -5,8 +5,17 @@ name = "pypi"
 
 [packages]
 pandas = "*"
+openpyxl = "*"
+scikit-learn = "*"
+xgboost = "*"
+hyperopt = "*"
+setuptools = "*"
+mlflow = "*"
 
 [dev-packages]
+ipykernel = "*"
+matplotlib = "*"
+seaborn = "*"
 
 [requires]
 python_version = "3.12"
