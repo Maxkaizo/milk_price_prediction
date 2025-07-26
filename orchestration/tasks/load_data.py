@@ -21,7 +21,7 @@ def read_parquet_partition(year: int, month: int, source: str = "local") -> pd.D
         bucket = os.getenv("S3_BUCKET", "mlops-milk-datalake")
         s3_uri = f"s3://{bucket}/{file_path}"
         print(f"📡 Loading from S3: {s3_uri}")
-        return pd.read_parquet(s3_uri, storage_options={"anon": True})
+        return pd.read_parquet(s3_uri)
     else:
         local_path = Path("data/datalake") / file_path
         print(f"📁 Loading from local: {local_path}")
