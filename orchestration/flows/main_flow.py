@@ -42,7 +42,6 @@ def main(
         month=month
     )
 
-    print(f"📊 Drift report generated at: {drift_report_path}")
     print(f"✅ Pipeline completed with RMSE: {rmse:.4f}")
     return rmse
 
