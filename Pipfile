@@ -14,7 +14,8 @@ mlflow = "*"
 boto3 = "*"
 prefect = "*"
 s3fs = "*"
-evidently = "*"
+pydantic = "*"
+evidently = {extras = ["html"], version = "*"}
 
 [dev-packages]
 ipykernel = "*"
