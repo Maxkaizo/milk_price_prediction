@@ -3,6 +3,7 @@ from pathlib import Path
 from prefect import task
 from evidently import Report, Dataset, Regression, DataDefinition
 from evidently.metrics import MeanError, RMSE, DummyMAE, DummyRMSE
+# from evidently.presets import RegressionPreset
 
 @task(name="monitor_model_drift")
 def monitor_model_drift(
@@ -25,12 +26,8 @@ def monitor_model_drift(
         data_definition=data_definition
     )
 
-    report = Report([
-        MeanError(),
-        RMSE(),
-        DummyMAE(),
-        DummyRMSE(),
-    ])
+    # report = Report(metrics=[RegressionPreset()])
+    report = Report([MeanError(),RMSE(),DummyMAE(),DummyRMSE()])
 
     output = report.run(current_data=curr_dataset)
 
@@ -41,4 +38,12 @@ def monitor_model_drift(
     output.save_html(str(output_path))
 
     print(f"📉 Model drift report saved to: {output_path}")
-    return str(output_path)
+
+    import json
+
+    debug_dict = output.dump_dict()
+
+    with open("model_drift_debug.json", "w") as f:
+        json.dump(debug_dict, f)
+
+    return output.dump_dict()

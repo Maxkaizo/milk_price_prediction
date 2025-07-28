@@ -32,4 +32,5 @@ def monitor_data_drift(
     output.save_html(str(output_path))
 
     print(f"📊 Data drift report saved to: {output_path}")
-    return str(output_path)
+
+    return output.dump_dict()
