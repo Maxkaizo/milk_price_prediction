@@ -50,46 +50,34 @@ def main(
         month=month
     )
 
-    # Inicio evaluacion para notificacion
-    # --- Evaluar Data Drift ---
+    # --- Evaluate Data Drift ---
     try:
-        # data_drift_detected = data_drift_dict["metrics"][0]["result"]["dataset_drift"]
         label = data_drift_dict["widgets"][0]["params"]["counters"][0]["label"]
         data_drift_detected = "NOT" not in label.upper()
 
     except Exception as e:
         data_drift_detected = False
-        print("⚠️ No se pudo leer dataset_drift:", e)
+        print("⚠️ Couldn't get dataset_drift:", e)
 
     if data_drift_detected:
         notify_telegram.submit("🚨 <b>Data Drift detected</b>")
     
     print("Data drift evaluated...")
 
-    # --- Evaluar Model Drift: cambio de RMSE ---
+    # --- Evaluate Model Drift ---
     try:
-        # reported_rmse  = model_drift_dict["metrics"][0]["result"]["rmse"]["value"]
         rmse_str = model_drift_dict["widgets"][4]["params"]["counters"][0]["value"]
         reported_rmse = float(rmse_str)
     except Exception as e:
         reported_rmse  = None
         print("⚠️ No se pudo leer RMSE:", e)
 
-    # Umbral fijo (puedes ajustar esto)
     RMSE_THRESHOLD = 2.0
 
     if reported_rmse and reported_rmse > RMSE_THRESHOLD:
         notify_telegram.submit(f"⚠️ <b>High RMSE</b>: {reported_rmse :.2f} (> {RMSE_THRESHOLD})")
     
     print("model drift evaluated...")
-
-    # debug posición dato
-    # import json
-
-    # with open("model_drift_debug.json", "w") as f:
-    #    json.dump(model_drift_dict, f)
-
-    # Fin evaluacion notificación
 
     print(f"✅ Pipeline completed with RMSE: {rmse:.4f}")
     notify_telegram.submit(f"✅ Pipeline completed with RMSE: {rmse:.4f}")
@@ -99,6 +87,6 @@ def main(
 if __name__ == "__main__":
     main.serve(
         name="train-milk-model",
-        cron="0 6 2 * *",  # Día 2 de cada mes a las 6:00 a.m.
+        cron="0 6 2 * *",  
         tags=["milk", "training"],
     )

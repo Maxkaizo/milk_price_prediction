@@ -23,11 +23,9 @@ def monitor_data_drift(
     report = Report(metrics=[DataDriftPreset()])
     output = report.run(reference_data=df_ref, current_data=df_cur)
 
-    # Carpeta destino
     output_dir = Path("monitor/reports")
     output_dir.mkdir(parents=True, exist_ok=True)
 
-    # Guardamos el reporte en su formato nativo (.evidently.html)
     output_path = output_dir / f"{year}-{month:02d}-data-drift-report.evidently.html"
     output.save_html(str(output_path))
 
