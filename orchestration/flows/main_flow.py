@@ -5,7 +5,7 @@ from dateutil.relativedelta import relativedelta
 from orchestration.tasks.load_data import load_data
 from orchestration.tasks.train_model import train_model
 from orchestration.tasks.monitor_data_drift import monitor_data_drift
-
+from orchestration.tasks.monitor_model_drift import monitor_model_drift
 
 
 @flow(name="main_train_milk_model")
@@ -30,14 +30,21 @@ def main(
     X_train_dicts, y_train, X_val_dicts, y_val = load_data(year, month, source)
 
     # Train model
-    rmse = train_model(X_train_dicts, y_train, X_val_dicts, y_val)
+    rmse, y_pred = train_model(X_train_dicts, y_train, X_val_dicts, y_val)
 
     # Monitor data drift
-    drift_report_path = monitor_data_drift(
+    monitor_data_drift(
         X_ref_dicts=X_train_dicts,
         y_ref=y_train,
         X_cur_dicts=X_val_dicts,
         y_cur=y_val,
+        year=year,
+        month=month
+    )
+
+    monitor_model_drift(
+        y_true=y_val,
+        y_pred=y_pred,
         year=year,
         month=month
     )

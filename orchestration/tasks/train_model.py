@@ -105,4 +105,4 @@ def train_model(X_train_dicts, y_train, X_val_dicts, y_val, model_name="milk-pri
         print(f"✅ Final RMSE on validation set: {rmse:.4f}")
         print(f"📌 Model registered in MLflow Model Registry as '{model_name}'")
 
-        return rmse
+        return rmse, y_pred.tolist()
