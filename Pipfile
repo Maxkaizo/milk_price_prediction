@@ -16,6 +16,7 @@ prefect = "*"
 s3fs = "*"
 pydantic = "*"
 evidently = {extras = ["html"], version = "*"}
+gunicorn = "*"
 
 [dev-packages]
 ipykernel = "*"

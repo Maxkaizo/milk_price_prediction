@@ -1,5 +1,5 @@
 import mlflow
-import pandas as pd
+# import pandas as pd
 from mlflow.tracking import MlflowClient
 
 mlflow.set_tracking_uri("http://localhost:5000")
@@ -29,10 +29,10 @@ if __name__ == "__main__":
     model = mlflow.pyfunc.load_model(model_uri)
 
     # Crear input como lista de diccionario (usado por DictVectorizer)
-    df = [sample_input]
+    # df = [sample_input]
 
     # Realizar predicción
-    pred = model.predict(df)
+    pred = model.predict(sample_input)
 
     print("========== MODEL INFO ==========")
     print(f"📦 Model name: {MODEL_NAME}")
