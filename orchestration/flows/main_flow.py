@@ -62,7 +62,9 @@ def main(
         print("⚠️ No se pudo leer dataset_drift:", e)
 
     if data_drift_detected:
-        notify_telegram.submit("🚨 <b>Data Drift detectado</b>")
+        notify_telegram.submit("🚨 <b>Data Drift detected</b>")
+    
+    print("Data drift evaluated...")
 
     # --- Evaluar Model Drift: cambio de RMSE ---
     try:
@@ -78,6 +80,8 @@ def main(
 
     if reported_rmse and reported_rmse > RMSE_THRESHOLD:
         notify_telegram.submit(f"⚠️ <b>High RMSE</b>: {reported_rmse :.2f} (> {RMSE_THRESHOLD})")
+    
+    print("model drift evaluated...")
 
     # debug posición dato
     # import json
