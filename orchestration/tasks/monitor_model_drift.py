@@ -34,16 +34,16 @@ def monitor_model_drift(
     output_dir = Path("monitor/reports")
     output_dir.mkdir(parents=True, exist_ok=True)
 
-    output_path = output_dir / f"{year}-{month:02d}-model-drift-report_2.html"
+    output_path = output_dir / f"{year}-{month:02d}-model-drift-report_.html"
     output.save_html(str(output_path))
 
     print(f"📉 Model drift report saved to: {output_path}")
 
-    import json
+    # import json
 
-    debug_dict = output.dump_dict()
+    # debug_dict = output.dump_dict()
 
-    with open("model_drift_debug2.json", "w") as f:
-        json.dump(debug_dict, f, default=str)
+    # with open("model_drift_debug2.json", "w") as f:
+    #    json.dump(debug_dict, f, default=str)
 
     return output.dump_dict()
