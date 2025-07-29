@@ -17,11 +17,13 @@ s3fs = "*"
 pydantic = "*"
 evidently = {extras = ["html"], version = "*"}
 gunicorn = "*"
+awsebcli = "*"
 
 [dev-packages]
 ipykernel = "*"
 matplotlib = "*"
 seaborn = "*"
+awsebcli = "*"
 
 [requires]
 python_version = "3.12"
