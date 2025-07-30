@@ -1,4 +1,15 @@
-# Roadmap
+# Roadmap:
+
+* Entirely Local. Local files + Flask
+* Entirely Local + gunicorn
+* Local with Docker container + gunicorn
+* Cloud deployment using Elastic Beanstalk (with Docker image)
+* Cloud deployment in steaming mode. Using Lambda + Kinesis --- configurar manualmente la lambda
+* Cloud deployment in steaming mode. Using Lambda + Kinesis + ECR --- crear la lambda a partir de un contenedor docker, a partir de aqui ya descargaremos el modelo del bucket de s3 mas reciente 
+* Cloud deployment in steaming mode. Using Lambda + Kinesis + ECR + Terraform, managed via Terraform
+
+
+# Completed:
 
 ## Entirely local
 
@@ -26,7 +37,7 @@
 
 ![alt text](images/curl3.png)
 
-## Cloud deployment using Elastic Beanstalk (sith Docker image)
+## Cloud deployment using Elastic Beanstalk (with Docker image)
 
 - Deployed with AWS eb cli
 
