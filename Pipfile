@@ -18,6 +18,7 @@ pydantic = "*"
 evidently = {extras = ["html"], version = "*"}
 gunicorn = "*"
 awsebcli = "*"
+fs-s3fs = "*"
 
 [dev-packages]
 ipykernel = "*"
