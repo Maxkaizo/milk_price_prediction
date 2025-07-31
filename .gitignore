@@ -2,3 +2,4 @@ mlruns/
 mlartifacts/
 *.csv
 *.xlsx
+data/
