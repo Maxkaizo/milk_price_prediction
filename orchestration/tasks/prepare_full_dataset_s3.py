@@ -45,6 +45,7 @@ def prepare_full_dataset_s3(
     df["Fecha"] = pd.to_datetime(df["Fecha"])
     group_cols = ["Estado", "Ciudad", "Tipo", "Canal"]
     df = df.sort_values(group_cols + ["Fecha"])
+    df["año"] = df["Fecha"].dt.year
     df["mes"] = df["Fecha"].dt.month
     df["dia"] = df["Fecha"].dt.day
     df["dia_semana"] = df["Fecha"].dt.day_name()
