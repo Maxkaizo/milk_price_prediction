@@ -18,12 +18,12 @@ pydantic = "*"
 evidently = "*"
 gunicorn = "*"
 awsebcli = "*"
-matplotlib = "*"
-seaborn = "*"
 
 [dev-packages]
 ipykernel = "*"
+matplotlib = "*"
+seaborn = "*"
+awsebcli = "*"
 
 [requires]
 python_version = "3.12"
-python_full_version = "3.12.3"
