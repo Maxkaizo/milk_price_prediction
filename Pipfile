@@ -20,6 +20,7 @@ gunicorn = "*"
 awsebcli = "*"
 matplotlib = "*"
 seaborn = "*"
+dotenv = "*"
 
 [dev-packages]
 ipykernel = "*"

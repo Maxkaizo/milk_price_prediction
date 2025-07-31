@@ -1,6 +1,12 @@
 import os
 import requests
 from prefect import task
+from dotenv import load_dotenv
+
+load_dotenv()
+
+BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
+CHAT_ID = os.getenv("TELEGRAM_CHAT_ID")
 
 @task(name="notify_telegram")
 def notify_telegram(message: str, parse_mode: str = "HTML") -> None:
@@ -16,21 +22,12 @@ def notify_telegram(message: str, parse_mode: str = "HTML") -> None:
         parse_mode (str): Modo de parseo del mensaje (HTML o MarkdownV2)
     """
 
-    TELEGRAM_BOT_TOKEN = "8220632753:AAG6_ePNCwcJQhJk1l6cptx4dD1kd7M9hrU"
-    TELEGRAM_CHAT_ID = "582235345"
-
-    token = TELEGRAM_BOT_TOKEN
-    chat_id = TELEGRAM_CHAT_ID
-
-    # token = os.getenv("TELEGRAM_BOT_TOKEN")
-    # chat_id = os.getenv("TELEGRAM_CHAT_ID")
-
-    if not token or not chat_id:
+    if not BOT_TOKEN or not CHAT_ID:
         raise ValueError("Variables de entorno TELEGRAM_BOT_TOKEN y TELEGRAM_CHAT_ID son requeridas")
 
-    url = f"https://api.telegram.org/bot{token}/sendMessage"
+    url = f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage"
     payload = {
-        "chat_id": chat_id,
+        "chat_id": CHAT_ID,
         "text": message,
         "parse_mode": parse_mode
     }
