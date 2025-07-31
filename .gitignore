@@ -3,3 +3,4 @@ mlartifacts/
 *.csv
 *.xlsx
 data/
+.env
