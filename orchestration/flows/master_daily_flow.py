@@ -1,0 +1,102 @@
+# milk_price_prediction/orchestration/flows/master_daily_flow.py
+
+from prefect import flow
+from datetime import datetime
+from orchestration.tasks.check_file_availability import check_file_availability
+from orchestration.tasks.extract_and_ingest_today import extract_and_ingest_today
+from orchestration.tasks.monitor_data_drift_from_s3 import monitor_data_drift_from_s3
+from orchestration.tasks.notify_telegram import notify_telegram
+from orchestration.tasks.prepare_full_dataset_s3 import prepare_full_dataset_s3
+from orchestration.tasks.train_random_forest_model import train_random_forest_model
+from orchestration.tasks.train_xgboost_model import train_xgboost_model
+import mlflow
+from typing import Optional
+
+
+@flow(name="daily-mlops-pipeline")
+def daily_pipeline(execution_date: Optional[str] = None):
+    # Parse date
+    if execution_date is None:
+        exec_date = datetime.today()
+    else:
+        exec_date = datetime.fromisoformat(execution_date)
+
+    # Step 1: Check if new file is available
+    should_run = check_file_availability(execution_date=exec_date)
+    notify_telegram.submit("✅ Checked file availability.")
+
+    if not should_run:
+        print("🚫 No new file to process.")
+        notify_telegram.submit("🚫 No new file to process.")
+        return
+
+    # Step 2: Extract and ingest data
+    s3_path = extract_and_ingest_today(execution_date=exec_date)
+    print(f"✅ File ingested and uploaded to: {s3_path}")
+    notify_telegram.submit(f"✅ File ingested: {s3_path}")
+
+    # Step 3: Data Drift Monitoring
+    drift_report = monitor_data_drift_from_s3()
+    print("📈 Drift monitoring complete.")
+    notify_telegram.submit("📈 Drift monitoring complete.")
+
+    try:
+        label = drift_report["widgets"][0]["params"]["counters"][0]["label"]
+        data_drift_detected = "NOT" not in label.upper()
+    except Exception as e:
+        data_drift_detected = False
+        print("⚠️ Couldn't determine data drift status:", e)
+
+    if data_drift_detected:
+        notify_telegram.submit("🚨 <b>Data Drift detected</b>")
+    else:
+        notify_telegram.submit("✅ <b>Data drift evaluated, and no issues found</b>")
+
+    # Step 4: Prepare dataset for training
+    output_path = prepare_full_dataset_s3(reference_date=str(exec_date))
+    print(f"📦 Full dataset prepared at: {output_path}")
+    notify_telegram.submit(f"📦 Full dataset ready: {output_path}")
+
+    # Step 5: Train models
+    notify_telegram.submit("🚀 Starting model training and selection pipeline...")
+    rmse_rf = train_random_forest_model()
+    notify_telegram.submit(f"🌲 Random Forest trained with RMSE: {rmse_rf:.4f}")
+    rmse_xgb = train_xgboost_model()
+    notify_telegram.submit(f"⚡ XGBoost trained with RMSE: {rmse_xgb:.4f}")
+
+    # Step 6: Choose best model
+    if rmse_rf < rmse_xgb:
+        best_model_name = "milk-price-predictor-rf"
+        notify_telegram.submit(f"✅ Best model: Random Forest (RMSE: {rmse_rf:.4f})")
+    else:
+        best_model_name = "milk-price-predictor-xgb"
+        notify_telegram.submit(f"✅ Best model: XGBoost (RMSE: {rmse_xgb:.4f})")
+
+    # Step 7: Promote best model to staging
+    client = mlflow.MlflowClient()
+    versions = client.get_latest_versions(best_model_name, stages=["None"])
+
+    if versions:
+        model_version = versions[0].version
+        client.transition_model_version_stage(
+            name=best_model_name,
+            version=model_version,
+            stage="Staging",
+            archive_existing_versions=True
+        )
+        notify_telegram.submit(
+            f"📌 Promoted '{best_model_name}' v{model_version} to <b>Staging</b>."
+        )
+    else:
+        notify_telegram.submit(f"⚠️ No version found to promote for model '{best_model_name}'")
+
+
+
+if __name__ == "__main__":
+    import sys
+
+    if len(sys.argv) > 1:
+        execution_date = sys.argv[1]
+        daily_pipeline(execution_date=execution_date)
+    else:
+        daily_pipeline()

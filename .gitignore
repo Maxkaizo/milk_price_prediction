@@ -4,3 +4,4 @@ mlartifacts/
 *.xlsx
 data/
 .env
+backup/

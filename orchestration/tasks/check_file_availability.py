@@ -10,11 +10,16 @@ S3_PREFIX = "daily"
 BASE_URL = "https://www.economia-sniim.gob.mx/SNIIM-Archivosfuente/Comentarios/Otros"
 
 @task
-def check_file_availability():
-    today = datetime.today()
-    excel_filename = f"Leche{today.strftime('%d%m%Y')}.xlsx"
-    parquet_filename = f"{today.strftime('%Y-%m-%d')}-data.parquet"
-    s3_key = f"{S3_PREFIX}/{today.year}/{today.strftime('%m')}/{parquet_filename}"
+def check_file_availability(execution_date: datetime = None) -> bool:
+    """
+    Verifica si el archivo Excel correspondiente a una fecha específica ya fue procesado.
+    Si no se especifica fecha, se usa la del día actual.
+    """
+    execution_date = execution_date or datetime.today()
+
+    excel_filename = f"Leche{execution_date.strftime('%d%m%Y')}.xlsx"
+    parquet_filename = f"{execution_date.strftime('%Y-%m-%d')}-data.parquet"
+    s3_key = f"{S3_PREFIX}/{execution_date.year}/{execution_date.strftime('%m')}/{parquet_filename}"
 
     s3 = boto3.client("s3")
 
@@ -34,4 +39,6 @@ def check_file_availability():
 
     file_in_s3 = s3_file_exists(BUCKET_NAME, s3_key)
     file_online = remote_file_exists(f"{BASE_URL}/{excel_filename}")
+
     return not file_in_s3 and file_online
+

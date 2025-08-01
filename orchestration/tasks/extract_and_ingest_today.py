@@ -19,17 +19,17 @@ meses_es_a_en = {
 }
 
 @task(name="extract_and_ingest_today", retries=2, retry_delay_seconds=30)
-def extract_and_ingest_today():
-    today = datetime.today().date()
+def extract_and_ingest_today(execution_date: datetime = None) -> str:
+    execution_date = execution_date.date() if execution_date else datetime.today().date()
 
     # Rutas dinámicas
-    excel_filename = f"Leche{today.strftime('%d%m%Y')}.xlsx"
+    excel_filename = f"Leche{execution_date.strftime('%d%m%Y')}.xlsx"
     excel_url = f"{BASE_URL}/{excel_filename}"
     excel_path = f"data/raw/{excel_filename}"
 
-    parquet_filename = f"{today.strftime('%Y-%m-%d')}-data.parquet"
-    local_parquet_path = f"data/datalake/daily/{today.year}/{today.strftime('%m')}/{parquet_filename}"
-    s3_key = f"daily/{today.year}/{today.strftime('%m')}/{parquet_filename}"
+    parquet_filename = f"{execution_date.strftime('%Y-%m-%d')}-data.parquet"
+    local_parquet_path = f"data/datalake/daily/{execution_date.year}/{execution_date.strftime('%m')}/{parquet_filename}"
+    s3_key = f"daily/{execution_date.year}/{execution_date.strftime('%m')}/{parquet_filename}"
 
     # --- Descargar Excel ---
     Path("data/raw").mkdir(parents=True, exist_ok=True)
@@ -41,9 +41,9 @@ def extract_and_ingest_today():
 
     # --- Parseo ---
     df_all = parse_excel_to_df(excel_path)
-    df_today = df_all[df_all["Fecha"] == today].copy()
+    df_today = df_all[df_all["Fecha"] == execution_date].copy()
     if df_today.empty:
-        raise ValueError("❌ No rows found for today's date.")
+        raise ValueError("❌ No rows found for the given execution date.")
 
     # --- Guardar localmente ---
     Path(local_parquet_path).parent.mkdir(parents=True, exist_ok=True)
