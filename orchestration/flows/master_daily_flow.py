@@ -1,5 +1,3 @@
-# milk_price_prediction/orchestration/flows/master_daily_flow.py
-
 from prefect import flow
 from datetime import datetime
 from orchestration.tasks.check_file_availability import check_file_availability
@@ -11,6 +9,9 @@ from orchestration.tasks.train_random_forest_model import train_random_forest_mo
 from orchestration.tasks.train_xgboost_model import train_xgboost_model
 import mlflow
 from typing import Optional
+
+import boto3
+import json
 
 
 @flow(name="daily-mlops-pipeline")
@@ -67,29 +68,65 @@ def daily_pipeline(execution_date: Optional[str] = None):
     # Step 6: Choose best model
     if rmse_rf < rmse_xgb:
         best_model_name = "milk-price-predictor-rf"
+        best_rmse = rmse_rf
         notify_telegram.submit(f"✅ Best model: Random Forest (RMSE: {rmse_rf:.4f})")
     else:
         best_model_name = "milk-price-predictor-xgb"
+        best_rmse = rmse_xgb
         notify_telegram.submit(f"✅ Best model: XGBoost (RMSE: {rmse_xgb:.4f})")
 
-    # Step 7: Promote best model to staging
+    # Step 7: Promote best model to Staging and save metadata to S3
     client = mlflow.MlflowClient()
     versions = client.get_latest_versions(best_model_name, stages=["None"])
 
     if versions:
         model_version = versions[0].version
+        run_id = versions[0].run_id
+
+        # Promote to Staging
         client.transition_model_version_stage(
             name=best_model_name,
             version=model_version,
             stage="Staging",
             archive_existing_versions=True
         )
+
+        # Get registered model version info (model_id path)
+        registered_model = client.get_model_version(
+            name=best_model_name,
+            version=model_version
+        )
+
+        artifact_uri = registered_model.source  # ✅ this is the correct S3 model path
+
+        run = client.get_run(run_id)
+        rmse = float(run.data.metrics.get("final_rmse", best_rmse))
+
+        # Save promotion metadata to S3
+        promotion_record = {
+            "model_name": best_model_name,
+            "version": str(model_version),
+            "run_id": run_id,
+            "artifact_uri": artifact_uri,
+            "rmse": rmse,
+            "promoted_stage": "Staging",
+            "promotion_time": datetime.utcnow().isoformat()
+        }
+
+        s3 = boto3.client("s3")
+        s3.put_object(
+            Bucket="mlflow-models-milk-price-dev",
+            Key="promoted/daily_model.json",
+            Body=json.dumps(promotion_record),
+            ContentType="application/json"
+        )
+
+        print("📤 Promotion metadata saved to S3.")
         notify_telegram.submit(
-            f"📌 Promoted '{best_model_name}' v{model_version} to <b>Staging</b>."
+            f"📌 Promoted '{best_model_name}' v{model_version} to <b>Staging</b> and saved metadata to S3."
         )
     else:
         notify_telegram.submit(f"⚠️ No version found to promote for model '{best_model_name}'")
-
 
 
 if __name__ == "__main__":

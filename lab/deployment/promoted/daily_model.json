@@ -1,0 +1,9 @@
+{
+  "model_name": "milk-price-predictor-rf",
+  "version": "2",
+  "run_id": "94127e382abb4a53a17632764c844261",
+  "artifact_uri": "models:/m-7e67bea8560d44c4b4e38bad4030982d",
+  "rmse": 0.21774853869800637,
+  "promoted_stage": "Staging",
+  "promotion_time": "2025-08-01T04:57:35.411224"
+}
