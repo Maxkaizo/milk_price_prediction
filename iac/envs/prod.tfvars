@@ -1,8 +1,8 @@
-project_id      = "stg-milk-pred"
+project_id      = "prod-milk-pred"
 
-repository_name = "stg-lambda-repo"
-lambda_name     = "stg-milk-lambda"
-api_name        = "stg-milk-api"
+repository_name = "prod-lambda-repo"
+lambda_name     = "prod-milk-lambda"
+api_name        = "prod-milk-api"
 
 aws_region      = "us-east-1"
 
