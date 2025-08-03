@@ -123,7 +123,7 @@ aws lambda list-functions --query 'Functions[?FunctionName==`milk-api-lambda`].{
 
 # Probar con el header para lambda
 
-curl -XPOST "https://d9yodh9h96.execute-api.us-east-1.amazonaws.com/default/predict" \
+curl -XPOST "https://tjga5hm9q0.execute-api.us-east-1.amazonaws.com/default/predict" \
 -H "Content-Type: application/json" \
 -d '{
     "Estado": "Jalisco",
@@ -143,4 +143,25 @@ curl -XPOST "https://d9yodh9h96.execute-api.us-east-1.amazonaws.com/default/pred
 aws logs filter-log-events \
   --log-group-name /aws/lambda/milk-api-lambda \
   --limit 3
+
+
+
+
+"https://9v4atvsc14.execute-api.us-east-1.amazonaws.com/default"
+
+curl -XPOST "https://9v4atvsc14.execute-api.us-east-1.amazonaws.com/default/predict" \
+-H "Content-Type: application/json" \
+-d '{
+    "Estado": "Jalisco",
+    "Ciudad": "Guadalajara",
+    "Tipo": "Pasteurizada",
+    "Canal": "Autoservicio",
+    "día": 1,
+    "mes": 8,
+    "año": 2025,
+    "dia_semana": "4",
+    "Precio_lag1": 23.5,
+    "Precio_mean7": 23.1
+}'
+
 
