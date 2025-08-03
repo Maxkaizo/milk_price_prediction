@@ -9,6 +9,7 @@ BUCKET_NAME = "mlops-milk-datalake"
 S3_PREFIX = "daily"
 BASE_URL = "https://www.economia-sniim.gob.mx/SNIIM-Archivosfuente/Comentarios/Otros"
 
+
 @task
 def check_file_availability(execution_date: datetime = None) -> bool:
     """
@@ -41,4 +42,3 @@ def check_file_availability(execution_date: datetime = None) -> bool:
     file_online = remote_file_exists(f"{BASE_URL}/{excel_filename}")
 
     return not file_in_s3 and file_online
-

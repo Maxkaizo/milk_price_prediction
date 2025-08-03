@@ -1,0 +1,37 @@
+# Run code formatting with black
+
+black orchestration/ > best_practices/code_format/black_orchestration_report.txt 2>&1
+
+# checout changes (using git diff)
+git diff > ./best_practices/code_format/git_diff_orchestration_report.txt
+
+
+# 
+
+
+format:
+	black .
+
+check-format:
+	black --check .
+
+diff-format:
+	black --diff .
+
+
+# check format
+simulate_publication/
+black --check simulate_publication/ > best_practices/code_format/simulate_publication_report.txt 2>&1
+black --diff simulate_publication/ >> best_practices/code_format/simulate_publication_report.txt 2>&1
+black simulate_publication/ >> best_practices/code_format/simulate_publication_report.txt 2>&1
+
+
+deployment/ondemand/
+black --check deployment/ondemand/ > best_practices/code_format/on_demand_report.txt 2>&1
+black --diff deployment/ondemand/ >> best_practices/code_format/on_demand_report.txt 2>&1
+black deployment/ondemand/ >> best_practices/code_format/on_demand_report.txt 2>&1
+
+iac/code/
+black --check iac/code/ > best_practices/code_format/iac_code_report.txt 2>&1
+black --diff iac/code/ >> best_practices/code_format/iac_code_report.txt 2>&1
+black iac/code/ >> best_practices/code_format/iac_code_report.txt 2>&1

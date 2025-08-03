@@ -1,0 +1,72 @@
+would reformat /home/maxkaizo/milk_price_prediction/iac/code/handler.py
+
+Oh no! 💥 💔 💥
+1 file would be reformatted.
+--- /home/maxkaizo/milk_price_prediction/iac/code/handler.py	2025-08-03 16:06:36.900378+00:00
++++ /home/maxkaizo/milk_price_prediction/iac/code/handler.py	2025-08-03 18:51:20.307828+00:00
+@@ -2,25 +2,25 @@
+ import boto3
+ import mlflow.pyfunc
+ 
+ s3 = boto3.client("s3")
+ response = s3.get_object(
+-    Bucket="mlflow-models-milk-price-dev",
+-    Key="promoted/daily_model.json"
++    Bucket="mlflow-models-milk-price-dev", Key="promoted/daily_model.json"
+ )
+ meta = json.load(response["Body"])
+ 
+ model_id = meta["artifact_uri"].split("/")[-1]
+ model_s3_path = f"s3://mlflow-models-milk-price-dev/2/models/{model_id}/artifacts/"
+ model = mlflow.pyfunc.load_model(model_s3_path)
+ 
++
+ # Lambda handler
+ def handler(event, context):
+ 
+     try:
+ 
+-        raw_body = event.get('body')
++        raw_body = event.get("body")
+ 
+         if isinstance(raw_body, str):
+             body = json.loads(raw_body)
+         else:
+             body = raw_body if raw_body is not None else event
+@@ -30,21 +30,17 @@
+ 
+         prediction = model.predict(body)
+ 
+         return {
+             "statusCode": 200,
+-            "headers": {
+-                "Content-Type": "application/json"   
+-            },
+-            "body": json.dumps({"predicted_price": float(prediction[0])})
++            "headers": {"Content-Type": "application/json"},
++            "body": json.dumps({"predicted_price": float(prediction[0])}),
+         }
+ 
+     except Exception as e:
+         print(f"[ERROR] Ha ocurrido una excepción: {e}")
+-        
++
+         return {
+             "statusCode": 400,
+-            "headers": {
+-                "Content-Type": "application/json"
+-            },
+-            "body": json.dumps({"error": str(e)})
+-        }
+\ No newline at end of file
++            "headers": {"Content-Type": "application/json"},
++            "body": json.dumps({"error": str(e)}),
++        }
+would reformat /home/maxkaizo/milk_price_prediction/iac/code/handler.py
+
+All done! ✨ 🍰 ✨
+1 file would be reformatted.
+reformatted /home/maxkaizo/milk_price_prediction/iac/code/handler.py
+
+All done! ✨ 🍰 ✨
+1 file reformatted.

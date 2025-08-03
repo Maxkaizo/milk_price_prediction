@@ -12,15 +12,26 @@ BASE_URL = "https://www.economia-sniim.gob.mx/SNIIM-Archivosfuente/Comentarios/O
 
 # Diccionario de meses en español
 meses_es_a_en = {
-    'enero': 'January', 'febrero': 'February', 'marzo': 'March',
-    'abril': 'April', 'mayo': 'May', 'junio': 'June',
-    'julio': 'July', 'agosto': 'August', 'septiembre': 'September',
-    'octubre': 'October', 'noviembre': 'November', 'diciembre': 'December'
+    "enero": "January",
+    "febrero": "February",
+    "marzo": "March",
+    "abril": "April",
+    "mayo": "May",
+    "junio": "June",
+    "julio": "July",
+    "agosto": "August",
+    "septiembre": "September",
+    "octubre": "October",
+    "noviembre": "November",
+    "diciembre": "December",
 }
+
 
 @task(name="extract_and_ingest_today", retries=2, retry_delay_seconds=30)
 def extract_and_ingest_today(execution_date: datetime = None) -> str:
-    execution_date = execution_date.date() if execution_date else datetime.today().date()
+    execution_date = (
+        execution_date.date() if execution_date else datetime.today().date()
+    )
 
     # Rutas dinámicas
     excel_filename = f"Leche{execution_date.strftime('%d%m%Y')}.xlsx"
@@ -62,13 +73,28 @@ def parse_excel_to_df(path):
     data_final = []
 
     for i, row in df.iterrows():
-        if row.astype(str).str.contains("Precio promedio al consumidor por litro", case=False, na=False).any():
+        if (
+            row.astype(str)
+            .str.contains(
+                "Precio promedio al consumidor por litro", case=False, na=False
+            )
+            .any()
+        ):
             row_fecha = df.iloc[i + 1]
-            fecha_raw = next((str(cell) for cell in row_fecha if isinstance(cell, str) and "de" in cell), None)
+            fecha_raw = next(
+                (
+                    str(cell)
+                    for cell in row_fecha
+                    if isinstance(cell, str) and "de" in cell
+                ),
+                None,
+            )
             if not fecha_raw:
                 continue
 
-            match = re.search(r"(\d{1,2}) de (\w+) de (\d{4})", fecha_raw, re.IGNORECASE)
+            match = re.search(
+                r"(\d{1,2}) de (\w+) de (\d{4})", fecha_raw, re.IGNORECASE
+            )
             if not match:
                 continue
             dia, mes, año = match.groups()
@@ -84,22 +110,31 @@ def parse_excel_to_df(path):
                 canal = enc2[j]
                 columnas.append(f"{tipo}_{canal}")
 
-            df_bloque = df.iloc[i + 4:, 0:6].copy()
+            df_bloque = df.iloc[i + 4 :, 0:6].copy()
             df_bloque.columns = columnas
-            df_bloque[['Estado', 'Ciudad']] = df_bloque[['Estado', 'Ciudad']].ffill()
+            df_bloque[["Estado", "Ciudad"]] = df_bloque[["Estado", "Ciudad"]].ffill()
 
             stop_idx = None
             for k, row_k in df_bloque.iterrows():
                 celda = str(row_k[0]).strip().lower()
-                if "promedio" in celda or "fuente" in celda or "sniim" in celda or celda == "estado" or celda == "nan":
+                if (
+                    "promedio" in celda
+                    or "fuente" in celda
+                    or "sniim" in celda
+                    or celda == "estado"
+                    or celda == "nan"
+                ):
                     stop_idx = k
                     break
             if stop_idx:
-                df_bloque = df_bloque.loc[:stop_idx - 1]
+                df_bloque = df_bloque.loc[: stop_idx - 1]
 
             df_bloque["Fecha"] = fecha
-            df_long = df_bloque.melt(id_vars=["Fecha", "Estado", "Ciudad"],
-                                     var_name="Tipo_Canal", value_name="Precio")
+            df_long = df_bloque.melt(
+                id_vars=["Fecha", "Estado", "Ciudad"],
+                var_name="Tipo_Canal",
+                value_name="Precio",
+            )
 
             df_long["Tipo"] = df_long["Tipo_Canal"].str.split("_").str[0]
             df_long["Canal"] = df_long["Tipo_Canal"].str.split("_").str[1]
@@ -109,5 +144,7 @@ def parse_excel_to_df(path):
             data_final.append(df_long)
 
     df_final = pd.concat(data_final, ignore_index=True)
-    df_final = df_final[~df_final["Ciudad"].str.lower().str.contains("promedio", na=False)]
+    df_final = df_final[
+        ~df_final["Ciudad"].str.lower().str.contains("promedio", na=False)
+    ]
     return df_final

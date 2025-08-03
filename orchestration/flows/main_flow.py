@@ -10,11 +10,7 @@ from orchestration.tasks.notify_telegram import notify_telegram
 
 
 @flow(name="main_train_milk_model")
-def main(
-    source: str = "local",
-    year: int = 0,
-    month: int = 0
-):
+def main(source: str = "local", year: int = 0, month: int = 0):
     """
     Main flow to load data and train a model monthly.
     If year/month are 0, it uses the previous month as reference.
@@ -40,14 +36,11 @@ def main(
         X_cur_dicts=X_val_dicts,
         y_cur=y_val,
         year=year,
-        month=month
+        month=month,
     )
 
     model_drift_dict = monitor_model_drift(
-        y_true=y_val,
-        y_pred=y_pred,
-        year=year,
-        month=month
+        y_true=y_val, y_pred=y_pred, year=year, month=month
     )
 
     # --- Evaluate Data Drift ---
@@ -61,7 +54,7 @@ def main(
 
     if data_drift_detected:
         notify_telegram.submit("🚨 <b>Data Drift detected</b>")
-    
+
     print("Data drift evaluated...")
 
     # --- Evaluate Model Drift ---
@@ -69,14 +62,16 @@ def main(
         rmse_str = model_drift_dict["widgets"][4]["params"]["counters"][0]["value"]
         reported_rmse = float(rmse_str)
     except Exception as e:
-        reported_rmse  = None
+        reported_rmse = None
         print("⚠️ No se pudo leer RMSE:", e)
 
     RMSE_THRESHOLD = 2.0
 
     if reported_rmse and reported_rmse > RMSE_THRESHOLD:
-        notify_telegram.submit(f"⚠️ <b>High RMSE</b>: {reported_rmse :.2f} (> {RMSE_THRESHOLD})")
-    
+        notify_telegram.submit(
+            f"⚠️ <b>High RMSE</b>: {reported_rmse :.2f} (> {RMSE_THRESHOLD})"
+        )
+
     print("model drift evaluated...")
 
     print(f"✅ Pipeline completed with RMSE: {rmse:.4f}")
@@ -87,6 +82,6 @@ def main(
 if __name__ == "__main__":
     main.serve(
         name="train-milk-model",
-        cron="0 6 2 * *",  
+        cron="0 6 2 * *",
         tags=["milk", "training"],
     )

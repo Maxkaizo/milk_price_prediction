@@ -4,12 +4,13 @@ import pandas as pd
 from pathlib import Path
 import fsspec
 
+
 @task(name="prepare_full_dataset_s3")
 def prepare_full_dataset_s3(
     reference_date: str = None,  # pass as string in ISO format
     lookback_days: int = 548,
     s3_root: str = "s3://mlops-milk-datalake/daily",
-    output_path: str = "data/processed/full_dataset.parquet"
+    output_path: str = "data/processed/full_dataset.parquet",
 ) -> str:
     if reference_date is None:
         reference_date = datetime.today()
@@ -27,7 +28,9 @@ def prepare_full_dataset_s3(
     for path in all_paths:
         filename = path.split("/")[-1]
         try:
-            file_date = datetime.strptime(filename.split("-data.parquet")[0], "%Y-%m-%d")
+            file_date = datetime.strptime(
+                filename.split("-data.parquet")[0], "%Y-%m-%d"
+            )
             if start_date <= file_date <= reference_date:
                 valid_files.append(f"s3://{path}")
         except:

@@ -45,7 +45,9 @@ def monitor_data_drift_from_s3(
     dated_files.sort(key=lambda x: x[1], reverse=True)
 
     current_files = [f for f, d in dated_files if d >= current_cutoff]
-    reference_files = [f for f, d in dated_files if reference_cutoff <= d < current_cutoff]
+    reference_files = [
+        f for f, d in dated_files if reference_cutoff <= d < current_cutoff
+    ]
 
     if not current_files or not reference_files:
         raise ValueError("❌ Not enough files to compute drift report.")
@@ -54,14 +56,18 @@ def monitor_data_drift_from_s3(
     print(f"📁 Reference files: {len(reference_files)}")
 
     # --- Load data ---
-    df_cur = pd.concat([
-        pd.read_parquet(f"s3://{f}", storage_options={"anon": False})
-        for f in current_files
-    ])
-    df_ref = pd.concat([
-        pd.read_parquet(f"s3://{f}", storage_options={"anon": False})
-        for f in reference_files
-    ])
+    df_cur = pd.concat(
+        [
+            pd.read_parquet(f"s3://{f}", storage_options={"anon": False})
+            for f in current_files
+        ]
+    )
+    df_ref = pd.concat(
+        [
+            pd.read_parquet(f"s3://{f}", storage_options={"anon": False})
+            for f in reference_files
+        ]
+    )
 
     df_cur["Fecha"] = pd.to_datetime(df_cur["Fecha"])
     df_ref["Fecha"] = pd.to_datetime(df_ref["Fecha"])
@@ -74,7 +80,10 @@ def monitor_data_drift_from_s3(
     output_dir = Path("monitor/reports")
     output_dir.mkdir(parents=True, exist_ok=True)
 
-    output_path = output_dir / f"{base_date.strftime('%Y-%m-%d')}-data-drift-report.evidently.html"
+    output_path = (
+        output_dir
+        / f"{base_date.strftime('%Y-%m-%d')}-data-drift-report.evidently.html"
+    )
     output.save_html(str(output_path))
 
     print(f"📊 Drift report saved: {output_path}")
