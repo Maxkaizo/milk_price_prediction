@@ -1,0 +1,146 @@
+# Local Test
+
+curl -X POST http://localhost:9696/predict \
+     -H "Content-Type: application/json" \
+     -d '{
+        "Estado": "Jalisco",
+        "Ciudad": "Guadalajara",
+        "Tipo": "Pasteurizada",
+        "Canal": "Autoservicio",
+        "día": 1,
+        "mes": 8,
+        "año": 2025,
+        "dia_semana": "4",
+        "Precio_lag1": 23.5,
+        "Precio_mean7": 23.1
+     }'
+
+
+# Docker commands
+
+# Build Image
+docker build -t milk-api-local .
+
+# Run image
+
+docker run -it --rm \
+  -p 9696:9696 \
+  -v ~/.aws:/root/.aws \
+  milk-api-local 
+
+---------------
+
+# Build local lambda
+
+docker build -t milk-lambda-local -f Dockerfile.lambda .
+
+# Run local lambda
+
+docker run -it --rm \
+  -p 8080:8080 \
+  -v ~/.aws:/root/.aws \
+  milk-lambda-local
+
+# test with local lambda
+
+curl -XPOST "http://localhost:9000/2015-03-31/functions/function/invocations" \
+     -d '{
+           "Estado": "Jalisco",
+           "Ciudad": "Guadalajara",
+           "Tipo": "Pasteurizada",
+           "Canal": "Autoservicio",
+           "día": 1,
+           "mes": 8,
+           "año": 2025,
+           "dia_semana": "4",
+           "Precio_lag1": 23.5,
+           "Precio_mean7": 23.1
+         }'
+
+
+
+
+### Tutorial tests
+
+docker run --platform linux/amd64 -it --rm \
+  -p 9000:8080 \
+  -e PORT=8080 \
+  -v ~/.aws:/root/.aws \
+  milk-docker-image:test
+
+
+
+
+# See available images
+
+docker images
+
+# delete image
+
+docker rmi <IMAGE ID>
+
+# build specifying platform
+
+docker build --platform linux/amd64 -t milk-docker-image:test -f Dockerfile.lambda . --no-cache
+
+# Etiqueta la nueva imagen (sobrescribirá la etiqueta localmente)
+docker tag milk-docker-image:test 438480637738.dkr.ecr.us-east-1.amazonaws.com/milk-pred-test:milk-docker-image
+
+# Crear repositorio
+aws ecr create-repository --repository-name milk-pred-test
+
+# Login al repo
+aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 123456789012.dkr.ecr.us-east-1.amazonaws.com
+
+# Sube la imagen corregida a ECR
+docker push --platform linux/amd64 438480637738.dkr.ecr.us-east-1.amazonaws.com/milk-pred-test:milk-docker-image
+
+
+# probar predicción en la nube
+
+curl -XPOST "https://d9yodh9h96.execute-api.us-east-1.amazonaws.com/default/predict" \
+     -d '{
+           "Estado": "Jalisco",
+           "Ciudad": "Guadalajara",
+           "Tipo": "Pasteurizada",
+           "Canal": "Autoservicio",
+           "día": 1,
+           "mes": 8,
+           "año": 2025,
+           "dia_semana": "4",
+           "Precio_lag1": 23.5,
+           "Precio_mean7": 23.1
+         }'
+
+
+# Listar el estado de terraform
+
+terraform state list
+
+# Listar la función lambda
+
+aws lambda list-functions --query 'Functions[?FunctionName==`milk-api-lambda`].{Nombre:FunctionName, ARN:FunctionArn, Rol:Role, Arquitectura:Architectures[0], Timeout:Timeout, Memoria:MemorySize}' --output table
+
+# Probar con el header para lambda
+
+curl -XPOST "https://d9yodh9h96.execute-api.us-east-1.amazonaws.com/default/predict" \
+-H "Content-Type: application/json" \
+-d '{
+    "Estado": "Jalisco",
+    "Ciudad": "Guadalajara",
+    "Tipo": "Pasteurizada",
+    "Canal": "Autoservicio",
+    "día": 1,
+    "mes": 8,
+    "año": 2025,
+    "dia_semana": "4",
+    "Precio_lag1": 23.5,
+    "Precio_mean7": 23.1
+}'
+
+
+# Obtener logs de la función lambda
+aws logs filter-log-events \
+  --log-group-name /aws/lambda/milk-api-lambda \
+  --limit 3
+

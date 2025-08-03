@@ -24,6 +24,7 @@ dotenv = "*"
 
 [dev-packages]
 ipykernel = "*"
+awslambdaric = "*"
 
 [requires]
 python_version = "3.12"
