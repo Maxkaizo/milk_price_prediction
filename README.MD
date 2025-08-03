@@ -1,6 +1,12 @@
-# Milk Price Prediction in Mexico – MLOps Zoomcamp Capstone
+# Milk Price Prediction in Mexico 
+# – MLOps Zoomcamp Capstone
 
 ![alt text](images/banner.png)
+
+<p align="center">
+  <img src="images/banner.png)g" width="100%" alt=" Milk Price Prediction in Mexico " />
+</p>
+
 
 
 ## 1. Project Overview
