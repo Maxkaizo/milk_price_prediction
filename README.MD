@@ -54,7 +54,6 @@ This project provides a practical forecasting tool for the Mexican milk industry
       1. An On-Demand Cloud API: A deployed endpoint for real-time price predictions that can be integrated into any application.
       2. A Daily Price Report: A scheduled batch process, orchestrated with Prefect, runs daily to generate and publish a report of suggested prices, providing proactive insights directly to users.
 
-![alt text](image-2.png)
 ---
 
 ## MLOps Context: A Three-Layer Design
@@ -69,12 +68,9 @@ Instead of a single, monolithic process, our MLOps approach is designed with a m
 
 - **The Monitoring Layer:** This is the intelligence of our system. It continuously oversees the entire process, tracking data quality and model performance. It is responsible for detecting issues like data drift and, most importantly, for automatically promoting the best-performing model to production, thus closing the MLOps loop.
 
-![alt text](<## Business Context - visual selection (2).png>)
-
 ---
 
 ## Architecture
-![alt text](image-1.png)
 
 ### Data Preparation - Simulating a Datalake
 
