@@ -1,23 +1,21 @@
 # Milk Price Prediction in Mexico 
 ## MLOps Zoomcamp Capstone
 
-![alt text](images/banner.png)
-
 <p align="center">
-  <img src="images/banner.png)g" width="100%" alt=" Milk Price Prediction in Mexico " />
+  <img src="images/banner.png" width="100%" alt="Milk Price Prediction in Mexico" />
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Language-Python-3776AB?logo=python" />
-  <img src="https://img.shields.io/badge/Code-GitHub-181717?logo=github" />
-  <img src="https://img.shields.io/badge/CI/CD-GitHub%20Actions-2088FF?logo=github-actions" />
-  <img src="https://img.shields.io/badge/Data%20Versioning-DVC-4360F9?logo=dvc" />
-  <img src="https://img.shields.io/badge/Monitoring-Evidently%20AI-8A2BE2" />
-  <img src="https://img.shields.io/badge/Orchestration-Prefect-0052FF?logo=prefect" />
-  <img src="https://img.shields.io/badge/API-FastAPI-009688?logo=fastapi" />
-  <img src="https://img.shields.io/badge/Containerization-Docker-2496ED?logo=docker" />
-  <img src="https://img.shields.io/badge/Automation-Makefile-FF8C00" />
-  <img src="https://img.shields.io/badge/Data%20Source-SNIIM-0072BC" />
+  <img src="https://img.shields.io/badge/language-Python-3776AB" />
+  <img src="https://img.shields.io/badge/source%20control-GitHub-181717" />
+  <img src="https://img.shields.io/badge/CI/CD-GitHub%20Actions-2088FF" />
+  <img src="https://img.shields.io/badge/data%20versioning-DVC-4360F9" />
+  <img src="https://img.shields.io/badge/monitoring-Evidently%20AI-8A2BE2" />
+  <img src="https://img.shields.io/badge/orchestration-Prefect-0052FF" />
+  <img src="https://img.shields.io/badge/api-FastAPI-009688" />
+  <img src="https://img.shields.io/badge/containers-Docker-2496ED" />
+  <img src="https://img.shields.io/badge/automation-Makefile-FF8C00" />
+  <img src="https://img.shields.io/badge/data%20source-SNIIM-0072BC" />
 </p>
 
 
