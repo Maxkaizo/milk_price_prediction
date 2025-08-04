@@ -138,3 +138,11 @@ if __name__ == "__main__":
         daily_pipeline(execution_date=execution_date)
     else:
         daily_pipeline()
+
+    # Serve deployment for Prefect UI with daily schedule at 1 PM (Mexico City time)
+    daily_pipeline.serve(
+        name="daily-milk-predictor",
+        cron="0 13 * * *",  # 1 PM UTC-6 (CDMX), ajusta si tu Prefect está en UTC
+        tags=["milk", "batch", "training"],
+        description="Daily training pipeline for milk price prediction at 1 PM",
+    )

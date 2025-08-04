@@ -26,6 +26,7 @@ dotenv = "*"
 ipykernel = "*"
 awslambdaric = "*"
 black = "*"
+pytest = "*"
 
 [requires]
 python_version = "3.12"

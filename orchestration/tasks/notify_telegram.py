@@ -35,3 +35,5 @@ def notify_telegram(message: str, parse_mode: str = "HTML") -> None:
 
     if response.status_code != 200:
         raise RuntimeError(f"Error al enviar mensaje a Telegram: {response.text}")
+
+notify_telegram_fn = notify_telegram.fn
