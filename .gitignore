@@ -5,3 +5,4 @@ mlartifacts/
 data/
 .env
 backup/
+*.db

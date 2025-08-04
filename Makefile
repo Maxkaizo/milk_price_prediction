@@ -47,22 +47,6 @@ help: ## Show this help
 	@echo "$(YELLOW)Available targets:$(NC)"
 	@awk 'BEGIN {FS = ":.*?## "} /^[a-zA-Z_-]+:.*?## / {printf "  $(GREEN)%-20s$(NC) %s\n", $$1, $$2}' $(MAKEFILE_LIST)
 
-# Create logs directory if it doesn't exist
-$(LOGS_DIR):
-	@mkdir -p $(LOGS_DIR)
-
-## === INITIAL SETUP ===
-setup: $(LOGS_DIR) ## Setup project environment
-	@echo "$(YELLOW)Setting up project environment...$(NC)"
-	$(PIPENV) install
-	$(PIPENV) shell
-	prefect config set PREFECT_API_URL=$(PREFECT_API_URL)
-	@echo "$(GREEN)Environment setup completed$(NC)"
-
-## === SERVER MANAGEMENT ===
-start-servers: start-mlflow start-prefect ## Start all servers (MLflow and Prefect)
-	@echo "$(GREEN)All servers started$(NC)"
-	@echo "$(YELLOW)View logs with: make logs-all$(NC)"
 
 start-mlflow: $(LOGS_DIR) ## Start MLflow server in background
 	@echo "$(YELLOW)Starting MLflow server...$(NC)"
@@ -75,6 +59,40 @@ start-mlflow: $(LOGS_DIR) ## Start MLflow server in background
 	@echo "$(GREEN)MLflow started on port $(MLFLOW_PORT)$(NC)"
 	@echo "$(GREEN)UI available at: http://localhost:$(MLFLOW_PORT)$(NC)"
 	@echo "$(YELLOW)View logs with: make logs-mlflow$(NC)"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## === SERVER MANAGEMENT ===
+start-servers: start-mlflow start-prefect ## Start all servers (MLflow and Prefect)
+	@echo "$(GREEN)All servers started$(NC)"
+	@echo "$(YELLOW)View logs with: make logs-all$(NC)"
+
+
 
 start-prefect: $(LOGS_DIR) ## Start Prefect server in background
 	@echo "$(YELLOW)Starting Prefect server...$(NC)"
@@ -123,6 +141,49 @@ status: ## Check server status
 	else \
 		echo "$(RED)✗ Prefect not running$(NC)"; \
 	fi
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+##################################
+
+
+
+
+
 
 ## === LOG MANAGEMENT ===
 logs-mlflow: ## View MLflow logs in real-time

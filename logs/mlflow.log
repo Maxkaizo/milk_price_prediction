@@ -1,0 +1,2283 @@
+nohup: ignoring input
+2025/08/04 12:22:53 INFO mlflow.store.db.utils: Creating initial MLflow database tables...
+2025/08/04 12:22:53 INFO mlflow.store.db.utils: Updating database tables
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+2025/08/04 12:22:53 INFO mlflow.store.db.utils: Creating initial MLflow database tables...
+2025/08/04 12:22:53 INFO mlflow.store.db.utils: Updating database tables
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+[2025-08-04 12:22:54 -0600] [30472] [INFO] Starting gunicorn 23.0.0
+[2025-08-04 12:22:54 -0600] [30472] [INFO] Listening at: http://0.0.0.0:5000 (30472)
+[2025-08-04 12:22:54 -0600] [30472] [INFO] Using worker: sync
+[2025-08-04 12:22:54 -0600] [30473] [INFO] Booting worker with pid: 30473
+[2025-08-04 12:22:54 -0600] [30474] [INFO] Booting worker with pid: 30474
+[2025-08-04 12:22:54 -0600] [30475] [INFO] Booting worker with pid: 30475
+[2025-08-04 12:22:54 -0600] [30476] [INFO] Booting worker with pid: 30476
+2025/08/04 12:23:02 INFO mlflow.store.db.utils: Creating initial MLflow database tables...
+2025/08/04 12:23:02 INFO mlflow.store.db.utils: Updating database tables
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+2025/08/04 12:23:03 INFO mlflow.store.db.utils: Creating initial MLflow database tables...
+2025/08/04 12:23:03 INFO mlflow.store.db.utils: Updating database tables
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+2025/08/04 12:23:03 INFO mlflow.store.db.utils: Creating initial MLflow database tables...
+2025/08/04 12:23:03 INFO mlflow.store.db.utils: Updating database tables
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+2025/08/04 12:23:40 INFO mlflow.store.db.utils: Creating initial MLflow database tables...
+2025/08/04 12:23:40 INFO mlflow.store.db.utils: Updating database tables
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+[2025-08-04 12:36:34 -0600] [30472] [CRITICAL] WORKER TIMEOUT (pid:30475)
+[2025-08-04 12:36:34 -0600] [30475] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 133, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/parser.py", line 41, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 259, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 271, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 262, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 36, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 63, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/base.py", line 204, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2025-08-04 12:36:34 -0600] [30475] [INFO] Worker exiting (pid: 30475)
+[2025-08-04 12:36:35 -0600] [33265] [INFO] Booting worker with pid: 33265
+2025/08/04 12:37:14 INFO mlflow.store.db.utils: Creating initial MLflow database tables...
+2025/08/04 12:37:14 INFO mlflow.store.db.utils: Updating database tables
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+[2025-08-04 12:38:15 -0600] [30472] [CRITICAL] WORKER TIMEOUT (pid:30473)
+[2025-08-04 12:38:15 -0600] [30473] [ERROR] Error handling request /ajax-api/2.0/mlflow/runs/search
+Traceback (most recent call last):
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    self.handle_request(listener, req, client, addr)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 177, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/flask/app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/mlflow/server/handlers.py", line 594, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/mlflow/server/handlers.py", line 635, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/mlflow/server/handlers.py", line 1057, in _search_runs
+    response_message = search_runs_impl(request_message)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/mlflow/server/handlers.py", line 1073, in search_runs_impl
+    run_entities = _get_tracking_store().search_runs(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/mlflow/store/tracking/abstract_store.py", line 576, in search_runs
+    runs, token = self._search_runs(
+                  ^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/mlflow/store/tracking/sqlalchemy_store.py", line 1473, in _search_runs
+    queried_runs = session.execute(stmt).scalars(SqlRun).all()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/sqlalchemy/engine/result.py", line 1774, in all
+    return self._allrows()
+           ^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/sqlalchemy/engine/result.py", line 548, in _allrows
+    rows = self._fetchall_impl()
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/sqlalchemy/engine/result.py", line 1681, in _fetchall_impl
+    return self._real_result._fetchall_impl()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/sqlalchemy/engine/result.py", line 2275, in _fetchall_impl
+    return list(self.iterator)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/sqlalchemy/orm/loading.py", line 246, in chunks
+    post_load.invoke(context, path)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/sqlalchemy/orm/loading.py", line 1560, in invoke
+    loader(
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/sqlalchemy/orm/strategies.py", line 3338, in _load_for_path
+    self._load_via_parent(
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/sqlalchemy/orm/strategies.py", line 3413, in _load_via_parent
+    for k, v in itertools.groupby(
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/sqlalchemy/engine/result.py", line 512, in iterrows
+    for raw_row in self._fetchiter_impl():
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/sqlalchemy/orm/loading.py", line 226, in chunks
+    tuple([proc(row) for proc in process]) for row in fetch
+           ^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/sqlalchemy/orm/loading.py", line 1114, in _instance
+    instance = mapper.class_manager.new_instance()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/sqlalchemy/orm/instrumentation.py", line 509, in new_instance
+    state = self._state_constructor(instance, self)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/sqlalchemy/orm/state.py", line 204, in __init__
+    self.obj = weakref.ref(obj, self._cleanup)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/base.py", line 204, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2025-08-04 12:38:15 -0600] [30473] [INFO] Worker exiting (pid: 30473)
+[2025-08-04 12:38:16 -0600] [33648] [INFO] Booting worker with pid: 33648
+[2025-08-04 12:39:17 -0600] [30472] [CRITICAL] WORKER TIMEOUT (pid:33648)
+[2025-08-04 12:39:17 -0600] [33648] [ERROR] Error handling request /ajax-api/2.0/mlflow/runs/search
+Traceback (most recent call last):
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    self.handle_request(listener, req, client, addr)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 177, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/flask/app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/mlflow/server/handlers.py", line 594, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/mlflow/server/handlers.py", line 635, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/mlflow/server/handlers.py", line 1057, in _search_runs
+    response_message = search_runs_impl(request_message)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/mlflow/server/handlers.py", line 1073, in search_runs_impl
+    run_entities = _get_tracking_store().search_runs(
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/mlflow/server/handlers.py", line 367, in _get_tracking_store
+    _tracking_store = _tracking_store_registry.get_store(store_uri, artifact_root)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/mlflow/tracking/_tracking_service/registry.py", line 45, in get_store
+    return self._get_store_with_resolved_uri(resolved_store_uri, artifact_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/mlflow/tracking/_tracking_service/registry.py", line 56, in _get_store_with_resolved_uri
+    return builder(store_uri=resolved_store_uri, artifact_uri=artifact_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/mlflow/server/handlers.py", line 186, in _get_sqlalchemy_store
+    from mlflow.store.tracking.sqlalchemy_store import SqlAlchemyStore
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/mlflow/store/tracking/sqlalchemy_store.py", line 126, in <module>
+    sqlalchemy.orm.configure_mappers()
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/sqlalchemy/orm/mapper.py", line 4187, in configure_mappers
+    _configure_registries(_all_registries(), cascade=True)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/sqlalchemy/orm/mapper.py", line 4218, in _configure_registries
+    _do_configure_registries(registries, cascade)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/sqlalchemy/orm/mapper.py", line 4259, in _do_configure_registries
+    mapper._post_configure_properties()
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/sqlalchemy/orm/mapper.py", line 2418, in _post_configure_properties
+    prop.init()
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/sqlalchemy/orm/interfaces.py", line 595, in init
+    self.do_init()
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/sqlalchemy/orm/relationships.py", line 1660, in do_init
+    self._generate_backref()
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/sqlalchemy/orm/relationships.py", line 2139, in _generate_backref
+    mapper._configure_property(
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/sqlalchemy/orm/mapper.py", line 2252, in _configure_property
+    prop.post_instrument_class(self)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/sqlalchemy/orm/interfaces.py", line 1119, in post_instrument_class
+    self.strategy.init_class_attribute(mapper)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/sqlalchemy/orm/strategies.py", line 792, in init_class_attribute
+    _register_attribute(
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/sqlalchemy/orm/strategies.py", line 126, in _register_attribute
+    desc = attributes.register_attribute_impl(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/sqlalchemy/orm/attributes.py", line 2607, in register_attribute_impl
+    factory = kw.pop("typecallable", None)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/base.py", line 204, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2025-08-04 12:39:17 -0600] [33648] [INFO] Worker exiting (pid: 33648)
+[2025-08-04 12:39:18 -0600] [33899] [INFO] Booting worker with pid: 33899
+[2025-08-04 12:40:18 -0600] [30472] [CRITICAL] WORKER TIMEOUT (pid:30474)
+[2025-08-04 12:40:18 -0600] [30474] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 133, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/parser.py", line 41, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 259, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 271, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 262, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 36, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 63, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/base.py", line 204, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2025-08-04 12:40:18 -0600] [30474] [INFO] Worker exiting (pid: 30474)
+[2025-08-04 12:40:19 -0600] [34128] [INFO] Booting worker with pid: 34128
+2025/08/04 12:40:20 INFO mlflow.store.db.utils: Creating initial MLflow database tables...
+2025/08/04 12:40:20 INFO mlflow.store.db.utils: Updating database tables
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+[2025-08-04 12:40:50 -0600] [30472] [CRITICAL] WORKER TIMEOUT (pid:30476)
+[2025-08-04 12:40:50 -0600] [30476] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 133, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/parser.py", line 41, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 259, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 271, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 262, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 36, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 63, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/base.py", line 204, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2025-08-04 12:40:50 -0600] [30476] [INFO] Worker exiting (pid: 30476)
+[2025-08-04 12:40:50 -0600] [34246] [INFO] Booting worker with pid: 34246
+[2025-08-04 12:41:22 -0600] [30472] [CRITICAL] WORKER TIMEOUT (pid:34246)
+[2025-08-04 12:41:22 -0600] [34246] [ERROR] Error handling request /ajax-api/2.0/mlflow/runs/search
+Traceback (most recent call last):
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    self.handle_request(listener, req, client, addr)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 177, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/flask/app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/mlflow/server/handlers.py", line 594, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/mlflow/server/handlers.py", line 635, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/mlflow/server/handlers.py", line 1057, in _search_runs
+    response_message = search_runs_impl(request_message)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/mlflow/server/handlers.py", line 1073, in search_runs_impl
+    run_entities = _get_tracking_store().search_runs(
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/mlflow/server/handlers.py", line 367, in _get_tracking_store
+    _tracking_store = _tracking_store_registry.get_store(store_uri, artifact_root)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/mlflow/tracking/_tracking_service/registry.py", line 45, in get_store
+    return self._get_store_with_resolved_uri(resolved_store_uri, artifact_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/mlflow/tracking/_tracking_service/registry.py", line 56, in _get_store_with_resolved_uri
+    return builder(store_uri=resolved_store_uri, artifact_uri=artifact_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/mlflow/server/handlers.py", line 186, in _get_sqlalchemy_store
+    from mlflow.store.tracking.sqlalchemy_store import SqlAlchemyStore
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/mlflow/store/tracking/sqlalchemy_store.py", line 12, in <module>
+    import sqlalchemy
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/sqlalchemy/__init__.py", line 13, in <module>
+    from .engine import AdaptedConnection as AdaptedConnection
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/sqlalchemy/engine/__init__.py", line 18, in <module>
+    from . import events as events
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/sqlalchemy/engine/events.py", line 19, in <module>
+    from .base import Connection
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 2869, in <module>
+    class TwoPhaseTransaction(RootTransaction):
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 2869, in TwoPhaseTransaction
+    class TwoPhaseTransaction(RootTransaction):
+    
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/base.py", line 204, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2025-08-04 12:41:22 -0600] [34246] [INFO] Worker exiting (pid: 34246)
+[2025-08-04 12:41:22 -0600] [34366] [INFO] Booting worker with pid: 34366
+2025/08/04 12:41:54 INFO mlflow.store.db.utils: Creating initial MLflow database tables...
+2025/08/04 12:41:54 INFO mlflow.store.db.utils: Updating database tables
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+[2025-08-04 12:43:26 -0600] [30472] [CRITICAL] WORKER TIMEOUT (pid:33899)
+[2025-08-04 12:43:26 -0600] [33899] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 133, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/parser.py", line 41, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 259, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 271, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 262, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 36, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 63, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/base.py", line 204, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2025-08-04 12:43:26 -0600] [33899] [INFO] Worker exiting (pid: 33899)
+[2025-08-04 12:43:26 -0600] [34909] [INFO] Booting worker with pid: 34909
+[2025-08-04 12:43:57 -0600] [30472] [CRITICAL] WORKER TIMEOUT (pid:34366)
+[2025-08-04 12:43:57 -0600] [34366] [ERROR] Error handling request /ajax-api/2.0/mlflow/runs/search
+Traceback (most recent call last):
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    self.handle_request(listener, req, client, addr)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 177, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/flask/app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/mlflow/server/handlers.py", line 594, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/mlflow/server/handlers.py", line 635, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/mlflow/server/handlers.py", line 1059, in _search_runs
+    response.set_data(message_to_json(response_message))
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/mlflow/utils/proto_json_utils.py", line 117, in message_to_json
+    MessageToJson(message, preserving_proto_field_name=True)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/google/protobuf/json_format.py", line 122, in MessageToJson
+    return printer.ToJsonString(message, indent, sort_keys, ensure_ascii)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/google/protobuf/json_format.py", line 196, in ToJsonString
+    js = self._MessageToJsonObject(message)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/google/protobuf/json_format.py", line 210, in _MessageToJsonObject
+    return self._RegularMessageToJsonObject(message, js)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/google/protobuf/json_format.py", line 238, in _RegularMessageToJsonObject
+    js[name] = [self._FieldToJsonObject(field, k) for k in value]
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/google/protobuf/json_format.py", line 284, in _FieldToJsonObject
+    return self._MessageToJsonObject(value)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/google/protobuf/json_format.py", line 210, in _MessageToJsonObject
+    return self._RegularMessageToJsonObject(message, js)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/google/protobuf/json_format.py", line 243, in _RegularMessageToJsonObject
+    js[name] = self._FieldToJsonObject(field, value)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/google/protobuf/json_format.py", line 284, in _FieldToJsonObject
+    return self._MessageToJsonObject(value)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/google/protobuf/json_format.py", line 210, in _MessageToJsonObject
+    return self._RegularMessageToJsonObject(message, js)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/google/protobuf/json_format.py", line 238, in _RegularMessageToJsonObject
+    js[name] = [self._FieldToJsonObject(field, k) for k in value]
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/google/protobuf/json_format.py", line 284, in _FieldToJsonObject
+    return self._MessageToJsonObject(value)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/google/protobuf/json_format.py", line 210, in _MessageToJsonObject
+    return self._RegularMessageToJsonObject(message, js)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/google/protobuf/json_format.py", line 214, in _RegularMessageToJsonObject
+    fields = message.ListFields()
+             ^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/base.py", line 204, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2025-08-04 12:43:57 -0600] [34366] [INFO] Worker exiting (pid: 34366)
+[2025-08-04 12:43:58 -0600] [35010] [INFO] Booting worker with pid: 35010
+2025/08/04 12:44:29 INFO mlflow.store.db.utils: Creating initial MLflow database tables...
+2025/08/04 12:44:29 INFO mlflow.store.db.utils: Updating database tables
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+[2025-08-04 12:44:59 -0600] [30472] [CRITICAL] WORKER TIMEOUT (pid:34909)
+[2025-08-04 12:44:59 -0600] [34909] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 133, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/parser.py", line 41, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 259, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 271, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 262, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 36, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 63, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/base.py", line 204, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2025-08-04 12:44:59 -0600] [34909] [INFO] Worker exiting (pid: 34909)
+[2025-08-04 12:45:00 -0600] [35235] [INFO] Booting worker with pid: 35235
+[2025-08-04 12:46:33 -0600] [30472] [CRITICAL] WORKER TIMEOUT (pid:35235)
+[2025-08-04 12:46:33 -0600] [35235] [ERROR] Error handling request /ajax-api/2.0/mlflow/runs/search
+Traceback (most recent call last):
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    self.handle_request(listener, req, client, addr)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 177, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/flask/app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/mlflow/server/handlers.py", line 594, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/mlflow/server/handlers.py", line 635, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/mlflow/server/handlers.py", line 1057, in _search_runs
+    response_message = search_runs_impl(request_message)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/mlflow/server/handlers.py", line 1073, in search_runs_impl
+    run_entities = _get_tracking_store().search_runs(
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/mlflow/server/handlers.py", line 367, in _get_tracking_store
+    _tracking_store = _tracking_store_registry.get_store(store_uri, artifact_root)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/mlflow/tracking/_tracking_service/registry.py", line 45, in get_store
+    return self._get_store_with_resolved_uri(resolved_store_uri, artifact_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/mlflow/tracking/_tracking_service/registry.py", line 56, in _get_store_with_resolved_uri
+    return builder(store_uri=resolved_store_uri, artifact_uri=artifact_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/mlflow/server/handlers.py", line 186, in _get_sqlalchemy_store
+    from mlflow.store.tracking.sqlalchemy_store import SqlAlchemyStore
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/mlflow/store/tracking/sqlalchemy_store.py", line 12, in <module>
+    import sqlalchemy
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/sqlalchemy/__init__.py", line 13, in <module>
+    from .engine import AdaptedConnection as AdaptedConnection
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/sqlalchemy/engine/__init__.py", line 18, in <module>
+    from . import events as events
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/sqlalchemy/engine/events.py", line 19, in <module>
+    from .base import Connection
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 28, in <module>
+    from .interfaces import BindTyping
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/sqlalchemy/engine/interfaces.py", line 37, in <module>
+    from ..sql.compiler import Compiled as Compiled
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/sqlalchemy/sql/__init__.py", line 14, in <module>
+    from .compiler import COLLECT_CARTESIAN_PRODUCTS as COLLECT_CARTESIAN_PRODUCTS
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/sqlalchemy/sql/compiler.py", line 62, in <module>
+    from . import crud
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/sqlalchemy/sql/crud.py", line 34, in <module>
+    from . import dml
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/sqlalchemy/sql/dml.py", line 35, in <module>
+    from . import util as sql_util
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/sqlalchemy/sql/util.py", line 58, in <module>
+    from .schema import Column
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/sqlalchemy/sql/schema.py", line 316, in <module>
+    class Table(
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/sqlalchemy/sql/schema.py", line 1302, in Table
+    @util.deprecated(
+     ^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/sqlalchemy/util/deprecations.py", line 141, in decorate
+    return _decorate_with_warning(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/sqlalchemy/util/deprecations.py", line 396, in _decorate_with_warning
+    decorated = warned(func)
+                ^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/sqlalchemy/util/langhelpers.py", line 361, in decorate
+    targ_name, fn_name = _unique_symbols(names, "target", "fn")
+    ^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/sqlalchemy/util/langhelpers.py", line 303, in _unique_symbols
+    used_set.add(sym)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/base.py", line 204, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2025-08-04 12:46:33 -0600] [35235] [INFO] Worker exiting (pid: 35235)
+[2025-08-04 12:46:33 -0600] [35910] [INFO] Booting worker with pid: 35910
+2025/08/04 12:47:05 INFO mlflow.store.db.utils: Creating initial MLflow database tables...
+2025/08/04 12:47:05 INFO mlflow.store.db.utils: Updating database tables
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+[2025-08-04 12:47:35 -0600] [30472] [CRITICAL] WORKER TIMEOUT (pid:33265)
+[2025-08-04 12:47:35 -0600] [33265] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 133, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/parser.py", line 41, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 259, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 271, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 262, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 36, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 63, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/base.py", line 204, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2025-08-04 12:47:35 -0600] [33265] [INFO] Worker exiting (pid: 33265)
+[2025-08-04 12:47:36 -0600] [36127] [INFO] Booting worker with pid: 36127
+[2025-08-04 12:48:07 -0600] [30472] [CRITICAL] WORKER TIMEOUT (pid:35010)
+[2025-08-04 12:48:07 -0600] [35010] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 133, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/parser.py", line 41, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 259, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 271, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 262, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 36, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 63, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/base.py", line 204, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2025-08-04 12:48:07 -0600] [35010] [INFO] Worker exiting (pid: 35010)
+[2025-08-04 12:48:07 -0600] [36235] [INFO] Booting worker with pid: 36235
+2025/08/04 12:48:08 INFO mlflow.store.db.utils: Creating initial MLflow database tables...
+2025/08/04 12:48:08 INFO mlflow.store.db.utils: Updating database tables
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+[2025-08-04 12:49:10 -0600] [30472] [CRITICAL] WORKER TIMEOUT (pid:35910)
+[2025-08-04 12:49:10 -0600] [35910] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 133, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/parser.py", line 41, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 259, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 271, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 262, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 36, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 63, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/base.py", line 204, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2025-08-04 12:49:10 -0600] [35910] [INFO] Worker exiting (pid: 35910)
+[2025-08-04 12:49:10 -0600] [36453] [INFO] Booting worker with pid: 36453
+2025/08/04 12:49:11 INFO mlflow.store.db.utils: Creating initial MLflow database tables...
+2025/08/04 12:49:11 INFO mlflow.store.db.utils: Updating database tables
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+[2025-08-04 12:49:41 -0600] [30472] [CRITICAL] WORKER TIMEOUT (pid:36127)
+[2025-08-04 12:49:41 -0600] [36127] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 133, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/parser.py", line 41, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 259, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 271, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 262, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 36, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 63, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/base.py", line 204, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2025-08-04 12:49:41 -0600] [36127] [INFO] Worker exiting (pid: 36127)
+[2025-08-04 12:49:42 -0600] [36563] [INFO] Booting worker with pid: 36563
+2025/08/04 12:49:43 INFO mlflow.store.db.utils: Creating initial MLflow database tables...
+2025/08/04 12:49:43 INFO mlflow.store.db.utils: Updating database tables
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+[2025-08-04 12:50:12 -0600] [30472] [CRITICAL] WORKER TIMEOUT (pid:36235)
+[2025-08-04 12:50:12 -0600] [36235] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 133, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/parser.py", line 41, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 259, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 271, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 262, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 36, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 63, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/base.py", line 204, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2025-08-04 12:50:12 -0600] [36235] [INFO] Worker exiting (pid: 36235)
+[2025-08-04 12:50:13 -0600] [36673] [INFO] Booting worker with pid: 36673
+[2025-08-04 12:50:45 -0600] [30472] [CRITICAL] WORKER TIMEOUT (pid:36673)
+[2025-08-04 12:50:45 -0600] [36673] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 133, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/parser.py", line 41, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 259, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 271, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 262, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 36, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 63, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/base.py", line 204, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2025-08-04 12:50:45 -0600] [36673] [INFO] Worker exiting (pid: 36673)
+[2025-08-04 12:50:45 -0600] [36780] [INFO] Booting worker with pid: 36780
+[2025-08-04 12:51:16 -0600] [30472] [CRITICAL] WORKER TIMEOUT (pid:36453)
+[2025-08-04 12:51:16 -0600] [36453] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 133, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/parser.py", line 41, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 259, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 271, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 262, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 36, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 63, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/base.py", line 204, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2025-08-04 12:51:16 -0600] [36453] [INFO] Worker exiting (pid: 36453)
+[2025-08-04 12:51:16 -0600] [36897] [INFO] Booting worker with pid: 36897
+2025/08/04 12:51:17 INFO mlflow.store.db.utils: Creating initial MLflow database tables...
+2025/08/04 12:51:17 INFO mlflow.store.db.utils: Updating database tables
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+[2025-08-04 12:51:47 -0600] [30472] [CRITICAL] WORKER TIMEOUT (pid:36780)
+[2025-08-04 12:51:47 -0600] [36780] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 133, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/parser.py", line 41, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 259, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 271, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 262, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 36, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 63, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/base.py", line 204, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2025-08-04 12:51:47 -0600] [36780] [INFO] Worker exiting (pid: 36780)
+[2025-08-04 12:51:47 -0600] [37005] [INFO] Booting worker with pid: 37005
+2025/08/04 12:51:49 INFO mlflow.store.db.utils: Creating initial MLflow database tables...
+2025/08/04 12:51:49 INFO mlflow.store.db.utils: Updating database tables
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+[2025-08-04 12:52:19 -0600] [30472] [CRITICAL] WORKER TIMEOUT (pid:36563)
+[2025-08-04 12:52:19 -0600] [36563] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 133, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/parser.py", line 41, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 259, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 271, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 262, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 36, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 63, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/base.py", line 204, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2025-08-04 12:52:19 -0600] [36563] [INFO] Worker exiting (pid: 36563)
+[2025-08-04 12:52:20 -0600] [37127] [INFO] Booting worker with pid: 37127
+[2025-08-04 12:52:51 -0600] [30472] [CRITICAL] WORKER TIMEOUT (pid:37005)
+[2025-08-04 12:52:51 -0600] [37005] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 133, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/parser.py", line 41, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 259, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 271, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 262, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 36, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 63, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/base.py", line 204, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2025-08-04 12:52:51 -0600] [37005] [INFO] Worker exiting (pid: 37005)
+[2025-08-04 12:52:51 -0600] [37232] [INFO] Booting worker with pid: 37232
+2025/08/04 12:52:52 INFO mlflow.store.db.utils: Creating initial MLflow database tables...
+2025/08/04 12:52:52 INFO mlflow.store.db.utils: Updating database tables
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+[2025-08-04 12:53:22 -0600] [30472] [CRITICAL] WORKER TIMEOUT (pid:36897)
+[2025-08-04 12:53:22 -0600] [36897] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 133, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/parser.py", line 41, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 259, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 271, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 262, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 36, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 63, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/base.py", line 204, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2025-08-04 12:53:22 -0600] [36897] [INFO] Worker exiting (pid: 36897)
+[2025-08-04 12:53:22 -0600] [37420] [INFO] Booting worker with pid: 37420
+2025/08/04 12:53:24 INFO mlflow.store.db.utils: Creating initial MLflow database tables...
+2025/08/04 12:53:24 INFO mlflow.store.db.utils: Updating database tables
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+[2025-08-04 12:53:54 -0600] [30472] [CRITICAL] WORKER TIMEOUT (pid:37232)
+[2025-08-04 12:53:54 -0600] [37232] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 133, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/parser.py", line 41, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 259, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 271, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 262, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 36, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 63, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/base.py", line 204, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2025-08-04 12:53:54 -0600] [37232] [INFO] Worker exiting (pid: 37232)
+[2025-08-04 12:53:55 -0600] [37571] [INFO] Booting worker with pid: 37571
+[2025-08-04 12:54:26 -0600] [30472] [CRITICAL] WORKER TIMEOUT (pid:37571)
+[2025-08-04 12:54:26 -0600] [37571] [ERROR] Error handling request /ajax-api/2.0/mlflow/runs/search
+Traceback (most recent call last):
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    self.handle_request(listener, req, client, addr)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 177, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/flask/app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/mlflow/server/handlers.py", line 594, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/mlflow/server/handlers.py", line 635, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/mlflow/server/handlers.py", line 1057, in _search_runs
+    response_message = search_runs_impl(request_message)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/mlflow/server/handlers.py", line 1073, in search_runs_impl
+    run_entities = _get_tracking_store().search_runs(
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/mlflow/server/handlers.py", line 367, in _get_tracking_store
+    _tracking_store = _tracking_store_registry.get_store(store_uri, artifact_root)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/mlflow/tracking/_tracking_service/registry.py", line 45, in get_store
+    return self._get_store_with_resolved_uri(resolved_store_uri, artifact_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/mlflow/tracking/_tracking_service/registry.py", line 56, in _get_store_with_resolved_uri
+    return builder(store_uri=resolved_store_uri, artifact_uri=artifact_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/mlflow/server/handlers.py", line 186, in _get_sqlalchemy_store
+    from mlflow.store.tracking.sqlalchemy_store import SqlAlchemyStore
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/mlflow/store/tracking/sqlalchemy_store.py", line 12, in <module>
+    import sqlalchemy
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/sqlalchemy/__init__.py", line 13, in <module>
+    from .engine import AdaptedConnection as AdaptedConnection
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/sqlalchemy/engine/__init__.py", line 18, in <module>
+    from . import events as events
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/sqlalchemy/engine/events.py", line 19, in <module>
+    from .base import Connection
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 2869, in <module>
+    class TwoPhaseTransaction(RootTransaction):
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 2869, in TwoPhaseTransaction
+    class TwoPhaseTransaction(RootTransaction):
+    
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/base.py", line 204, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2025-08-04 12:54:26 -0600] [37571] [INFO] Worker exiting (pid: 37571)
+[2025-08-04 12:54:27 -0600] [37699] [INFO] Booting worker with pid: 37699
+[2025-08-04 12:55:28 -0600] [30472] [CRITICAL] WORKER TIMEOUT (pid:37420)
+[2025-08-04 12:55:28 -0600] [37420] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 133, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/parser.py", line 41, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 259, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 271, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 262, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 36, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 63, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/base.py", line 204, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2025-08-04 12:55:28 -0600] [37420] [INFO] Worker exiting (pid: 37420)
+[2025-08-04 12:55:28 -0600] [37946] [INFO] Booting worker with pid: 37946
+[2025-08-04 12:55:59 -0600] [30472] [CRITICAL] WORKER TIMEOUT (pid:34128)
+[2025-08-04 12:55:59 -0600] [34128] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 133, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/parser.py", line 41, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 259, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 271, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 262, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 36, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 63, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/base.py", line 204, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2025-08-04 12:55:59 -0600] [34128] [INFO] Worker exiting (pid: 34128)
+[2025-08-04 12:56:00 -0600] [38060] [INFO] Booting worker with pid: 38060
+2025/08/04 12:56:00 INFO mlflow.store.db.utils: Creating initial MLflow database tables...
+2025/08/04 12:56:00 INFO mlflow.store.db.utils: Updating database tables
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+[2025-08-04 12:56:30 -0600] [30472] [CRITICAL] WORKER TIMEOUT (pid:37699)
+[2025-08-04 12:56:30 -0600] [37699] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 133, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/parser.py", line 41, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 259, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 271, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 262, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 36, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 63, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/base.py", line 204, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2025-08-04 12:56:30 -0600] [37699] [INFO] Worker exiting (pid: 37699)
+[2025-08-04 12:56:31 -0600] [38163] [INFO] Booting worker with pid: 38163
+[2025-08-04 12:57:33 -0600] [30472] [CRITICAL] WORKER TIMEOUT (pid:38163)
+[2025-08-04 12:57:33 -0600] [38163] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 133, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/parser.py", line 41, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 259, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 271, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 262, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 36, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 63, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/base.py", line 204, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2025-08-04 12:57:33 -0600] [38163] [INFO] Worker exiting (pid: 38163)
+[2025-08-04 12:57:33 -0600] [38400] [INFO] Booting worker with pid: 38400
+[2025-08-04 12:58:04 -0600] [30472] [CRITICAL] WORKER TIMEOUT (pid:37946)
+[2025-08-04 12:58:04 -0600] [37946] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 133, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/parser.py", line 41, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 259, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 271, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 262, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 36, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 63, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/base.py", line 204, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2025-08-04 12:58:04 -0600] [37946] [INFO] Worker exiting (pid: 37946)
+[2025-08-04 12:58:04 -0600] [38510] [INFO] Booting worker with pid: 38510
+2025/08/04 12:58:05 INFO mlflow.store.db.utils: Creating initial MLflow database tables...
+2025/08/04 12:58:05 INFO mlflow.store.db.utils: Updating database tables
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+[2025-08-04 12:58:35 -0600] [30472] [CRITICAL] WORKER TIMEOUT (pid:37127)
+[2025-08-04 12:58:35 -0600] [37127] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 133, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/parser.py", line 41, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 259, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 271, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 262, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 36, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 63, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/base.py", line 204, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2025-08-04 12:58:35 -0600] [37127] [INFO] Worker exiting (pid: 37127)
+[2025-08-04 12:58:35 -0600] [38620] [INFO] Booting worker with pid: 38620
+2025/08/04 12:58:37 INFO mlflow.store.db.utils: Creating initial MLflow database tables...
+2025/08/04 12:58:37 INFO mlflow.store.db.utils: Updating database tables
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+[2025-08-04 12:59:07 -0600] [30472] [CRITICAL] WORKER TIMEOUT (pid:38620)
+[2025-08-04 12:59:07 -0600] [38620] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 133, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/parser.py", line 41, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 259, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 271, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 262, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 36, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 63, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/base.py", line 204, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2025-08-04 12:59:07 -0600] [38620] [INFO] Worker exiting (pid: 38620)
+[2025-08-04 12:59:08 -0600] [38729] [INFO] Booting worker with pid: 38729
+2025/08/04 13:00:11 INFO mlflow.store.db.utils: Creating initial MLflow database tables...
+2025/08/04 13:00:11 INFO mlflow.store.db.utils: Updating database tables
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+[2025-08-04 13:01:44 -0600] [30472] [CRITICAL] WORKER TIMEOUT (pid:38729)
+[2025-08-04 13:01:44 -0600] [38729] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 133, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/parser.py", line 41, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 259, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 271, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 262, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 36, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 63, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/base.py", line 204, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2025-08-04 13:01:44 -0600] [38729] [INFO] Worker exiting (pid: 38729)
+[2025-08-04 13:01:44 -0600] [39311] [INFO] Booting worker with pid: 39311
+2025/08/04 13:01:45 INFO mlflow.store.db.utils: Creating initial MLflow database tables...
+2025/08/04 13:01:45 INFO mlflow.store.db.utils: Updating database tables
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+[2025-08-04 13:02:15 -0600] [30472] [CRITICAL] WORKER TIMEOUT (pid:38060)
+[2025-08-04 13:02:15 -0600] [38060] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 133, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/parser.py", line 41, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 259, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 271, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 262, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 36, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 63, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/base.py", line 204, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2025-08-04 13:02:15 -0600] [38060] [INFO] Worker exiting (pid: 38060)
+[2025-08-04 13:02:16 -0600] [39445] [INFO] Booting worker with pid: 39445
+2025/08/04 13:02:17 INFO mlflow.store.db.utils: Creating initial MLflow database tables...
+2025/08/04 13:02:17 INFO mlflow.store.db.utils: Updating database tables
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+2025/08/04 13:02:49 INFO mlflow.store.db.utils: Creating initial MLflow database tables...
+2025/08/04 13:02:49 INFO mlflow.store.db.utils: Updating database tables
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+[2025-08-04 13:20:45 -0600] [30472] [CRITICAL] WORKER TIMEOUT (pid:39311)
+[2025-08-04 13:20:45 -0600] [39311] [ERROR] Error handling request /ajax-api/2.0/mlflow/runs/search
+Traceback (most recent call last):
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    self.handle_request(listener, req, client, addr)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 177, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/flask/app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/mlflow/server/handlers.py", line 594, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/mlflow/server/handlers.py", line 635, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/mlflow/server/handlers.py", line 1057, in _search_runs
+    response_message = search_runs_impl(request_message)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/mlflow/server/handlers.py", line 1073, in search_runs_impl
+    run_entities = _get_tracking_store().search_runs(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/mlflow/store/tracking/abstract_store.py", line 576, in search_runs
+    runs, token = self._search_runs(
+                  ^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/mlflow/store/tracking/sqlalchemy_store.py", line 1473, in _search_runs
+    queried_runs = session.execute(stmt).scalars(SqlRun).all()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/sqlalchemy/engine/result.py", line 1774, in all
+    return self._allrows()
+           ^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/sqlalchemy/engine/result.py", line 548, in _allrows
+    rows = self._fetchall_impl()
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/sqlalchemy/engine/result.py", line 1681, in _fetchall_impl
+    return self._real_result._fetchall_impl()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/sqlalchemy/engine/result.py", line 2275, in _fetchall_impl
+    return list(self.iterator)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/sqlalchemy/orm/loading.py", line 246, in chunks
+    post_load.invoke(context, path)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/sqlalchemy/orm/loading.py", line 1560, in invoke
+    loader(
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/sqlalchemy/orm/strategies.py", line 3338, in _load_for_path
+    self._load_via_parent(
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/sqlalchemy/orm/strategies.py", line 3413, in _load_via_parent
+    for k, v in itertools.groupby(
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/sqlalchemy/engine/result.py", line 512, in iterrows
+    for raw_row in self._fetchiter_impl():
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/sqlalchemy/orm/loading.py", line 226, in chunks
+    tuple([proc(row) for proc in process]) for row in fetch
+           ^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/sqlalchemy/orm/loading.py", line 1145, in _instance
+    _populate_full(
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/sqlalchemy/orm/loading.py", line 1341, in _populate_full
+    dict_[key] = getter(row)
+    ~~~~~^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/base.py", line 204, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2025-08-04 13:20:45 -0600] [39311] [INFO] Worker exiting (pid: 39311)
+[2025-08-04 13:20:46 -0600] [44610] [INFO] Booting worker with pid: 44610
+[2025-08-04 13:22:49 -0600] [30472] [CRITICAL] WORKER TIMEOUT (pid:38400)
+[2025-08-04 13:22:49 -0600] [38400] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 133, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/parser.py", line 41, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 259, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 271, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 262, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 36, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 63, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/base.py", line 204, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2025-08-04 13:22:49 -0600] [38400] [INFO] Worker exiting (pid: 38400)
+[2025-08-04 13:22:50 -0600] [30472] [ERROR] Worker (pid:38400) was sent SIGKILL! Perhaps out of memory?
+[2025-08-04 13:22:50 -0600] [45168] [INFO] Booting worker with pid: 45168
+2025/08/04 13:22:50 INFO mlflow.store.db.utils: Creating initial MLflow database tables...
+2025/08/04 13:22:50 INFO mlflow.store.db.utils: Updating database tables
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+2025/08/04 13:23:06 INFO mlflow.store.db.utils: Creating initial MLflow database tables...
+2025/08/04 13:23:06 INFO mlflow.store.db.utils: Updating database tables
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+2025/08/04 13:26:15 INFO mlflow.store.db.utils: Creating initial MLflow database tables...
+2025/08/04 13:26:15 INFO mlflow.store.db.utils: Updating database tables
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+2025/08/04 13:26:15 INFO mlflow.store.db.utils: Creating initial MLflow database tables...
+2025/08/04 13:26:15 INFO mlflow.store.db.utils: Updating database tables
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+2025/08/04 13:26:48 INFO mlflow.store.db.utils: Creating initial MLflow database tables...
+2025/08/04 13:26:48 INFO mlflow.store.db.utils: Updating database tables
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+2025/08/04 13:26:48 INFO mlflow.store.db.utils: Creating initial MLflow database tables...
+2025/08/04 13:26:48 INFO mlflow.store.db.utils: Updating database tables
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+[2025-08-04 13:29:02 -0600] [30472] [CRITICAL] WORKER TIMEOUT (pid:39445)
+ERROR [sqlalchemy.pool.impl.QueuePool] Error closing cursor
+Traceback (most recent call last):
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/sqlalchemy/engine/result.py", line 2275, in _fetchall_impl
+    return list(self.iterator)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/sqlalchemy/orm/loading.py", line 219, in chunks
+    fetch = cursor._raw_all_rows()
+            ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/sqlalchemy/engine/result.py", line 540, in _raw_all_rows
+    rows = self._fetchall_impl()
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/sqlalchemy/engine/cursor.py", line 2135, in _fetchall_impl
+    return self.cursor_strategy.fetchall(self, self.cursor)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/sqlalchemy/engine/cursor.py", line 1141, in fetchall
+    self.handle_exception(result, dbapi_cursor, e)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/sqlalchemy/engine/cursor.py", line 1082, in handle_exception
+    result.connection._handle_dbapi_exception(
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 2352, in _handle_dbapi_exception
+    raise exc_info[1].with_traceback(exc_info[2])
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/sqlalchemy/engine/cursor.py", line 1137, in fetchall
+    rows = dbapi_cursor.fetchall()
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/base.py", line 204, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 2209, in _safe_close_cursor
+    cursor.close()
+sqlite3.ProgrammingError: Cannot operate on a closed database.
+[2025-08-04 13:29:02 -0600] [39445] [ERROR] Error handling request /ajax-api/2.0/mlflow/runs/search
+Traceback (most recent call last):
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    self.handle_request(listener, req, client, addr)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 177, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/flask/app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/mlflow/server/handlers.py", line 594, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/mlflow/server/handlers.py", line 635, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/mlflow/server/handlers.py", line 1057, in _search_runs
+    response_message = search_runs_impl(request_message)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/mlflow/server/handlers.py", line 1073, in search_runs_impl
+    run_entities = _get_tracking_store().search_runs(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/mlflow/store/tracking/abstract_store.py", line 576, in search_runs
+    runs, token = self._search_runs(
+                  ^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/mlflow/store/tracking/sqlalchemy_store.py", line 1473, in _search_runs
+    queried_runs = session.execute(stmt).scalars(SqlRun).all()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/sqlalchemy/engine/result.py", line 1774, in all
+    return self._allrows()
+           ^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/sqlalchemy/engine/result.py", line 548, in _allrows
+    rows = self._fetchall_impl()
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/sqlalchemy/engine/result.py", line 1681, in _fetchall_impl
+    return self._real_result._fetchall_impl()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/sqlalchemy/engine/result.py", line 2275, in _fetchall_impl
+    return list(self.iterator)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/sqlalchemy/orm/loading.py", line 219, in chunks
+    fetch = cursor._raw_all_rows()
+            ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/sqlalchemy/engine/result.py", line 540, in _raw_all_rows
+    rows = self._fetchall_impl()
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/sqlalchemy/engine/cursor.py", line 2135, in _fetchall_impl
+    return self.cursor_strategy.fetchall(self, self.cursor)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/sqlalchemy/engine/cursor.py", line 1141, in fetchall
+    self.handle_exception(result, dbapi_cursor, e)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/sqlalchemy/engine/cursor.py", line 1082, in handle_exception
+    result.connection._handle_dbapi_exception(
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 2352, in _handle_dbapi_exception
+    raise exc_info[1].with_traceback(exc_info[2])
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/sqlalchemy/engine/cursor.py", line 1137, in fetchall
+    rows = dbapi_cursor.fetchall()
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/base.py", line 204, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2025-08-04 13:29:02 -0600] [39445] [INFO] Worker exiting (pid: 39445)
+[2025-08-04 13:29:03 -0600] [47291] [INFO] Booting worker with pid: 47291
+2025/08/04 13:30:36 INFO mlflow.store.db.utils: Creating initial MLflow database tables...
+2025/08/04 13:30:36 INFO mlflow.store.db.utils: Updating database tables
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+[2025-08-04 13:40:27 -0600] [30472] [CRITICAL] WORKER TIMEOUT (pid:47291)
+[2025-08-04 13:40:27 -0600] [47291] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 133, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/parser.py", line 41, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 259, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 271, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 262, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 36, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 63, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/base.py", line 204, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2025-08-04 13:40:27 -0600] [47291] [INFO] Worker exiting (pid: 47291)
+[2025-08-04 13:40:28 -0600] [49492] [INFO] Booting worker with pid: 49492
+[2025-08-04 13:40:58 -0600] [30472] [CRITICAL] WORKER TIMEOUT (pid:45168)
+[2025-08-04 13:40:58 -0600] [45168] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 133, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/parser.py", line 41, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 259, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 271, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 262, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 36, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 63, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/base.py", line 204, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2025-08-04 13:40:58 -0600] [45168] [INFO] Worker exiting (pid: 45168)
+[2025-08-04 13:40:58 -0600] [49609] [INFO] Booting worker with pid: 49609
+[2025-08-04 13:41:30 -0600] [30472] [CRITICAL] WORKER TIMEOUT (pid:44610)
+[2025-08-04 13:41:30 -0600] [44610] [ERROR] Error handling request /ajax-api/2.0/mlflow/runs/search
+Traceback (most recent call last):
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    self.handle_request(listener, req, client, addr)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 177, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/flask/app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/mlflow/server/handlers.py", line 594, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/mlflow/server/handlers.py", line 635, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/mlflow/server/handlers.py", line 1057, in _search_runs
+    response_message = search_runs_impl(request_message)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/mlflow/server/handlers.py", line 1073, in search_runs_impl
+    run_entities = _get_tracking_store().search_runs(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/mlflow/store/tracking/abstract_store.py", line 576, in search_runs
+    runs, token = self._search_runs(
+                  ^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/mlflow/store/tracking/sqlalchemy_store.py", line 1473, in _search_runs
+    queried_runs = session.execute(stmt).scalars(SqlRun).all()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/sqlalchemy/engine/result.py", line 1774, in all
+    return self._allrows()
+           ^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/sqlalchemy/engine/result.py", line 548, in _allrows
+    rows = self._fetchall_impl()
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/sqlalchemy/engine/result.py", line 1681, in _fetchall_impl
+    return self._real_result._fetchall_impl()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/sqlalchemy/engine/result.py", line 2275, in _fetchall_impl
+    return list(self.iterator)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/sqlalchemy/orm/loading.py", line 246, in chunks
+    post_load.invoke(context, path)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/sqlalchemy/orm/loading.py", line 1560, in invoke
+    loader(
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/sqlalchemy/orm/strategies.py", line 3338, in _load_for_path
+    self._load_via_parent(
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/sqlalchemy/orm/strategies.py", line 3421, in _load_via_parent
+    data[k].extend(vv[1] for vv in v)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/sqlalchemy/orm/strategies.py", line 3421, in <genexpr>
+    data[k].extend(vv[1] for vv in v)
+                  ^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/sqlalchemy/engine/result.py", line 516, in iterrows
+    hashed = strategy(obj) if strategy else obj
+             ^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/sqlalchemy/engine/row.py", line 176, in _filter_on_values
+    return Row(self._parent, processor, self._key_to_index, self._data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/base.py", line 204, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2025-08-04 13:41:30 -0600] [44610] [INFO] Worker exiting (pid: 44610)
+[2025-08-04 13:41:31 -0600] [30472] [ERROR] Worker (pid:44610) was sent SIGKILL! Perhaps out of memory?
+[2025-08-04 13:41:31 -0600] [49750] [INFO] Booting worker with pid: 49750
+2025/08/04 13:41:54 INFO mlflow.store.db.utils: Creating initial MLflow database tables...
+2025/08/04 13:41:54 INFO mlflow.store.db.utils: Creating initial MLflow database tables...
+2025/08/04 13:41:54 INFO mlflow.store.db.utils: Updating database tables
+2025/08/04 13:41:54 INFO mlflow.store.db.utils: Updating database tables
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+2025/08/04 13:41:55 INFO mlflow.store.db.utils: Creating initial MLflow database tables...
+2025/08/04 13:41:55 INFO mlflow.store.db.utils: Updating database tables
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+[2025-08-04 13:42:24 -0600] [30472] [CRITICAL] WORKER TIMEOUT (pid:38510)
+[2025-08-04 13:42:24 -0600] [38510] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 133, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/parser.py", line 41, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 259, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 271, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 262, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 36, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 63, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/base.py", line 204, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2025-08-04 13:42:24 -0600] [38510] [INFO] Worker exiting (pid: 38510)
+[2025-08-04 13:42:25 -0600] [49932] [INFO] Booting worker with pid: 49932
+[2025-08-04 13:42:56 -0600] [30472] [CRITICAL] WORKER TIMEOUT (pid:49750)
+[2025-08-04 13:42:56 -0600] [49750] [ERROR] Error handling request /ajax-api/2.0/mlflow/runs/search
+Traceback (most recent call last):
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    self.handle_request(listener, req, client, addr)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 177, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/flask/app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/mlflow/server/handlers.py", line 594, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/mlflow/server/handlers.py", line 635, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/mlflow/server/handlers.py", line 1059, in _search_runs
+    response.set_data(message_to_json(response_message))
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/mlflow/utils/proto_json_utils.py", line 117, in message_to_json
+    MessageToJson(message, preserving_proto_field_name=True)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/google/protobuf/json_format.py", line 122, in MessageToJson
+    return printer.ToJsonString(message, indent, sort_keys, ensure_ascii)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/google/protobuf/json_format.py", line 196, in ToJsonString
+    js = self._MessageToJsonObject(message)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/google/protobuf/json_format.py", line 210, in _MessageToJsonObject
+    return self._RegularMessageToJsonObject(message, js)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/google/protobuf/json_format.py", line 238, in _RegularMessageToJsonObject
+    js[name] = [self._FieldToJsonObject(field, k) for k in value]
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/google/protobuf/json_format.py", line 284, in _FieldToJsonObject
+    return self._MessageToJsonObject(value)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/google/protobuf/json_format.py", line 210, in _MessageToJsonObject
+    return self._RegularMessageToJsonObject(message, js)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/google/protobuf/json_format.py", line 243, in _RegularMessageToJsonObject
+    js[name] = self._FieldToJsonObject(field, value)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/google/protobuf/json_format.py", line 284, in _FieldToJsonObject
+    return self._MessageToJsonObject(value)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/google/protobuf/json_format.py", line 210, in _MessageToJsonObject
+    return self._RegularMessageToJsonObject(message, js)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/google/protobuf/json_format.py", line 238, in _RegularMessageToJsonObject
+    js[name] = [self._FieldToJsonObject(field, k) for k in value]
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/google/protobuf/json_format.py", line 284, in _FieldToJsonObject
+    return self._MessageToJsonObject(value)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/google/protobuf/json_format.py", line 210, in _MessageToJsonObject
+    return self._RegularMessageToJsonObject(message, js)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/google/protobuf/json_format.py", line 243, in _RegularMessageToJsonObject
+    js[name] = self._FieldToJsonObject(field, value)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/google/protobuf/json_format.py", line 281, in _FieldToJsonObject
+    def _FieldToJsonObject(self, field, value):
+    
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/base.py", line 204, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2025-08-04 13:42:56 -0600] [49750] [INFO] Worker exiting (pid: 49750)
+[2025-08-04 13:42:56 -0600] [50043] [INFO] Booting worker with pid: 50043
+2025/08/04 13:43:04 INFO mlflow.store.db.utils: Creating initial MLflow database tables...
+2025/08/04 13:43:04 INFO mlflow.store.db.utils: Updating database tables
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+2025/08/04 13:43:04 INFO mlflow.store.db.utils: Creating initial MLflow database tables...
+2025/08/04 13:43:04 INFO mlflow.store.db.utils: Updating database tables
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+[2025-08-04 13:45:38 -0600] [30472] [CRITICAL] WORKER TIMEOUT (pid:49609)
+[2025-08-04 13:45:38 -0600] [49609] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 133, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/parser.py", line 41, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 259, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 271, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 262, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 36, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 63, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/base.py", line 204, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2025-08-04 13:45:38 -0600] [49609] [INFO] Worker exiting (pid: 49609)
+[2025-08-04 13:45:38 -0600] [50555] [INFO] Booting worker with pid: 50555
+[2025-08-04 13:46:09 -0600] [30472] [CRITICAL] WORKER TIMEOUT (pid:49932)
+[2025-08-04 13:46:09 -0600] [49932] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 133, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/parser.py", line 41, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 259, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 271, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 262, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 36, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 63, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/base.py", line 204, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2025-08-04 13:46:09 -0600] [49932] [INFO] Worker exiting (pid: 49932)
+[2025-08-04 13:46:10 -0600] [50682] [INFO] Booting worker with pid: 50682
+2025/08/04 13:46:10 INFO mlflow.store.db.utils: Creating initial MLflow database tables...
+2025/08/04 13:46:10 INFO mlflow.store.db.utils: Updating database tables
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+[2025-08-04 13:46:40 -0600] [30472] [CRITICAL] WORKER TIMEOUT (pid:49492)
+[2025-08-04 13:46:40 -0600] [49492] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 133, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/parser.py", line 41, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 259, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 271, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 262, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 36, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 63, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/base.py", line 204, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2025-08-04 13:46:40 -0600] [49492] [INFO] Worker exiting (pid: 49492)
+[2025-08-04 13:46:41 -0600] [50792] [INFO] Booting worker with pid: 50792
+[2025-08-04 13:47:12 -0600] [30472] [CRITICAL] WORKER TIMEOUT (pid:50043)
+[2025-08-04 13:47:12 -0600] [50043] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 133, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/parser.py", line 41, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 259, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 271, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 262, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 36, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 63, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/base.py", line 204, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2025-08-04 13:47:12 -0600] [50043] [INFO] Worker exiting (pid: 50043)
+[2025-08-04 13:47:12 -0600] [50896] [INFO] Booting worker with pid: 50896
+2025/08/04 13:47:13 INFO mlflow.store.db.utils: Creating initial MLflow database tables...
+2025/08/04 13:47:13 INFO mlflow.store.db.utils: Updating database tables
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+[2025-08-04 13:47:43 -0600] [30472] [CRITICAL] WORKER TIMEOUT (pid:50555)
+[2025-08-04 13:47:43 -0600] [50555] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 133, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/parser.py", line 41, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 259, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 271, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 262, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 36, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 63, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/base.py", line 204, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2025-08-04 13:47:43 -0600] [50555] [INFO] Worker exiting (pid: 50555)
+[2025-08-04 13:47:43 -0600] [50994] [INFO] Booting worker with pid: 50994
+2025/08/04 13:47:45 INFO mlflow.store.db.utils: Creating initial MLflow database tables...
+2025/08/04 13:47:45 INFO mlflow.store.db.utils: Updating database tables
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+[2025-08-04 13:48:15 -0600] [30472] [CRITICAL] WORKER TIMEOUT (pid:50896)
+[2025-08-04 13:48:15 -0600] [50896] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 133, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/parser.py", line 41, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 259, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 271, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 262, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 36, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 63, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/base.py", line 204, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2025-08-04 13:48:15 -0600] [50896] [INFO] Worker exiting (pid: 50896)
+[2025-08-04 13:48:16 -0600] [51099] [INFO] Booting worker with pid: 51099
+2025/08/04 13:48:48 INFO mlflow.store.db.utils: Creating initial MLflow database tables...
+2025/08/04 13:48:48 INFO mlflow.store.db.utils: Updating database tables
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+[2025-08-04 13:49:17 -0600] [30472] [CRITICAL] WORKER TIMEOUT (pid:50792)
+[2025-08-04 13:49:17 -0600] [50792] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 133, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/parser.py", line 41, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 259, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 271, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 262, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 36, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 63, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/base.py", line 204, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2025-08-04 13:49:17 -0600] [50792] [INFO] Worker exiting (pid: 50792)
+[2025-08-04 13:49:18 -0600] [51331] [INFO] Booting worker with pid: 51331
+[2025-08-04 13:49:50 -0600] [30472] [CRITICAL] WORKER TIMEOUT (pid:51331)
+[2025-08-04 13:49:50 -0600] [51331] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 133, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/parser.py", line 41, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 259, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 271, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 262, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 36, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 63, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/base.py", line 204, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2025-08-04 13:49:50 -0600] [51331] [INFO] Worker exiting (pid: 51331)
+[2025-08-04 13:49:50 -0600] [51470] [INFO] Booting worker with pid: 51470
+[2025-08-04 13:50:21 -0600] [30472] [CRITICAL] WORKER TIMEOUT (pid:50994)
+[2025-08-04 13:50:21 -0600] [50994] [ERROR] Error handling request /ajax-api/2.0/mlflow/runs/search
+Traceback (most recent call last):
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    self.handle_request(listener, req, client, addr)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 177, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/flask/app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/mlflow/server/handlers.py", line 594, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/mlflow/server/handlers.py", line 635, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/mlflow/server/handlers.py", line 1059, in _search_runs
+    response.set_data(message_to_json(response_message))
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/mlflow/utils/proto_json_utils.py", line 117, in message_to_json
+    MessageToJson(message, preserving_proto_field_name=True)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/google/protobuf/json_format.py", line 122, in MessageToJson
+    return printer.ToJsonString(message, indent, sort_keys, ensure_ascii)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/google/protobuf/json_format.py", line 197, in ToJsonString
+    return json.dumps(
+           ^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/encoder.py", line 202, in encode
+    chunks = list(chunks)
+             ^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/encoder.py", line 432, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/usr/lib/python3.12/json/encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "/usr/lib/python3.12/json/encoder.py", line 326, in _iterencode_list
+    yield from chunks
+  File "/usr/lib/python3.12/json/encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "/usr/lib/python3.12/json/encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "/usr/lib/python3.12/json/encoder.py", line 326, in _iterencode_list
+    yield from chunks
+  File "/usr/lib/python3.12/json/encoder.py", line 348, in _iterencode_dict
+    yield newline_indent
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/base.py", line 204, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2025-08-04 13:50:21 -0600] [50994] [INFO] Worker exiting (pid: 50994)
+[2025-08-04 13:50:22 -0600] [51585] [INFO] Booting worker with pid: 51585
+[2025-08-04 13:51:23 -0600] [30472] [CRITICAL] WORKER TIMEOUT (pid:50682)
+[2025-08-04 13:51:23 -0600] [50682] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 133, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/parser.py", line 41, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 259, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 271, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 262, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 36, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 63, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/base.py", line 204, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2025-08-04 13:51:23 -0600] [50682] [INFO] Worker exiting (pid: 50682)
+[2025-08-04 13:51:23 -0600] [51823] [INFO] Booting worker with pid: 51823
+[2025-08-04 13:51:54 -0600] [30472] [CRITICAL] WORKER TIMEOUT (pid:51470)
+[2025-08-04 13:51:54 -0600] [51470] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 133, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/parser.py", line 41, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 259, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 271, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/message.py", line 262, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 36, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 63, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/maxkaizo/.local/share/virtualenvs/milk_price_prediction-mju8LJeN/lib/python3.12/site-packages/gunicorn/workers/base.py", line 204, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2025-08-04 13:51:54 -0600] [51470] [INFO] Worker exiting (pid: 51470)
+[2025-08-04 13:51:54 -0600] [51925] [INFO] Booting worker with pid: 51925
+2025/08/04 13:51:55 INFO mlflow.store.db.utils: Creating initial MLflow database tables...
+2025/08/04 13:51:55 INFO mlflow.store.db.utils: Updating database tables
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.

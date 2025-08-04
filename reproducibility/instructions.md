@@ -20,74 +20,44 @@ To run this project end-to-end, ensure you have the following set up:
     -   The project uses hardcoded bucket names to enforce a clear separation between the data lake (raw and processed data) and MLflow's model artifacts.
 
     If these buckets do not exist, you can create them using the following AWS CLI commands:
-    ```bash
-    # Create the datalake bucket
-    aws s3api create-bucket --bucket mlops-milk-datalake --region us-east-1
-
-    # Create the MLflow models bucket
-    aws s3api create-bucket --bucket mlflow-models-milk-price-dev --region us-east-1
-    ```
-
----
-
-## 🚀 Quick Start (Automated)
-
 ```bash
-# Complete setup and start
-make full-setup
-make info
+# Create the datalake bucket
+aws s3api create-bucket --bucket mlops-milk-datalake --region us-east-1
+
+# Create the MLflow models bucket
+aws s3api create-bucket --bucket mlflow-models-milk-price-dev --region us-east-1
 ```
-
----
-
-## 📖 Step-by-Step Guide
-
-### 1. Initial Environment Setup
-
-#### 🤖 **With Makefile:**
+-   **Cloned Repository:** to have all files and prepared structure. 
 ```bash
-make setup
-```
+# clone repo
+git clone git@github.com:Maxkaizo/milk_price_prediction.git
 
-#### 🔧 **Direct Commands:**
+# switch to root folder
+cd milk_price_prediction
+```
+-   **Environment and Dependencies:** Documented in Pipfile, you can also intall and enable them with this commands:
 ```bash
 # Install dependencies
 pipenv install
 
 # Activate virtual environment
 pipenv shell
-
-# Configure Prefect
-prefect config set PREFECT_API_URL=http://127.0.0.1:4200/api
-
-# Create logs directory
-mkdir -p logs
 ```
 
-**✅ Validation:**
+**🌐 Access URLs:**
+- MLflow UI: http://localhost:5000
+- Prefect UI: http://localhost:4200
+
+
+### Start MLflow Server
+
+**With Makefile:**
 ```bash
-# Check Python environment
-which python
-pip list | grep -E "(prefect|mlflow|pandas)"
-
-# Check Prefect configuration
-prefect config view
-```
-
----
-
-### 2. Start MLflow Server
-
-#### 🤖 **With Makefile:**
-```bash
-# Background mode (recommended)
+# Background mode
 make start-mlflow
-
-# Foreground mode (for debugging)
-make start-mlflow-fg
 ```
 
-#### 🔧 **Direct Commands:**
+**Direct Commands:**
 ```bash
 # Background mode
 cd mlflow
@@ -95,7 +65,8 @@ nohup mlflow server \
   --backend-store-uri=sqlite:///mlflow.db \
   --default-artifact-root=s3://mlflow-models-milk-price-dev \
   --host 0.0.0.0 --port 5000 \
-  > ../logs/mlflow.log 2>&1 & echo $! > ../logs/mlflow.pid
+  > ../logs/mlflow.log 2>&1 &
+ps -ef | grep mlflow  | head -n 2 | tail -n 1 | cut -d" " -f 4 > ../logs/mlflow.pid
 
 # Foreground mode (for debugging)
 cd mlflow
@@ -116,6 +87,161 @@ tail -f logs/mlflow.log
 # Check process
 ps aux | grep mlflow
 ```
+### Stop MLflow Server
+
+**With Makefile:**
+```bash
+# Background mode
+make stop-mlflow
+```
+
+**With Direct Commands:**
+```bash
+# using logged pid
+kill $(cat logs/mlflow.pid)
+
+# or directly
+kill $(ps -ef | grep mlflow  | head -n 2 | tail -n 1 | cut -d" " -f 4)
+```
+
+### Start Prefect Server
+
+**With Makefile:**
+```bash
+# Background mode
+make start-prefect
+```
+
+**Direct Commands:**
+```bash
+# Background mode
+prefect server start --background
+```
+
+**✅ Validation:**
+```bash
+# Check if Prefect is running
+curl -s http://localhost:4200/api/health || echo "Prefect not responding"
+```
+
+### Stop Prefect Server
+
+**With Makefile:**
+```bash
+# Background mode
+make stop-prefect
+```
+
+**With Direct Commands:**
+```bash
+# directly
+prefect server stop
+```
+
+### Deploy and Run  Prefect flows
+
+- `master_daily_flow.py` is the main flow to check for new data, run a trining process, select and promote the best resulting model
+- It's scheduled to run on a daily basis at 1 pm 
+- It can also be launched mannualy
+- If there's no new file, a confirmation message is received via Telegram
+- IF there's a new file, all the flow runs and it sends confirmations of each step via Telegram
+
+```bash
+# deploy the flow
+python orchestration/flows/master_daily_flow.py &
+
+# To manualy launch a run you can also do:
+prefect deployment run 'daily-mlops-pipeline/daily-milk-predictor'
+```
+- For testing purposes we can force the proces by using a past date and deleting files in the datalake (local backup and s3 bucket), for example
+
+```bash
+# delete file on s3
+aws s3 rm s3://mlops-milk-datalake/daily/2025/08/2025-08-01-data.parquet
+
+# delete files locally
+rm data/datalake/daily/2025/08/2025-08-01-data.parquet
+
+# Force the run using custom date
+prefect deployment run 'daily-mlops-pipeline/daily-milk-predictor' \
+  --param execution_date="2025-08-01"
+```
+
+
+
+
+
+### Launch prefect runs manually from deployments
+```bash
+
+
+```
+
+
+
+
+
+
+
+```bash
+# comment
+command XXX
+
+``````bash
+# comment
+command XXX
+
+``````bash
+# comment
+command XXX
+
+```
+
+
+
+
+
+
+
+
+
+
+```bash
+# comment
+command XXX
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---
+De aqui hacia arriba todo esta checado y validado
+---
+
+
 
 ---
 
@@ -183,9 +309,6 @@ fi
 netstat -tlnp | grep -E ":(5000|4200)"
 ```
 
-**🌐 Access URLs:**
-- MLflow UI: http://localhost:5000
-- Prefect UI: http://localhost:4200
 
 ---
 

@@ -89,6 +89,21 @@ This layer performs the crucial one-time "bootstrapping" of our data lake. Since
 
 This is where our models are born and refined. The process begins by fetching the latest prepared data from the S3 data lake. We employ powerful libraries like **scikit-learn** and **XGBoost** to build our predictive models. To ensure peak performance, we automate the search for the best model configuration using **Hyperopt** for hyperparameter tuning. The entire journey, from data ingestion to model evaluation, is orchestrated as a seamless, repeatable pipeline by **Prefect**. Crucially, every experiment's parameters and metrics are logged with **MLflow**, which also serves as our Model Registry to version and store the final model candidates. To maintain code quality, we use **Black** for automated code formatting.
 
+**Training Flow Breakdown**
+The training pipeline, orchestrated by Prefect, follows these sequential steps:
+
+1. Load Data: The flow starts by fetching the latest clean and prepared data from the AWS S3 data lake.
+
+2. Train Models: Two separate models, a Random Forest (scikit-learn) and an XGBoost model, are trained on this data. This allows us to compare their performance.
+
+3. Optimize Hyperparameters: For each model type, Hyperopt is used to run multiple trials and find the optimal set of hyperparameters, maximizing a target metric like accuracy or minimizing error.
+
+4. Log Experiments to MLflow: Every training run, including all its parameters, metrics, and model artifacts, is logged as an experiment in MLflow. This creates a complete and auditable record of our work.
+
+5. Evaluate and Select Best Model: The pipeline compares the performance of the best Random Forest model against the best XGBoost model.
+
+6. Register Winning Model: The model with the superior performance is formally registered in the MLflow Model Registry, versioned, and tagged as a candidate for production.
+
 **Tool Summary:**
 
 | Tool | Role in this Layer |
