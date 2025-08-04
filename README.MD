@@ -6,17 +6,28 @@
 </p>
 
 <p align="center">
+  <!-- Development & ML -->
   <img src="https://img.shields.io/badge/language-Python-3776AB" />
-  <img src="https://img.shields.io/badge/source%20control-GitHub-181717" />
-  <img src="https://img.shields.io/badge/CI/CD-GitHub%20Actions-2088FF" />
-  <img src="https://img.shields.io/badge/data%20versioning-DVC-4360F9" />
-  <img src="https://img.shields.io/badge/monitoring-Evidently%20AI-8A2BE2" />
+  <img src="https://img.shields.io/badge/data-Pandas-150458" />
+  <img src="https://img.shields.io/badge/ML-Scikit--learn-F7931E" />
+  <img src="https://img.shields.io/badge/ML-XGBoost-0066B2" />
+  <img src="https://img.shields.io/badge/hyperparameter%20tuning-Hyperopt-E95B2A" />
+  <img src="https://img.shields.io/badge/code%20quality-Black-000000" />
+  
+  <!-- Orchestration & Monitoring -->
   <img src="https://img.shields.io/badge/orchestration-Prefect-0052FF" />
-  <img src="https://img.shields.io/badge/api-FastAPI-009688" />
+  <img src="https://img.shields.io/badge/experiment%20tracking-MLflow-00A6E1" />
+  <img src="https://img.shields.io/badge/monitoring-Evidently%20AI-8A2BE2" />
+  <img src="https://img.shields.io/badge/notifications-Telegram-2CA5E0" />
+
+  <!-- Cloud & Deployment -->
+  <img src="https://img.shields.io/badge/cloud-AWS-232F3E" />
+  <img src="https://img.shields.io/badge/IaC-Terraform-7B42BC" />
   <img src="https://img.shields.io/badge/containers-Docker-2496ED" />
-  <img src="https://img.shields.io/badge/automation-Makefile-FF8C00" />
-  <img src="https://img.shields.io/badge/data%20source-SNIIM-0072BC" />
+  <img src="https://img.shields.io/badge/api-Flask%20%26%20Gunicorn-000000" />
+  <img src="https://img.shields.io/badge/CI/CD-GitHub%20Actions-2088FF" />
 </p>
+
 
 ---
 
@@ -175,3 +186,7 @@ The project is organized into a modular structure where each directory has a cle
 *   **mlflow**: Configuration files for running a local MLflow tracking server, including the SQLite database (`mlflow.db`) that stores experiment metadata.
 
 *   **Pipfile / Pipfile.lock**: These files define the Python dependencies of the project, managed using `pipenv` to ensure reproducible environments.
+
+### Replicabilidad
+### Walkthroug
+## Cumplimiento de la rúbrica
