@@ -12,7 +12,7 @@ def daily_prediction_flow():
     """
     fecha = datetime.today().date()
     notify_telegram.submit(f"📈 Starting daily prediction for {fecha}")
-    
+
     try:
         s3_path = generate_daily_predictions()
         notify_telegram.submit(f"✅ Daily prediction uploaded to: {s3_path}")

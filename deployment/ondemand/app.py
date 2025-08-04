@@ -6,8 +6,7 @@ import boto3
 # --- Load model metadata directly from S3 ---
 s3 = boto3.client("s3")
 response = s3.get_object(
-    Bucket="mlflow-models-milk-price-dev",
-    Key="promoted/daily_model.json"
+    Bucket="mlflow-models-milk-price-dev", Key="promoted/daily_model.json"
 )
 meta = json.load(response["Body"])
 
@@ -17,6 +16,7 @@ model = mlflow.pyfunc.load_model(model_s3_path)
 
 # --- Initialize Flask app ---
 app = Flask(__name__)
+
 
 @app.route("/predict", methods=["POST"])
 def predict():
@@ -32,9 +32,11 @@ def predict():
     except Exception as e:
         return jsonify({"error": str(e)}), 400
 
+
 @app.route("/", methods=["GET"])
 def health():
     return "App is running", 200
+
 
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0", port=9696)

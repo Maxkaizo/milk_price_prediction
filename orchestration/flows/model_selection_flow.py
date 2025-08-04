@@ -6,6 +6,7 @@ from training.train_random_forest_model import train_random_forest_model
 from training.train_xgboost_model import train_xgboost_model
 import mlflow
 
+
 @flow(name="train_and_select_model")
 def train_and_select_model_flow():
     notify_telegram.send("🚀 Starting model training and selection pipeline...")
@@ -32,13 +33,16 @@ def train_and_select_model_flow():
             name=best_model_name,
             version=model_version,
             stage="Staging",
-            archive_existing_versions=True
+            archive_existing_versions=True,
         )
         notify_telegram.send(
             f"📌 Promoted model '{best_model_name}' version {model_version} to 'Staging' in MLflow."
         )
     else:
-        notify_telegram.send(f"⚠️ No version found to promote for model '{best_model_name}'")
+        notify_telegram.send(
+            f"⚠️ No version found to promote for model '{best_model_name}'"
+        )
+
 
 if __name__ == "__main__":
     train_and_select_model_flow()

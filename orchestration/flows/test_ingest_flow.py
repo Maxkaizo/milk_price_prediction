@@ -4,10 +4,11 @@ from orchestration.tasks.extract_and_ingest_today import extract_and_ingest_toda
 from orchestration.tasks.monitor_data_drift_from_s3 import monitor_data_drift_from_s3
 from orchestration.tasks.notify_telegram import notify_telegram
 
+
 @flow(name="check-and-download-daily-leche")
 def main():
     should_run = check_file_availability()
-    
+
     if should_run:
         s3_path = extract_and_ingest_today()
         print(f"✅ File ingested and uploaded to: {s3_path}")
@@ -26,8 +27,10 @@ def main():
         if data_drift_detected:
             notify_telegram.submit("🚨 <b>Data Drift detected</b>")
         else:
-            notify_telegram.submit("✅ <b>Data drift evaluated, and no issues found</b>")
-        
+            notify_telegram.submit(
+                "✅ <b>Data drift evaluated, and no issues found</b>"
+            )
+
         print("Data drift evaluated...")
 
     else:

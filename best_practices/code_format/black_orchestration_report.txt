@@ -1,0 +1,21 @@
+reformatted /home/maxkaizo/milk_price_prediction/orchestration/flows/daily_predictions_flow.py
+reformatted /home/maxkaizo/milk_price_prediction/orchestration/flows/model_selection_flow.py
+reformatted /home/maxkaizo/milk_price_prediction/orchestration/flows/test_full_data_creation.py
+reformatted /home/maxkaizo/milk_price_prediction/orchestration/flows/main_flow.py
+reformatted /home/maxkaizo/milk_price_prediction/orchestration/flows/test_train_pipeline.py
+reformatted /home/maxkaizo/milk_price_prediction/orchestration/flows/test_ingest_flow.py
+reformatted /home/maxkaizo/milk_price_prediction/orchestration/flows/master_daily_flow.py
+reformatted /home/maxkaizo/milk_price_prediction/orchestration/tasks/check_file_availability.py
+reformatted /home/maxkaizo/milk_price_prediction/orchestration/tasks/load_data.py
+reformatted /home/maxkaizo/milk_price_prediction/orchestration/tasks/generate_daily_predictions.py
+reformatted /home/maxkaizo/milk_price_prediction/orchestration/tasks/monitor_model_drift.py
+reformatted /home/maxkaizo/milk_price_prediction/orchestration/tasks/notify_telegram.py
+reformatted /home/maxkaizo/milk_price_prediction/orchestration/tasks/monitor_data_drift_from_s3.py
+reformatted /home/maxkaizo/milk_price_prediction/orchestration/tasks/extract_and_ingest_today.py
+reformatted /home/maxkaizo/milk_price_prediction/orchestration/tasks/prepare_full_dataset_s3.py
+reformatted /home/maxkaizo/milk_price_prediction/orchestration/tasks/train_model.py
+reformatted /home/maxkaizo/milk_price_prediction/orchestration/tasks/train_random_forest_model.py
+reformatted /home/maxkaizo/milk_price_prediction/orchestration/tasks/train_xgboost_model.py
+
+All done! ✨ 🍰 ✨
+18 files reformatted, 4 files left unchanged.

@@ -10,8 +10,16 @@ import mlflow
 import mlflow.sklearn
 from datetime import datetime
 
+
 @task
-def train_model(X_train_dicts, y_train, X_val_dicts, y_val, model_name="milk-price-predictor", max_evals=25):
+def train_model(
+    X_train_dicts,
+    y_train,
+    X_val_dicts,
+    y_val,
+    model_name="milk-price-predictor",
+    max_evals=25,
+):
     """
     Performs hyperparameter tuning using Hyperopt, trains final model, logs to MLflow, and registers the model.
     """
@@ -44,18 +52,19 @@ def train_model(X_train_dicts, y_train, X_val_dicts, y_val, model_name="milk-pri
                 subsample=params["subsample"],
                 colsample_bytree=params["colsample_bytree"],
                 random_state=42,
-                n_jobs=-1
+                n_jobs=-1,
             )
 
-            pipeline = Pipeline([
-                ("vectorizer", DictVectorizer()),
-                ("regressor", model)
-            ])
+            pipeline = Pipeline(
+                [("vectorizer", DictVectorizer()), ("regressor", model)]
+            )
 
             score = cross_val_score(
-                pipeline, X_train_dicts, y_train,
+                pipeline,
+                X_train_dicts,
+                y_train,
                 scoring="neg_root_mean_squared_error",
-                cv=3
+                cv=3,
             )
             rmse = -score.mean()
             mlflow.log_metric("rmse", rmse)
@@ -82,13 +91,12 @@ def train_model(X_train_dicts, y_train, X_val_dicts, y_val, model_name="milk-pri
             subsample=best["subsample"],
             colsample_bytree=best["colsample_bytree"],
             random_state=42,
-            n_jobs=-1
+            n_jobs=-1,
         )
 
-        pipeline = Pipeline([
-            ("vectorizer", DictVectorizer()),
-            ("regressor", best_model)
-        ])
+        pipeline = Pipeline(
+            [("vectorizer", DictVectorizer()), ("regressor", best_model)]
+        )
 
         pipeline.fit(X_train_dicts, y_train)
         y_pred = pipeline.predict(X_val_dicts)

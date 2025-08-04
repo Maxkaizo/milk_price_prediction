@@ -88,13 +88,12 @@ def daily_pipeline(execution_date: Optional[str] = None):
             name=best_model_name,
             version=model_version,
             stage="Staging",
-            archive_existing_versions=True
+            archive_existing_versions=True,
         )
 
         # Get registered model version info (model_id path)
         registered_model = client.get_model_version(
-            name=best_model_name,
-            version=model_version
+            name=best_model_name, version=model_version
         )
 
         artifact_uri = registered_model.source  # ✅ this is the correct S3 model path
@@ -110,7 +109,7 @@ def daily_pipeline(execution_date: Optional[str] = None):
             "artifact_uri": artifact_uri,
             "rmse": rmse,
             "promoted_stage": "Staging",
-            "promotion_time": datetime.utcnow().isoformat()
+            "promotion_time": datetime.utcnow().isoformat(),
         }
 
         s3 = boto3.client("s3")
@@ -118,7 +117,7 @@ def daily_pipeline(execution_date: Optional[str] = None):
             Bucket="mlflow-models-milk-price-dev",
             Key="promoted/daily_model.json",
             Body=json.dumps(promotion_record),
-            ContentType="application/json"
+            ContentType="application/json",
         )
 
         print("📤 Promotion metadata saved to S3.")
@@ -126,7 +125,9 @@ def daily_pipeline(execution_date: Optional[str] = None):
             f"📌 Promoted '{best_model_name}' v{model_version} to <b>Staging</b> and saved metadata to S3."
         )
     else:
-        notify_telegram.submit(f"⚠️ No version found to promote for model '{best_model_name}'")
+        notify_telegram.submit(
+            f"⚠️ No version found to promote for model '{best_model_name}'"
+        )
 
 
 if __name__ == "__main__":

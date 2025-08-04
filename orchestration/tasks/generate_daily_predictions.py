@@ -6,6 +6,7 @@ from prefect import task
 import boto3
 from pathlib import Path
 
+
 @task(name="generate_daily_predictions")
 def generate_daily_predictions() -> str:
     # --- Leer el dataset completo con histórico ---
@@ -26,10 +27,10 @@ def generate_daily_predictions() -> str:
     records = []
     for _, row in combinations.iterrows():
         mask = (
-            (df["Estado"] == row["Estado"]) &
-            (df["Ciudad"] == row["Ciudad"]) &
-            (df["Tipo"] == row["Tipo"]) &
-            (df["Canal"] == row["Canal"])
+            (df["Estado"] == row["Estado"])
+            & (df["Ciudad"] == row["Ciudad"])
+            & (df["Tipo"] == row["Tipo"])
+            & (df["Canal"] == row["Canal"])
         )
         df_sub = df[mask].sort_values("Fecha")
         df_sub = df_sub[df_sub["Fecha"] < pd.Timestamp(fecha_pred)]
@@ -50,7 +51,7 @@ def generate_daily_predictions() -> str:
             "año": tomorrow.year,
             "dia_semana": str(tomorrow.weekday()),
             "Precio_lag1": precio_lag1,
-            "Precio_mean7": precio_mean7
+            "Precio_mean7": precio_mean7,
         }
         records.append(record)
 
@@ -59,8 +60,7 @@ def generate_daily_predictions() -> str:
     # --- Leer metadata del modelo directamente desde S3 ---
     s3 = boto3.client("s3")
     response = s3.get_object(
-        Bucket="mlflow-models-milk-price-dev",
-        Key="promoted/daily_model.json"
+        Bucket="mlflow-models-milk-price-dev", Key="promoted/daily_model.json"
     )
     meta = json.load(response["Body"])
 
@@ -81,9 +81,7 @@ def generate_daily_predictions() -> str:
     # --- Subir reporte a S3 ---
     s3_output_key = f"predicciones/{fecha_pred}/predicciones_{fecha_pred}.csv"
     s3.upload_file(
-        Filename=output_local_path,
-        Bucket="mlops-milk-datalake",
-        Key=s3_output_key
+        Filename=output_local_path, Bucket="mlops-milk-datalake", Key=s3_output_key
     )
     print(f"📤 Archivo subido a S3: s3://mlops-milk-datalake/{s3_output_key}")
 

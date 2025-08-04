@@ -6,7 +6,9 @@ from datetime import datetime
 from dateutil.relativedelta import relativedelta
 
 
-def read_parquet_partition(year: int, month: int, source: str = "local") -> pd.DataFrame:
+def read_parquet_partition(
+    year: int, month: int, source: str = "local"
+) -> pd.DataFrame:
     """
     Reads a single monthly .parquet file from local or S3.
 

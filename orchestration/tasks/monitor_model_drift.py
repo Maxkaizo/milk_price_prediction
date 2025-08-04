@@ -4,6 +4,7 @@ from prefect import task
 from evidently import Report, Dataset, Regression, DataDefinition
 from evidently.metrics import MeanError, RMSE, DummyMAE, DummyRMSE
 
+
 @task(name="monitor_model_drift")
 def monitor_model_drift(
     y_true: list,
@@ -11,21 +12,15 @@ def monitor_model_drift(
     year: int,
     month: int,
 ) -> str:
-    curr_df = pd.DataFrame({
-        "prediction": y_pred,
-        "target": y_true
-    })
+    curr_df = pd.DataFrame({"prediction": y_pred, "target": y_true})
 
     data_definition = DataDefinition(
         regression=[Regression(target="target", prediction="prediction")]
-        )
-
-    curr_dataset = Dataset.from_pandas(
-        curr_df,
-        data_definition=data_definition
     )
 
-    report = Report([MeanError(),RMSE(),DummyMAE(),DummyRMSE()])
+    curr_dataset = Dataset.from_pandas(curr_df, data_definition=data_definition)
+
+    report = Report([MeanError(), RMSE(), DummyMAE(), DummyRMSE()])
 
     output = report.run(current_data=curr_dataset)
 

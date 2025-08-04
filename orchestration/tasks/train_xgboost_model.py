@@ -16,8 +16,11 @@ import mlflow.sklearn
 from datetime import datetime
 from prefect import task
 
+
 @task(name="train_xgboost_model")
-def train_xgboost_model(path_to_dataset: str = "data/processed/full_dataset.parquet", max_evals: int = 25):
+def train_xgboost_model(
+    path_to_dataset: str = "data/processed/full_dataset.parquet", max_evals: int = 25
+):
     df = pd.read_parquet(path_to_dataset)
     df = df.dropna(subset=["Precio", "Precio_lag1", "Precio_mean7"])
 
@@ -33,22 +36,29 @@ def train_xgboost_model(path_to_dataset: str = "data/processed/full_dataset.parq
             mlflow.log_params(params)
             mlflow.set_tags({"model_type": "xgboost"})
 
-            pipeline = Pipeline([
-                ("vectorizer", DictVectorizer()),
-                ("regressor", XGBRegressor(
-                    max_depth=int(params["max_depth"]),
-                    learning_rate=params["learning_rate"],
-                    n_estimators=int(params["n_estimators"]),
-                    min_child_weight=params["min_child_weight"],
-                    gamma=params["gamma"],
-                    subsample=params["subsample"],
-                    colsample_bytree=params["colsample_bytree"] ,
-                    random_state=42,
-                    n_jobs=-1
-                ))
-            ])
+            pipeline = Pipeline(
+                [
+                    ("vectorizer", DictVectorizer()),
+                    (
+                        "regressor",
+                        XGBRegressor(
+                            max_depth=int(params["max_depth"]),
+                            learning_rate=params["learning_rate"],
+                            n_estimators=int(params["n_estimators"]),
+                            min_child_weight=params["min_child_weight"],
+                            gamma=params["gamma"],
+                            subsample=params["subsample"],
+                            colsample_bytree=params["colsample_bytree"],
+                            random_state=42,
+                            n_jobs=-1,
+                        ),
+                    ),
+                ]
+            )
 
-            score = cross_val_score(pipeline, feature_dicts, y, scoring="neg_root_mean_squared_error", cv=3)
+            score = cross_val_score(
+                pipeline, feature_dicts, y, scoring="neg_root_mean_squared_error", cv=3
+            )
             rmse = -score.mean()
             mlflow.log_metric("rmse", rmse)
             return {"loss": rmse, "status": STATUS_OK}
@@ -72,7 +82,13 @@ def train_xgboost_model(path_to_dataset: str = "data/processed/full_dataset.parq
 
     with mlflow.start_run(run_name=run_name) as run:
         trials_xgb = Trials()
-        best_xgb = fmin(fn=objective_xgb, space=search_space_xgb, algo=tpe.suggest, max_evals=max_evals, trials=trials_xgb)
+        best_xgb = fmin(
+            fn=objective_xgb,
+            space=search_space_xgb,
+            algo=tpe.suggest,
+            max_evals=max_evals,
+            trials=trials_xgb,
+        )
 
         dv = DictVectorizer()
         X = dv.fit_transform(feature_dicts)
@@ -86,13 +102,10 @@ def train_xgboost_model(path_to_dataset: str = "data/processed/full_dataset.parq
             subsample=best_xgb["subsample"],
             colsample_bytree=best_xgb["colsample_bytree"],
             random_state=42,
-            n_jobs=-1
+            n_jobs=-1,
         )
 
-        pipeline = Pipeline([
-            ("vectorizer", dv),
-            ("regressor", final_xgb)
-        ])
+        pipeline = Pipeline([("vectorizer", dv), ("regressor", final_xgb)])
         pipeline.fit(feature_dicts, y)
         y_pred = pipeline.predict(feature_dicts)
         rmse = root_mean_squared_error(y, y_pred)

@@ -149,7 +149,7 @@ aws logs filter-log-events \
 
 "https://9v4atvsc14.execute-api.us-east-1.amazonaws.com/default"
 
-curl -XPOST "https://94v4prvbv1.execute-api.us-east-1.amazonaws.com/default/predict" \
+curl -XPOST "https://28lp654o4e.execute-api.us-east-1.amazonaws.com/default/predict" \
 -H "Content-Type: application/json" \
 -d '{
     "Estado": "Jalisco",
