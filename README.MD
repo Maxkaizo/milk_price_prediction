@@ -18,9 +18,9 @@
   <img src="https://img.shields.io/badge/data%20source-SNIIM-0072BC" />
 </p>
 
+---
 
-
-## 1. Project Overview
+## Project Overview
 This project delivers a complete MLOps pipeline to forecast the monthly price of milk in Mexico. It is designed as a production-ready, automated system capable of managing the entire machine learning lifecycle with minimal human intervention.
 The core purpose is to move beyond a static model and implement a dynamic solution that automatically adapts to new data. The system achieves this by:
 - **Training and versioning models** continuously.
@@ -29,7 +29,9 @@ The core purpose is to move beyond a static model and implement a dynamic soluti
 - Automatically **promoting a better-performing model** when available.
 - The expected outcome is **a reliable, self-maintaining prediction service** that consistently delivers accurate forecasts, ensuring the most effective model is always active.
 
-## 3. Business Context
+---
+
+## Business Context
 
 This project provides a practical forecasting tool for the Mexican milk industry, built on a foundation of reliable, official data.
 
@@ -41,7 +43,9 @@ This project provides a practical forecasting tool for the Mexican milk industry
 > 1. An On-Demand Cloud API: A deployed endpoint for real-time price predictions that can be integrated into any application.
 > 2. A Daily Price Report: A scheduled batch process, orchestrated with Prefect, runs daily to generate and publish a report of suggested prices, providing proactive insights directly to users.
 
-## 4. MLOps Context: A Three-Layer Design
+---
+
+## MLOps Context: A Three-Layer Design
 
 Instead of a single, monolithic process, our MLOps approach is designed with a modular, three-layer architecture. This separation of concerns makes the system more robust, scalable, and easier to maintain. This design philosophy sets the stage for the detailed architecture.
 
@@ -53,83 +57,65 @@ Instead of a single, monolithic process, our MLOps approach is designed with a m
 
 - **The Monitoring Layer:** This is the intelligence of our system. It continuously oversees the entire process, tracking data quality and model performance. It is responsible for detecting issues like data drift and, most importantly, for automatically promoting the best-performing model to production, thus closing the MLOps loop.
 
-
-
-
-
-
 ---
 
-### Business Motivation
-Milk is a high-consumption staple product. Prices fluctuate significantly due to transportation, distribution, and local economic factors. For instance:
+## Architecture
 
-- Pasteurized milk in **northern cities** may cost up to **40% more** than in southern states.
-- Daily shifts are common based on logistics and retailer conditions.
+### ** Data Preparation - Simulating a Datalake **
 
-A system like this could benefit companies, cooperatives, or regulators by:
+This layer performs the crucial one-time "bootstrapping" of our data lake. Since the official government data is a single, non-tabular Excel file, it's unsuitable for direct use in a daily pipeline. Our simulate_publication script is executed once to solve this: it processes the entire historical file, converts it into a clean, tabular structure, and partitions the data into daily files stored in AWS S3. This initial setup establishes the structured data lake that the day-to-day training pipelines will interact with, allowing them to simply focus on updating the current day's information.
 
-- Anticipating price variations  
-- Supporting transparent pricing strategies  
-- Identifying market opportunities or pricing anomalies  
-- Enabling regional demand forecasting
+**Tool Summary:**
 
----
+| Tool | Role in this Layer |
+| :--- | :--- |
+| **pandas** | Handles the core logic of reading, cleaning, and restructuring the raw data. |
+| **openpyxl** | Enables the initial ingestion of data from the source `.xlsx` file. |
+| **AWS S3** | Serves as the data lake where the clean, partitioned data is stored. |
+| **boto3 / s3fs** | Provides the Python interface to write the processed files to S3. |
 
-### MLOps Scope
-This project implements the complete MLOps lifecycle across **three solution layers**:
+### ** Development & Training Layer**
 
-#### 1. Training Layer (Local)
-- Implemented **locally to reduce cloud cost**.
-- Ingests and preprocesses daily data from SNIIM (Excel to Parquet).
-- Uses **Prefect 3.x** for orchestration of training pipelines.
-- Trains **XGBoost models** using **Hyperopt** for hyperparameter tuning.
-- Tracks all trials and model artifacts with **MLflow**, including metrics and parameters.
-- Trained models are saved and versioned in a **remote S3 bucket**.
+This is where our models are born and refined. The process begins by fetching the latest prepared data from the S3 data lake. We employ powerful libraries like **scikit-learn** and **XGBoost** to build our predictive models. To ensure peak performance, we automate the search for the best model configuration using **Hyperopt** for hyperparameter tuning. The entire journey, from data ingestion to model evaluation, is orchestrated as a seamless, repeatable pipeline by **Prefect**. Crucially, every experiment's parameters and metrics are logged with **MLflow**, which also serves as our Model Registry to version and store the final model candidates. To maintain code quality, we use **Black** for automated code formatting.
 
-#### 2. Inference Layer (Cloud)
-- Deployed on **AWS** using **Terraform** for Infrastructure-as-Code.
-- Two modes of prediction:
-  - **Online inference**: An **AWS Lambda function** (containerized via Docker in ECR), exposed via **API Gateway** for real-time requests.
-  - **Batch inference**: A scheduled process that generates **daily prediction reports** (initially run locally, with plans to move to cloud).
+**Tool Summary:**
 
-#### 3. Monitoring Layer (Hybrid)
-- **Model drift detection** using [Evidently AI](https://evidentlyai.com/) over recent vs historical performance.
-- Sends **alerts via Telegram** when drift exceeds defined thresholds.
-- Future plan: integrate with **Grafana dashboards** to monitor service uptime (API health check) and model behavior.
+| Tool | Role in this Layer |
+| :--- | :--- |
+| **Prefect** | Orchestrates the end-to-end training and evaluation pipeline. |
+| **MLflow** | Tracks experiments and manages models in the Model Registry. |
+| **scikit-learn / XGBoost** | Core libraries for model training and evaluation. |
+| **Hyperopt** | Automates hyperparameter optimization to find the best model. |
+| **Black** | Enforces consistent, clean code formatting across the project. |
+| **dotenv** | Securely manages credentials and environment variables. |
 
----
+### **Inference & Deployment Layer**
 
-### Cloud Infrastructure
-- Cloud services are provisioned using **Terraform**.
-- Includes:
-  - S3 buckets for data lake and model artifacts  
-  - ECR for Docker containers  
-  - Lambda + API Gateway for real-time inference  
-  - IAM roles and logging resources  
-- Upcoming: Grafana and CloudWatch integration for service monitoring.
+Once a model is approved, this layer makes it accessible. The entire cloud infrastructure—including the API Gateway, Lambda functions, and ECR repositories—is managed declaratively using **Terraform**, enabling Infrastructure as a Code (IaC) for consistency and reproducibility. This layer operates in two modes:
+1.  **Online Inference:** We use **Flask** and **Gunicorn** to build a robust API, which is containerized with **Docker** and stored in **AWS ECR**. This API is then deployed, often using **AWS Lambda**, and exposed to the world via **AWS API Gateway**.
+2.  **Batch Inference:** A separate **Prefect** flow runs on a daily schedule to generate a "Suggested Prices Report". This batch job uses the latest model to make predictions and delivers proactive insights.
 
----
+**Tool Summary:**
 
-### Rubric Alignment (MLOps Zoomcamp)
+| Tool | Role in this Layer |
+| :--- | :--- |
+| **Terraform** | Manages and provisions all AWS infrastructure as code (IaC). |
+| **Docker** | Containerizes the application for consistent, portable deployment. |
+| **Flask / Gunicorn** | Builds and serves the production-ready prediction API. |
+| **Prefect** | Orchestrates the scheduled batch inference pipeline for daily reports. |
+| **AWS ECR / S3 / Lambda / API Gateway** | The core AWS services for storing artifacts and serving the model. |
+| **boto3** | Provides the Python interface to interact with AWS services. |
 
-| Criterion                    | Status                                                                 |
-|-----------------------------|-------------------------------------------------------------------------|
-| **Problem description**     | Clear and well described with business context                         |
-| **Cloud**                   | AWS used with Terraform for IaC                                        |
-| **Experiment tracking**     | MLflow used for tracking + model registry, including Hyperopt trials   |
-| **Workflow orchestration**  | Fully deployed with Prefect flows                                      |
-| **Model deployment**        | Deployed to AWS Lambda via Docker + ECR                                |
-| **Model monitoring**        | Drift detection with alerts + future Grafana health checks             |
-| **Reproducibility**         | All code parameterized, structured, and documented                     |
-| **Best practices**          | *(To be added)* CI/CD, linter, Makefile, pre-commit hooks planned      |
+### **Monitoring & Alerting Layer**
+
+A deployed model requires constant supervision. This layer acts as the system's watchdog. We use **Evidently AI** to continuously monitor the live model, generating reports that detect data drift and performance degradation. These reports often include visualizations created with **Matplotlib** and **Seaborn**. If a significant event occurs—such as a drop in accuracy or the detection of data drift—the system automatically triggers an alert. These notifications are sent instantly to the team via a **Telegram** bot, enabling a proactive approach to model maintenance.
+
+**Tool Summary:**
+
+| Tool | Role in this Layer |
+| :--- | :--- |
+| **Evidently AI** | Actively monitors for data drift and model performance issues. |
+| **Telegram** | Serves as the notification channel for automated system alerts. |
+| **Matplotlib / Seaborn** | Creates visualizations for data analysis and monitoring reports. |
 
 ---
-
-### Next Steps
-- Finalize CI/CD with GitHub Actions  
-- Add integration test + automated drift dashboard  
-- Move batch predictions to AWS Step Functions or ECS
-
-
-
-
