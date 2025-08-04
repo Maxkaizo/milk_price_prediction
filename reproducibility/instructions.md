@@ -138,7 +138,7 @@ make stop-prefect
 prefect server stop
 ```
 
-### Deploy and Run  Prefect flows
+### Deploy and Run Prefect flows
 
 - `master_daily_flow.py` is the main flow to check for new data, run a trining process, select and promote the best resulting model
 - It's scheduled to run on a daily basis at 1 pm 
@@ -167,15 +167,52 @@ prefect deployment run 'daily-mlops-pipeline/daily-milk-predictor' \
   --param execution_date="2025-08-01"
 ```
 
+- `generate_daily_predictions.py` is a batch flow and it runs price predictions for all variations of State, City, and Product
+
+- It can also be launched mannualy
 
 
-
-
-### Launch prefect runs manually from deployments
 ```bash
+# deploy the flow
+python orchestration/flows/daily_predictions_flow.py &
 
-
+# To manualy launch a run you can also do:
+prefect deployment run 'daily_prediction_flow/daily-milk-predictor' &
 ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -192,21 +229,6 @@ command XXX
 command XXX
 
 ``````bash
-# comment
-command XXX
-
-```
-
-
-
-
-
-
-
-
-
-
-```bash
 # comment
 command XXX
 
@@ -243,107 +265,10 @@ De aqui hacia arriba todo esta checado y validado
 
 
 
----
-
-### 3. Start Prefect Server
-
-#### 🤖 **With Makefile:**
-```bash
-# Background mode (recommended)
-make start-prefect
-
-# Foreground mode (for debugging)
-make start-prefect-fg
-```
-
-#### 🔧 **Direct Commands:**
-```bash
-# Background mode
-nohup prefect server start > logs/prefect.log 2>&1 & echo $! > logs/prefect.pid
-sleep 5
-
-# Foreground mode (for debugging)
-prefect server start
-```
-
-**✅ Validation:**
-```bash
-# Check if Prefect is running
-curl -s http://localhost:4200/api/health || echo "Prefect not responding"
-
-# View logs
-tail -f logs/prefect.log
-
-# Check Prefect status
-prefect server status
-```
-
----
-
-### 4. Check Server Status
-
-#### 🤖 **With Makefile:**
-```bash
-make status
-```
-
-#### 🔧 **Direct Commands:**
-```bash
-echo "=== Server Status ==="
-
-# Check MLflow
-if [ -f logs/mlflow.pid ] && kill -0 `cat logs/mlflow.pid` 2>/dev/null; then
-    echo "✓ MLflow running (PID: `cat logs/mlflow.pid`)"
-else
-    echo "✗ MLflow not running"
-fi
-
-# Check Prefect
-if [ -f logs/prefect.pid ] && kill -0 `cat logs/prefect.pid` 2>/dev/null; then
-    echo "✓ Prefect running (PID: `cat logs/prefect.pid`)"
-else
-    echo "✗ Prefect not running"
-fi
-
-# Check ports
-netstat -tlnp | grep -E ":(5000|4200)"
-```
 
 
----
 
-### 5. Execute Main Data Flow
 
-#### 🤖 **With Makefile:**
-```bash
-# For current date
-make run-main-flow
-
-# For specific date
-make run-main-flow-date DATE=2025-08-01
-```
-
-#### 🔧 **Direct Commands:**
-```bash
-# For current date
-python orchestration/flows/master_daily_flow.py
-
-# For specific date
-python orchestration/flows/master_daily_flow.py 2025-08-01
-```
-
-**✅ Validation:**
-```bash
-# Check flow execution in Prefect UI
-# Or check recent flow runs
-prefect flow-run ls --limit 5
-
-# Check if new data was processed
-ls -la data/datalake/daily/$(date +%Y)/$(date +%m)/
-
-# Check S3 for new files
-aws s3 ls s3://mlops-milk-datalake/daily/$(date +%Y)/$(date +%m)/
-```
 
 ---
 

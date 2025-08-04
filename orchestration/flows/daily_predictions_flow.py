@@ -4,7 +4,7 @@ from orchestration.tasks.notify_telegram import notify_telegram
 from datetime import datetime
 
 
-@flow(name="daily_prediction_flow")
+@flow(name="daily_prediction_flow_batch")
 def daily_prediction_flow():
     """
     Este flujo genera predicciones de precios de leche para el día siguiente.
