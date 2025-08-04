@@ -198,6 +198,6 @@ The project is organized into a modular structure where each directory has a cle
 
 *   **Pipfile / Pipfile.lock**: These files define the Python dependencies of the project, managed using `pipenv` to ensure reproducible environments.
 
-### Replicabilidad
-### Walkthroug
-## Cumplimiento de la rúbrica
+### Reproducibility
+
+You can find a Makefile in the root folder of the repo and the detailed instructions and walkthrough in reproducibility/folder
