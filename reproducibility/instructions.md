@@ -162,14 +162,14 @@ prefect deployment run 'daily-mlops-pipeline/daily-milk-predictor'
 
 ```bash
 # delete file on s3
-aws s3 rm s3://mlops-milk-datalake/daily/2025/08/2025-08-01-data.parquet
+aws s3 rm s3://mlops-milk-datalake/daily/2025/08/2025-08-04-data.parquet
 
 # delete files locally
-rm data/datalake/daily/2025/08/2025-08-01-data.parquet
+rm data/datalake/daily/2025/08/2025-08-04-data.parquet
 
 # Force the run using custom date
 prefect deployment run 'daily-mlops-pipeline/daily-milk-predictor' \
-  --param execution_date="2025-08-01"
+  --param execution_date="2025-08-04"
 ```
 
 - `generate_daily_predictions.py` is a batch flow and it runs price predictions for all variations of State, City, and Product
@@ -185,5 +185,68 @@ python orchestration/flows/daily_predictions_flow.py &
 prefect deployment run 'daily_prediction_flow_batch/daily-milk-batch'
 ```
 
+### Deploy infra on AWS via terraform
 
+- We'll create an API, via the main.tf file located under iac/, wich invokes the creation of 12 resources related to 4 main modules:
+  - An ECR repo, to host our app's Docker image
+  - An IAM Role, to execute code
+  - A Lambda function, to run the code in serverless mode
+  - An API gateway, to expose the endpoint
 
+A suggested variables file for staging and prod envs are located under iac/envs (staging.tfvars and prod.tfvars)
+
+The code and Dockerfile needed for the lambda function creating is located under iac/code, also please note that the main.tf definitions includes the image build command, so it will take a while in creating and uploading the image
+
+At the end of this step please note the output, as it will be required for testing the service for example: api_url = "https://28lp654o4e.execute-api.us-east-1.amazonaws.com/default"
+
+**With Makefile:**
+```bash
+# staging infrastructure
+make deploy-infra-staging
+
+# prod infrastructure
+make deploy-infra-prod
+
+```
+
+**Direct Commands:**
+```bash
+# manage staging infra
+cd iac
+terraform init
+terraform plan -var-file="envs/staging.tfvars"
+terraform apply -var-file="envs/staging.tfvars" -auto-approve
+terraform destroy -var-file="envs/staging.tfvars" -auto-approve
+
+# manage prod infra
+cd iac
+terraform plan -var-file="envs/prod.tfvars"
+terraform apply -var-file="envs/prod.tfvars" -auto-approve
+terraform destroy -var-file="envs/prod.tfvars" -auto-approve
+```
+
+**✅ Validation:**
+```bash
+# Check deployed resources
+cd iac && terraform show
+# Or: cd deployment/ondemand/lambda_infra && terraform show
+
+# For testig the service, pleasse adjust the url for testing
+# Example: api_url = "https://1d4oza8gnd.execute-api.us-east-1.amazonaws.com/default"
+curl -XPOST "https://1d4oza8gnd.execute-api.us-east-1.amazonaws.com/default/predict" \
+-H "Content-Type: application/json" \
+-d '{
+    "Estado": "Jalisco",
+    "Ciudad": "Guadalajara",
+    "Tipo": "Pasteurizada",
+    "Canal": "Autoservicio",
+    "día": 1,
+    "mes": 8,
+    "año": 2025,
+    "dia_semana": "4",
+    "Precio_lag1": 23.5,
+    "Precio_mean7": 23.1
+}'
+
+```
+When testing please note that Lambda functions have to start the server and load the model the first time it gets invoked, so please try the test at least 2 times, 

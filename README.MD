@@ -206,3 +206,7 @@ Also in the deployment/notes/README.MD file, you can find the deployment on AWS 
 
 You can find also the files related to Infra as Code under the iac/ folder, where the service was succesfully deployed for staging and prod envs
 
+test related files and scripts are located under tests/ folder
+
+
+Also code formatting info is under best_practices/code_format

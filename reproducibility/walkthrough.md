@@ -34,7 +34,7 @@
 - With new files
 
 * The training pipeline runs completely
-![alt text](screenshots/fullrun_prefect.png)
+![alt text](screenshots/full_run_prefect_v2.png)
 ![alt text](screenshots/full_run_log.png)
 
 * Anew file is ingested to datalake
@@ -74,6 +74,18 @@
 
 ![alt text](screenshots/batch_preds.png)
 
+### Deploy infra via Terraform
+
+* deployment
+
+![alt text](screenshots/iac_deploy.png)
+
+* List Resources
+![alt text](screenshots/tf_state_list.png)
+
+* Test service
+
+![alt text](image.png)
 
 
 
