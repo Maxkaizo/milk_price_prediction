@@ -254,14 +254,14 @@ curl -XPOST "https://1d4oza8gnd.execute-api.us-east-1.amazonaws.com/default/pred
 - [ ] Best practices
   - [ ] There are unit tests
         - Check out the testing [log](https://github.com/Maxkaizo/milk_price_prediction/blob/main/tests/log.md)
-  - [ ] There is an integration test (1 point)
+  - [ ] There is an integration test
         - Check out the testing [log](https://github.com/Maxkaizo/milk_price_prediction/blob/main/tests/log.md)
-  - [ ] Linter and/or code formatter are used (1 point)
+  - [ ] Linter and/or code formatter are used
         - Used Black, checkout [best_practices/code_format](https://github.com/Maxkaizo/milk_price_prediction/tree/main/best_practices/code_format)
-  - [ ] There's a Makefile (1 point)
+  - [ ] There's a Makefile
         - [Makefile](https://github.com/Maxkaizo/milk_price_prediction/blob/main/Makefile) Located in the root folder  and referenced in the [instructions.md](https://github.com/Maxkaizo/milk_price_prediction/blob/main/reproducibility/instructions.md)
-  - [ ] There are pre-commit hooks (1 point)
-  - [ ] There's a CI/CD pipeline (2 points)
+  - [ ] There are pre-commit hooks 
+  - [ ] There's a CI/CD pipeline
 
 
 ---

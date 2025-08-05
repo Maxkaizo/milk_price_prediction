@@ -1,0 +1,21 @@
+# Pre commit
+
+Config:
+
+```yaml
+# .pre-commit-config.yaml
+repos:
+  - repo: https://github.com/psf/black
+    rev: 24.4.2  # usa una versión estable
+    hooks:
+      - id: black
+        language_version: python3.12
+```
+
+Result:
+
+![alt text](image.png)
+
+
+
+

@@ -1,4 +1,5 @@
 import mlflow
+
 # import pandas as pd
 from mlflow.tracking import MlflowClient
 
@@ -11,14 +12,16 @@ client = MlflowClient()
 latest_version = client.get_latest_versions(MODEL_NAME, stages=[])[-1]
 
 # Extra: detalles del modelo
-model_details = client.get_model_version(name=MODEL_NAME, version=latest_version.version)
+model_details = client.get_model_version(
+    name=MODEL_NAME, version=latest_version.version
+)
 
 # Ejemplo de entrada (debe coincidir con los features usados al entrenar)
 sample_input = {
     "Estado": "Jalisco",
     "Ciudad": "Guadalajara",
     "Tipo": "Leche pasteurizada",
-    "Canal": "Autoservicio"
+    "Canal": "Autoservicio",
 }
 
 if __name__ == "__main__":

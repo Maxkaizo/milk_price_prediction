@@ -1,6 +1,7 @@
 from unittest.mock import patch
 from orchestration.tasks.notify_telegram import notify_telegram_fn
 
+
 @patch("orchestration.tasks.notify_telegram.requests.post")
 def test_notify_telegram_post_called(mock_post):
     mock_post.return_value.status_code = 200

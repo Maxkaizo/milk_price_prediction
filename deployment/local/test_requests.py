@@ -6,7 +6,7 @@ sample_input = {
     "Estado": "Jalisco",
     "Ciudad": "Guadalajara",
     "Tipo": "Leche pasteurizada",
-    "Canal": "Autoservicio"
+    "Canal": "Autoservicio",
 }
 
 response = requests.post(url, json=sample_input)
