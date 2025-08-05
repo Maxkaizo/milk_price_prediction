@@ -1,8 +1,8 @@
 mlruns/
 mlartifacts/
-*.csv
 *.xlsx
 data/
 .env
 backup/
 *.db
+milk_prices_tabular.csv

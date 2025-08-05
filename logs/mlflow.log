@@ -111,3 +111,8 @@ INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
 INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
 INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
 INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+[2025-08-04 20:37:49 -0600] [15364] [INFO] Handling signal: term
+[2025-08-04 20:37:49 -0600] [15365] [INFO] Worker exiting (pid: 15365)
+[2025-08-04 20:37:49 -0600] [18038] [INFO] Worker exiting (pid: 18038)
+[2025-08-04 20:37:49 -0600] [18380] [INFO] Worker exiting (pid: 18380)
+[2025-08-04 20:38:19 -0600] [15364] [INFO] Shutting down: Master

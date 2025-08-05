@@ -1,0 +1,190 @@
+Estado,Ciudad,Tipo,Canal,día,mes,año,dia_semana,Precio_lag1,Precio_mean7,Precio_sugerido
+Aguascalientes ,Aguascalientes,Pasteurizada,Autoservicios,4,8,2025,0,28.17,28.117142857142863,28.129350942202226
+Aguascalientes ,Aguascalientes,Pasteurizada,Tiendas,4,8,2025,0,27.4,27.400000000000002,27.405819737256152
+Aguascalientes ,Aguascalientes,Ultrapasteurizada,Autoservicios,4,8,2025,0,34.17,34.17000000000001,34.293617557509975
+Aguascalientes ,Aguascalientes,Ultrapasteurizada,Tiendas,4,8,2025,0,30.9,30.900000000000002,30.90363817776758
+Baja California,Mexicali,Pasteurizada,Autoservicios,4,8,2025,0,26.34,26.34,26.345039365148878
+Baja California,Mexicali,Pasteurizada,Tiendas,4,8,2025,0,29.3,29.300000000000004,29.344612364928906
+Baja California,Mexicali,Ultrapasteurizada,Autoservicios,4,8,2025,0,27.47,27.47,27.478141426638796
+Baja California,Mexicali,Ultrapasteurizada,Tiendas,4,8,2025,0,24.83,24.830000000000002,24.82632248995904
+Baja California,Tijuana,Ultrapasteurizada,Autoservicios,4,8,2025,0,32.2,32.614285714285714,32.413177362414146
+Baja California,Tijuana,Ultrapasteurizada,Tiendas,4,8,2025,0,31.64,31.794285714285714,31.900637858587373
+Baja California Sur,La Paz,Pasteurizada,Autoservicios,4,8,2025,0,27.63,27.63,27.608816492174853
+Baja California Sur,La Paz,Pasteurizada,Tiendas,4,8,2025,0,26.0,26.0,26.00014774544289
+Baja California Sur,La Paz,Ultrapasteurizada,Autoservicios,4,8,2025,0,28.87,29.202857142857145,28.979413780647064
+Baja California Sur,La Paz,Ultrapasteurizada,Tiendas,4,8,2025,0,31.0,31.0,31.005722866215287
+CDMX,Ciudad de México,Pasteurizada,Autoservicios,4,8,2025,0,32.83,32.82999999999999,32.83302977011035
+CDMX,Ciudad de México,Pasteurizada,Tiendas,4,8,2025,0,27.34,27.34,27.341849233186004
+CDMX,Ciudad de México,Ultrapasteurizada,Autoservicios,4,8,2025,0,34.75,34.75,34.77819854435993
+CDMX,Ciudad de México,Ultrapasteurizada,Tiendas,4,8,2025,0,28.02,28.020000000000003,28.03531496185003
+CDMX,ZM Ciudad de México,Pasteurizada,Autoservicios,4,8,2025,0,23.7,23.699999999999996,23.689564118370164
+CDMX,ZM Ciudad de México,Pasteurizada,Tiendas,4,8,2025,0,24.07,24.207142857142856,24.217678217154376
+CDMX,ZM Ciudad de México,Ultrapasteurizada,Autoservicios,4,8,2025,0,23.7,23.699999999999996,23.689564118370164
+CDMX,ZM Ciudad de México,Ultrapasteurizada,Tiendas,4,8,2025,0,25.65,25.650000000000002,25.645474404625684
+Campeche,Campeche,Ultrapasteurizada,Autoservicios,4,8,2025,0,34.97,34.97,34.896928684293705
+Campeche,Campeche,Ultrapasteurizada,Tiendas,4,8,2025,0,31.75,31.75,31.740429546720158
+Chiapas,Tapachula,Ultrapasteurizada,Autoservicios,4,8,2025,0,34.88,35.1,34.974829372228186
+Chiapas,Tapachula,Ultrapasteurizada,Tiendas,4,8,2025,0,30.4,30.400000000000002,30.44349302708386
+Chiapas,Tuxtla Gutiérrez,Ultrapasteurizada,Autoservicios,4,8,2025,0,27.5,27.5,27.49869053981018
+Chiapas,Tuxtla Gutiérrez,Ultrapasteurizada,Tiendas,4,8,2025,0,28.5,28.5,28.493330829572074
+Chihuahua,Cd.Juárez,Pasteurizada,Autoservicios,4,8,2025,0,28.83,28.898571428571433,28.9071388939832
+Chihuahua,Cd.Juárez,Pasteurizada,Tiendas,4,8,2025,0,29.6,29.599999999999998,29.61828777565703
+Chihuahua,Cd.Juárez,Ultrapasteurizada,Autoservicios,4,8,2025,0,34.37,34.37,34.375483080871156
+Chihuahua,Chihuahua,Pasteurizada,Autoservicios,4,8,2025,0,29.95,29.949999999999996,29.943669843028726
+Chihuahua,Chihuahua,Pasteurizada,Tiendas,4,8,2025,0,29.55,29.55714285714286,29.557494026666124
+Chihuahua,Chihuahua,Ultrapasteurizada,Autoservicios,4,8,2025,0,37.27,37.27,37.26064094246031
+Chihuahua,Chihuahua,Ultrapasteurizada,Tiendas,4,8,2025,0,34.5,34.5,34.556695176140444
+Coahuila,Piedras Negras,Pasteurizada,Autoservicios,4,8,2025,0,23.3,23.300000000000004,23.305286685030577
+Coahuila,Piedras Negras,Pasteurizada,Tiendas,4,8,2025,0,24.7,24.699999999999996,24.698844905898746
+Coahuila,Piedras Negras,Ultrapasteurizada,Autoservicios,4,8,2025,0,26.35,26.349999999999998,26.34919208001158
+Coahuila,Piedras Negras,Ultrapasteurizada,Tiendas,4,8,2025,0,31.45,31.449999999999996,31.463213147851732
+Coahuila,Saltillo,Pasteurizada,Autoservicios,4,8,2025,0,30.67,30.67000000000001,30.686809825715407
+Coahuila,Saltillo,Pasteurizada,Tiendas,4,8,2025,0,31.2,31.199999999999996,31.20068761821399
+Coahuila,Saltillo,Ultrapasteurizada,Autoservicios,4,8,2025,0,36.73,36.73,36.811517236842114
+Coahuila,Saltillo,Ultrapasteurizada,Tiendas,4,8,2025,0,29.88,29.88,29.88411256295607
+Coahuila,Torreón,Pasteurizada,Autoservicios,4,8,2025,0,32.4,32.4,32.38114125534588
+Coahuila,Torreón,Pasteurizada,Tiendas,4,8,2025,0,32.5,32.5,32.48723757303975
+Coahuila,Torreón,Ultrapasteurizada,Autoservicios,4,8,2025,0,34.83,34.82999999999999,34.817787092789644
+Coahuila,Torreón,Ultrapasteurizada,Tiendas,4,8,2025,0,38.0,38.0,38.0
+Colima,Colima,Pasteurizada,Autoservicios,4,8,2025,0,28.38,28.38,28.392295147606152
+Colima,Colima,Pasteurizada,Tiendas,4,8,2025,0,25.5,25.5,25.51339065704362
+Colima,Colima,Ultrapasteurizada,Autoservicios,4,8,2025,0,35.75,35.75,35.76678872466146
+Colima,Colima,Ultrapasteurizada,Tiendas,4,8,2025,0,26.5,26.5,26.507012449202954
+Durango,Durango,Pasteurizada,Autoservicios,4,8,2025,0,28.05,28.050000000000004,28.03127016701412
+Durango,Durango,Pasteurizada,Tiendas,4,8,2025,0,29.25,29.25,29.248691994073003
+Durango,Durango,Ultrapasteurizada,Autoservicios,4,8,2025,0,35.77,35.77,35.77337002514189
+Durango,Gómez Palacio,Pasteurizada,Autoservicios,4,8,2025,0,30.67,30.485714285714284,30.579036432982107
+Durango,Gómez Palacio,Pasteurizada,Tiendas,4,8,2025,0,31.45,31.449999999999996,31.46872241067225
+Durango,Gómez Palacio,Ultrapasteurizada,Autoservicios,4,8,2025,0,37.27,37.15,37.24006449224385
+Durango,Gómez Palacio,Ultrapasteurizada,Tiendas,4,8,2025,0,38.95,38.949999999999996,38.94999999999993
+Edo. México,Toluca,Pasteurizada,Autoservicios,4,8,2025,0,31.3,31.328571428571433,31.394303307867386
+Edo. México,Toluca,Pasteurizada,Tiendas,4,8,2025,0,26.96,26.960000000000004,26.964202508647055
+Edo. México,Toluca,Ultrapasteurizada,Autoservicios,4,8,2025,0,33.83,33.82999999999999,33.84698499587176
+Edo. México,Toluca,Ultrapasteurizada,Tiendas,4,8,2025,0,29.6,29.599999999999998,29.62150871960983
+Guanajuato,Celaya,Pasteurizada,Autoservicios,4,8,2025,0,25.33,25.330000000000002,25.32353137284866
+Guanajuato,Celaya,Pasteurizada,Tiendas,4,8,2025,0,28.63,28.63,28.63851546820016
+Guanajuato,Celaya,Ultrapasteurizada,Autoservicios,4,8,2025,0,29.83,29.85428571428571,29.875463833075216
+Guanajuato,Celaya,Ultrapasteurizada,Tiendas,4,8,2025,0,28.75,28.75,28.7526328631144
+Guanajuato,León,Pasteurizada,Autoservicios,4,8,2025,0,23.75,23.75,23.75157816499211
+Guanajuato,León,Pasteurizada,Tiendas,4,8,2025,0,23.69,23.69,23.688874470123714
+Guanajuato,León,Ultrapasteurizada,Autoservicios,4,8,2025,0,23.75,23.75,23.75157816499211
+Guanajuato,León,Ultrapasteurizada,Tiendas,4,8,2025,0,23.56,23.56,23.562718587303774
+Guerrero,Acapulco,Pasteurizada,Autoservicios,4,8,2025,0,28.73,28.592857142857138,28.614278222028883
+Guerrero,Acapulco,Pasteurizada,Tiendas,4,8,2025,0,29.17,29.17000000000001,29.176126841028132
+Guerrero,Acapulco,Ultrapasteurizada,Autoservicios,4,8,2025,0,34.48,34.90857142857142,34.62761300969362
+Guerrero,Acapulco,Ultrapasteurizada,Tiendas,4,8,2025,0,32.46,32.46,32.45854900050051
+Guerrero,Chilpancingo,Pasteurizada,Autoservicios,4,8,2025,0,29.47,29.445714285714285,29.43415809331045
+Guerrero,Chilpancingo,Pasteurizada,Tiendas,4,8,2025,0,29.0,29.047142857142855,29.055226857152356
+Guerrero,Chilpancingo,Ultrapasteurizada,Autoservicios,4,8,2025,0,33.13,33.20142857142857,33.194125168946385
+Guerrero,Chilpancingo,Ultrapasteurizada,Tiendas,4,8,2025,0,30.17,30.17000000000001,30.17093189327406
+Hidalgo,Pachuca,Pasteurizada,Autoservicios,4,8,2025,0,29.45,29.449999999999996,29.43564727050923
+Hidalgo,Pachuca,Pasteurizada,Tiendas,4,8,2025,0,28.0,28.0,28.004315242422596
+Hidalgo,Pachuca,Ultrapasteurizada,Autoservicios,4,8,2025,0,35.27,35.27,35.27809779375843
+Hidalgo,Pachuca,Ultrapasteurizada,Tiendas,4,8,2025,0,28.0,28.19142857142857,28.199248938407646
+Jalisco,Guadalajara,Pasteurizada,Autoservicios,4,8,2025,0,27.0,27.0,26.999496765070067
+Jalisco,Guadalajara,Pasteurizada,Tiendas,4,8,2025,0,27.5,27.642857142857142,27.772816785418783
+Jalisco,Guadalajara,Ultrapasteurizada,Autoservicios,4,8,2025,0,30.0,30.0,29.99268573789751
+Jalisco,Guadalajara,Ultrapasteurizada,Tiendas,4,8,2025,0,32.83,32.97571428571428,33.04862372535624
+Jalisco,ZM Guadalajara,Pasteurizada,Autoservicios,4,8,2025,0,28.9,28.900000000000002,28.884035481543123
+Jalisco,ZM Guadalajara,Pasteurizada,Tiendas,4,8,2025,0,27.5,27.5,27.497641318815617
+Jalisco,ZM Guadalajara,Ultrapasteurizada,Autoservicios,4,8,2025,0,37.9,37.9,37.89880000000006
+Jalisco,ZM Guadalajara,Ultrapasteurizada,Tiendas,4,8,2025,0,32.64,32.63999999999999,32.65468133106317
+Michoacán,Morelia,Pasteurizada,Autoservicios,4,8,2025,0,28.55,28.421428571428574,28.4979083037039
+Michoacán,Morelia,Pasteurizada,Tiendas,4,8,2025,0,28.2,28.199999999999996,28.15915721926525
+Michoacán,Morelia,Ultrapasteurizada,Autoservicios,4,8,2025,0,33.97,33.32714285714285,33.79351539717031
+Michoacán,Morelia,Ultrapasteurizada,Tiendas,4,8,2025,0,28.75,28.75,28.7526328631144
+Morelos,Cuernavaca,Pasteurizada,Autoservicios,4,8,2025,0,29.08,29.07999999999999,29.097512895325703
+Morelos,Cuernavaca,Pasteurizada,Tiendas,4,8,2025,0,29.33,29.047142857142855,29.25725148197886
+Morelos,Cuernavaca,Ultrapasteurizada,Autoservicios,4,8,2025,0,33.42,33.681428571428576,33.52355997776644
+Morelos,Cuernavaca,Ultrapasteurizada,Tiendas,4,8,2025,0,29.17,29.07285714285715,29.17178208772901
+Nayarit,Tepic,Pasteurizada,Autoservicios,4,8,2025,0,27.25,27.014285714285716,27.171304320764342
+Nayarit,Tepic,Pasteurizada,Tiendas,4,8,2025,0,26.65,26.508571428571432,26.6277906879734
+Nayarit,Tepic,Ultrapasteurizada,Autoservicios,4,8,2025,0,28.17,28.17000000000001,28.163729379092615
+Nayarit,Tepic,Ultrapasteurizada,Tiendas,4,8,2025,0,26.17,26.17000000000001,26.198862882720622
+Nuevo León,Monterrey,Pasteurizada,Autoservicios,4,8,2025,0,27.9,27.900000000000002,27.897505083001207
+Nuevo León,Monterrey,Pasteurizada,Tiendas,4,8,2025,0,29.75,29.75,29.746062092590872
+Nuevo León,Monterrey,Ultrapasteurizada,Autoservicios,4,8,2025,0,34.77,35.17285714285715,34.835410718259816
+Nuevo León,Monterrey,Ultrapasteurizada,Tiendas,4,8,2025,0,40.0,40.0,40.0
+Nuevo León,ZM Monterrey,Pasteurizada,Autoservicios,4,8,2025,0,26.3,26.300000000000004,26.303663952057942
+Nuevo León,ZM Monterrey,Pasteurizada,Tiendas,4,8,2025,0,29.75,29.75,29.746062092590872
+Nuevo León,ZM Monterrey,Ultrapasteurizada,Autoservicios,4,8,2025,0,36.13,36.13,36.141291950685115
+Nuevo León,ZM Monterrey,Ultrapasteurizada,Tiendas,4,8,2025,0,37.38,37.38,37.37906394736848
+Oaxaca,Oaxaca,Pasteurizada,Autoservicios,4,8,2025,0,35.3,34.55857142857143,35.24608628893216
+Oaxaca,Oaxaca,Pasteurizada,Tiendas,4,8,2025,0,29.5,30.02857142857143,30.086191770684206
+Oaxaca,Oaxaca,Ultrapasteurizada,Autoservicios,4,8,2025,0,35.0,34.667142857142856,34.91226349037492
+Oaxaca,Oaxaca,Ultrapasteurizada,Tiendas,4,8,2025,0,30.0,30.275714285714287,30.21327978595333
+Puebla,Puebla,Pasteurizada,Autoservicios,4,8,2025,0,30.52,30.544285714285714,30.529210092803005
+Puebla,Puebla,Pasteurizada,Tiendas,4,8,2025,0,29.25,29.25,29.248691994073003
+Puebla,Puebla,Ultrapasteurizada,Autoservicios,4,8,2025,0,32.98,33.122857142857136,33.14007341026304
+Puebla,Puebla,Ultrapasteurizada,Tiendas,4,8,2025,0,35.38,35.38,35.37852300933842
+Puebla,ZM Puebla,Pasteurizada,Autoservicios,4,8,2025,0,29.67,29.67000000000001,29.67360090958306
+Puebla,ZM Puebla,Pasteurizada,Tiendas,4,8,2025,0,30.65,30.650000000000002,30.659998766516274
+Puebla,ZM Puebla,Ultrapasteurizada,Autoservicios,4,8,2025,0,34.25,34.037142857142854,34.25287407323021
+Puebla,ZM Puebla,Ultrapasteurizada,Tiendas,4,8,2025,0,29.23,29.229999999999997,29.23415860582348
+Querétaro,Querétaro,Pasteurizada,Autoservicios,4,8,2025,0,29.93,29.962857142857143,29.9332503333407
+Querétaro,Querétaro,Pasteurizada,Tiendas,4,8,2025,0,29.55,29.538571428571434,29.568216621496553
+Querétaro,Querétaro,Ultrapasteurizada,Autoservicios,4,8,2025,0,30.18,30.02285714285714,30.067670439959997
+Querétaro,Querétaro,Ultrapasteurizada,Tiendas,4,8,2025,0,29.78,29.79,29.801642451934352
+Quintana Roo,Cancún,Ultrapasteurizada,Autoservicios,4,8,2025,0,32.05,32.00714285714286,32.086042785526786
+Quintana Roo,Cancún,Ultrapasteurizada,Tiendas,4,8,2025,0,33.13,33.14714285714286,33.151328228766545
+Quintana Roo,Chetumal,Ultrapasteurizada,Autoservicios,4,8,2025,0,34.33,34.621428571428574,34.58020958609693
+Quintana Roo,Chetumal,Ultrapasteurizada,Tiendas,4,8,2025,0,27.0,27.0,26.999496765070067
+San Luis Potosí,San Luis Potosí,Pasteurizada,Autoservicios,4,8,2025,0,27.17,27.04857142857143,27.112918063985795
+San Luis Potosí,San Luis Potosí,Pasteurizada,Tiendas,4,8,2025,0,26.44,26.44,26.460360697587852
+San Luis Potosí,San Luis Potosí,Ultrapasteurizada,Autoservicios,4,8,2025,0,31.65,31.822857142857146,31.98463149199586
+San Luis Potosí,San Luis Potosí,Ultrapasteurizada,Tiendas,4,8,2025,0,27.25,27.25,27.24736160727626
+Sinaloa,Culiacán,Pasteurizada,Autoservicios,4,8,2025,0,26.98,26.979999999999997,26.973643880124882
+Sinaloa,Culiacán,Pasteurizada,Tiendas,4,8,2025,0,31.39,31.389999999999993,31.40112983193443
+Sinaloa,Culiacán,Ultrapasteurizada,Autoservicios,4,8,2025,0,32.32,32.32,32.29077316605209
+Sinaloa,Culiacán,Ultrapasteurizada,Tiendas,4,8,2025,0,36.67,36.67000000000001,36.71432559959353
+Sonora,Cd. Obregón,Pasteurizada,Autoservicios,4,8,2025,0,28.83,28.61571428571428,28.729393468116992
+Sonora,Cd. Obregón,Pasteurizada,Tiendas,4,8,2025,0,29.0,29.0,29.00179519301113
+Sonora,Cd. Obregón,Ultrapasteurizada,Autoservicios,4,8,2025,0,30.54,30.459999999999997,30.520294185882143
+Sonora,Cd. Obregón,Ultrapasteurizada,Tiendas,4,8,2025,0,32.7,32.699999999999996,32.708571570963734
+Sonora,Hermosillo,Pasteurizada,Autoservicios,4,8,2025,0,26.88,26.88,26.883202403931737
+Sonora,Hermosillo,Pasteurizada,Tiendas,4,8,2025,0,28.48,28.479999999999997,28.47871178004643
+Sonora,Hermosillo,Ultrapasteurizada,Autoservicios,4,8,2025,0,24.57,24.569999999999997,24.598139836003448
+Sonora,Hermosillo,Ultrapasteurizada,Tiendas,4,8,2025,0,24.54,24.57571428571428,24.610687007427217
+Sonora,Nogales,Ultrapasteurizada,Autoservicios,4,8,2025,0,30.23,30.229999999999997,30.23864311642214
+Sonora,Nogales,Ultrapasteurizada,Tiendas,4,8,2025,0,29.95,29.949999999999996,29.945610024889515
+Sonora,San Luis Río Colorado,Pasteurizada,Autoservicios,4,8,2025,0,0.0,0.0,0.0
+Sonora,San Luis Río Colorado,Pasteurizada,Tiendas,4,8,2025,0,0.0,0.0,0.0
+Sonora,San Luis Río Colorado,Ultrapasteurizada,Autoservicios,4,8,2025,0,0.0,0.0,0.0
+Sonora,San Luis Río Colorado,Ultrapasteurizada,Tiendas,4,8,2025,0,0.0,0.0,0.0
+Tabasco,Villahermosa,Ultrapasteurizada,Autoservicios,4,8,2025,0,29.13,29.13,29.121394417277315
+Tabasco,Villahermosa,Ultrapasteurizada,Tiendas,4,8,2025,0,27.17,27.032857142857146,27.111667901305605
+Tamaulipas,Cd. Victoria,Pasteurizada,Autoservicios,4,8,2025,0,27.76,27.617142857142852,27.677879018580164
+Tamaulipas,Cd. Victoria,Pasteurizada,Tiendas,4,8,2025,0,29.67,29.67000000000001,29.663335044070276
+Tamaulipas,Cd. Victoria,Ultrapasteurizada,Autoservicios,4,8,2025,0,33.75,33.61714285714286,33.66161917139224
+Tamaulipas,Cd. Victoria,Ultrapasteurizada,Tiendas,4,8,2025,0,32.67,32.67000000000001,32.67114472502877
+Tamaulipas,Matamoros,Pasteurizada,Autoservicios,4,8,2025,0,29.23,29.33142857142857,29.339511599032008
+Tamaulipas,Matamoros,Pasteurizada,Tiendas,4,8,2025,0,30.5,30.5,30.496395849408778
+Tamaulipas,Matamoros,Ultrapasteurizada,Autoservicios,4,8,2025,0,36.13,36.13,36.144850284018446
+Tamaulipas,Matamoros,Ultrapasteurizada,Tiendas,4,8,2025,0,38.0,38.0,38.0
+Tamaulipas,Nuevo Laredo,Pasteurizada,Autoservicios,4,8,2025,0,27.03,27.005714285714287,27.00663868585183
+Tamaulipas,Nuevo Laredo,Pasteurizada,Tiendas,4,8,2025,0,28.13,28.13,28.129763330641087
+Tamaulipas,Nuevo Laredo,Ultrapasteurizada,Autoservicios,4,8,2025,0,33.13,33.13,33.15454624215035
+Tamaulipas,Nuevo Laredo,Ultrapasteurizada,Tiendas,4,8,2025,0,32.5,32.5,32.48308976053975
+Tamaulipas,Reynosa,Pasteurizada,Autoservicios,4,8,2025,0,28.83,28.82999999999999,28.842017425215353
+Tamaulipas,Reynosa,Pasteurizada,Tiendas,4,8,2025,0,29.63,29.63,29.63004058961792
+Tamaulipas,Reynosa,Ultrapasteurizada,Autoservicios,4,8,2025,0,27.81,27.81,27.82296273877824
+Tamaulipas,Tampico,Pasteurizada,Autoservicios,4,8,2025,0,18.95,18.95,18.937386485960054
+Tamaulipas,Tampico,Pasteurizada,Tiendas,4,8,2025,0,18.05,18.05,18.06184999999998
+Tamaulipas,Tampico,Ultrapasteurizada,Autoservicios,4,8,2025,0,27.25,26.678571428571427,27.06685317236656
+Tamaulipas,Tampico,Ultrapasteurizada,Tiendas,4,8,2025,0,23.35,23.328571428571426,23.348802473357782
+Tlaxcala,Tlaxcala,Pasteurizada,Autoservicios,4,8,2025,0,27.5,27.428571428571427,27.47813633868319
+Tlaxcala,Tlaxcala,Pasteurizada,Tiendas,4,8,2025,0,29.0,29.0,29.00179519301113
+Tlaxcala,Tlaxcala,Ultrapasteurizada,Autoservicios,4,8,2025,0,35.38,35.41571428571429,35.416440942642154
+Tlaxcala,Tlaxcala,Ultrapasteurizada,Tiendas,4,8,2025,0,36.0,36.0,36.06544621310259
+Veracruz,Coatzacoalcos,Ultrapasteurizada,Autoservicios,4,8,2025,0,33.23,33.62714285714286,33.851012063186694
+Veracruz,Coatzacoalcos,Ultrapasteurizada,Tiendas,4,8,2025,0,28.8,28.31428571428572,28.611355134594213
+Veracruz,Veracruz ,Ultrapasteurizada,Autoservicios,4,8,2025,0,36.1,35.707142857142856,36.061125174265854
+Veracruz,Veracruz ,Ultrapasteurizada,Tiendas,4,8,2025,0,34.0,34.66428571428572,34.38804268910364
+Veracruz,Xalapa,Ultrapasteurizada,Autoservicios,4,8,2025,0,35.58,35.57999999999999,35.56618523351842
+Veracruz,Xalapa,Ultrapasteurizada,Tiendas,4,8,2025,0,35.17,35.17000000000001,35.085047060788945
+Yucatán,Mérida,Ultrapasteurizada,Autoservicios,4,8,2025,0,34.42,34.51285714285715,34.467451279215126
+Yucatán,Mérida,Ultrapasteurizada,Tiendas,4,8,2025,0,29.6,29.599999999999998,29.60466584758416
+Zacatecas,Zacatecas,Pasteurizada,Autoservicios,4,8,2025,0,26.3,26.270000000000003,26.28189136974611
+Zacatecas,Zacatecas,Pasteurizada,Tiendas,4,8,2025,0,25.75,25.75,25.74849582352684
+Zacatecas,Zacatecas,Ultrapasteurizada,Autoservicios,4,8,2025,0,34.47,34.47,34.51049041718009
+Zacatecas,Zacatecas,Ultrapasteurizada,Tiendas,4,8,2025,0,33.5,33.5,33.51499036421039

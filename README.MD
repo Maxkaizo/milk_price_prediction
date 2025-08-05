@@ -28,7 +28,7 @@
   <img src="https://img.shields.io/badge/CI/CD-GitHub%20Actions-2088FF" />
 </p>
 
-
+Rubric (checklist)[] for peer review
 ---
 
 ## Project Overview
@@ -208,5 +208,64 @@ You can find also the files related to Infra as Code under the iac/ folder, wher
 
 test related files and scripts are located under tests/ folder
 
-
 Also code formatting info is under best_practices/code_format
+
+
+### Rubric Checklist
+
+This project act as capstone project for the DataTalksClub MLOps Zoomcamp, and in order to make it easy for the peers that will check this repo, here's a checklist to match with the rubric
+
+- [ ] Problem description
+    - On top of this [README](https://github.com/Maxkaizo/milk_price_prediction/blob/main/README.MD) file
+- [ ] Cloud
+    - The configuration files to deploy via terraform are located in [iac/](https://github.com/Maxkaizo/milk_price_prediction/tree/main/iac) folder
+    - Instructions to test can ve found in [reproducibility/instructions.md](https://github.com/Maxkaizo/milk_price_prediction/blob/main/reproducibility/instructions.md#deploy-infra-on-aws-via-terraform) 
+    - or simply use this command to test the cloud 
+```bash
+curl -XPOST "https://1d4oza8gnd.execute-api.us-east-1.amazonaws.com/default/predict" -H "Content-Type: application/json" -d '{
+    "Estado": "Jalisco",
+    "Ciudad": "Guadalajara",
+    "Tipo": "Pasteurizada",
+    "Canal": "Autoservicio",
+    "día": 1,
+    "mes": 8,
+    "año": 2025,
+    "dia_semana": "4",
+    "Precio_lag1": 23.5,
+    "Precio_mean7": 23.1
+}'
+```
+- [ ] Experiment tracking and model registry
+    - I've used Mlflow and prefect, so all the Mlflow configuration can be found within the scripts that run the tasks under [orchestration/tasks](https://github.com/Maxkaizo/milk_price_prediction/tree/main/orchestration/tasks)
+    - For example this one, where I trained the [Xgboost model](https://github.com/Maxkaizo/milk_price_prediction/blob/main/orchestration/tasks/train_xgboost_model.py) 
+    - Screenshots are located in [walkthrough](https://github.com/Maxkaizo/milk_price_prediction/blob/main/reproducibility/walkthrough.md)
+    - And if you clone the repo, instructions are located in [reproducibility/instructions.md] (https://github.com/Maxkaizo/milk_price_prediction/blob/main/reproducibility/instructions.md#deploy-and-run-prefect-flows)    
+    - Also the registered model screenshot can be located in this section of the [walkthrough](https://github.com/Maxkaizo/milk_price_prediction/blob/main/reproducibility/walkthrough.md#main-training-daily-flow)
+- [ ] Workflow orchestration
+    - Used Prefect
+    - Checkout [orchestration/](https://github.com/Maxkaizo/milk_price_prediction/tree/main/orchestration)
+    - Screenshots are located in [walkthrough](https://github.com/Maxkaizo/milk_price_prediction/blob/main/reproducibility/walkthrough.md)
+- [ ] Model deployment
+    - The task for a daily batch prediction can be found [here](https://github.com/Maxkaizo/milk_price_prediction/blob/main/orchestration/tasks/generate_daily_predictions.py)
+    - The On top of this [README]() file
+    - Checkout this [README](https://github.com/Maxkaizo/milk_price_prediction/blob/main/deployment/notes/README.MD) for local and a hardcoded version deployed on the cloud, all config files are under [deployment/ondemand](https://github.com/Maxkaizo/milk_price_prediction/tree/main/deployment/ondemand)
+- [ ] Model monitoring
+    - Used Evidently for monitoring data drift and model performance, and the configuration is in [orchestration/tasks/monitor_data_drift_from_s3.py](https://github.com/Maxkaizo/milk_price_prediction/blob/main/orchestration/tasks/monitor_data_drift_from_s3.py) and [orchestration/tasks/monitor_model_drift.py](https://github.com/Maxkaizo/milk_price_prediction/blob/main/orchestration/tasks/monitor_model_drift.py)
+    - Also you can find some Telegram notifications in [walkthrough](https://github.com/Maxkaizo/milk_price_prediction/blob/main/reproducibility/walkthrough.md)
+    - There's also some report examples in [monitors/reports](https://github.com/Maxkaizo/milk_price_prediction/tree/main/monitor/reports)
+- [ ] Reproducibility
+    - On top of this [README]() file
+
+
+    [README]()
+    [README]()
+    [README]()
+
+- [ ] Best practices
+ There are unit tests (1 point)
+ There is an integration test (1 point)
+ Linter and/or code formatter are used (1 point)
+ There's a Makefile (1 point)
+ There are pre-commit hooks (1 point)
+ There's a CI/CD pipeline (2 points)
+    - On top of this [README]() file

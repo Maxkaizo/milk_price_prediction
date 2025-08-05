@@ -249,4 +249,4 @@ curl -XPOST "https://1d4oza8gnd.execute-api.us-east-1.amazonaws.com/default/pred
 }'
 
 ```
-When testing please note that Lambda functions have to start the server and load the model the first time it gets invoked, so please try the test at least 2 times, 
+When testing please note that Lambda functions have to start the server and load the model the first time it gets invoked, so please try the test at least 2 times.
