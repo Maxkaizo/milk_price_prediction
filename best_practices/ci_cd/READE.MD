@@ -89,3 +89,27 @@ jobs:
         run: terraform apply -auto-approve -var-file="envs/staging.tfvars"
 
 ```
+
+Result:
+
+Checkout the resultin report here:
+
+https://github.com/Maxkaizo/milk_price_prediction/actions/runs/16742043473/job/47392257866
+
+
+
+Alse here are a few screenshots
+
+![alt text](image-1.png)
+
+![alt text](image-2.png)
+
+
+and a test to the service
+
+![alt text](image-3.png)
+
+
+
+
+
