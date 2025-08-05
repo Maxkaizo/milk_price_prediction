@@ -28,7 +28,7 @@
   <img src="https://img.shields.io/badge/CI/CD-GitHub%20Actions-2088FF" />
 </p>
 
-Rubric (checklist)[] for peer review
+Rubric [checklist](https://github.com/Maxkaizo/milk_price_prediction/tree/main?tab=readme-ov-file#rubric-checklist) for peer review
 ---
 
 ## Project Overview
@@ -198,9 +198,13 @@ The project is organized into a modular structure where each directory has a cle
 
 *   **Pipfile / Pipfile.lock**: These files define the Python dependencies of the project, managed using `pipenv` to ensure reproducible environments.
 
+---
+
 ### Reproducibility
 
 You can find a Makefile in the root folder of the repo and the detailed instructions and walkthrough in [reproducibility/](https://github.com/Maxkaizo/milk_price_prediction/tree/main/reproducibility) folder
+
+---
 
 ### Rubric Checklist
 
@@ -258,3 +262,6 @@ curl -XPOST "https://1d4oza8gnd.execute-api.us-east-1.amazonaws.com/default/pred
         - [Makefile](https://github.com/Maxkaizo/milk_price_prediction/blob/main/Makefile) Located in the root folder  and referenced in the [instructions.md](https://github.com/Maxkaizo/milk_price_prediction/blob/main/reproducibility/instructions.md)
   - [ ] There are pre-commit hooks (1 point)
   - [ ] There's a CI/CD pipeline (2 points)
+
+
+---
