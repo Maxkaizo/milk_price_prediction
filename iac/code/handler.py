@@ -1,6 +1,10 @@
 import json
 import boto3
 import mlflow.pyfunc
+import logging
+
+logger = logging.getLogger()
+logger.setLevel(logging.INFO)
 
 s3 = boto3.client("s3")
 response = s3.get_object(
