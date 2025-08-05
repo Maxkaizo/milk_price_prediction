@@ -261,6 +261,7 @@ curl -XPOST "https://1d4oza8gnd.execute-api.us-east-1.amazonaws.com/default/pred
   - [ ] There's a Makefile
         - [Makefile](https://github.com/Maxkaizo/milk_price_prediction/blob/main/Makefile) Located in the root folder  and referenced in the [instructions.md](https://github.com/Maxkaizo/milk_price_prediction/blob/main/reproducibility/instructions.md)
   - [ ] There are pre-commit hooks 
+        - checkout [pre-commit](https://github.com/Maxkaizo/milk_price_prediction/blob/main/best_practices/pre_commit/README.MD)
   - [ ] There's a CI/CD pipeline
 
 
