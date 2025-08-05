@@ -247,25 +247,19 @@ curl -XPOST "https://1d4oza8gnd.execute-api.us-east-1.amazonaws.com/default/pred
     - Screenshots are located in [walkthrough](https://github.com/Maxkaizo/milk_price_prediction/blob/main/reproducibility/walkthrough.md)
 - [ ] Model deployment
     - The task for a daily batch prediction can be found [here](https://github.com/Maxkaizo/milk_price_prediction/blob/main/orchestration/tasks/generate_daily_predictions.py)
-    - The On top of this [README]() file
+    - Some batch [reports](https://github.com/Maxkaizo/milk_price_prediction/tree/main/reports) examples
     - Checkout this [README](https://github.com/Maxkaizo/milk_price_prediction/blob/main/deployment/notes/README.MD) for local and a hardcoded version deployed on the cloud, all config files are under [deployment/ondemand](https://github.com/Maxkaizo/milk_price_prediction/tree/main/deployment/ondemand)
+    - Also the best deployment is the onde made with terraform with dinamic definition, showed in the [walkthrough](https://github.com/Maxkaizo/milk_price_prediction/blob/main/reproducibility/walkthrough.md#main-training-daily-flow) 
 - [ ] Model monitoring
     - Used Evidently for monitoring data drift and model performance, and the configuration is in [orchestration/tasks/monitor_data_drift_from_s3.py](https://github.com/Maxkaizo/milk_price_prediction/blob/main/orchestration/tasks/monitor_data_drift_from_s3.py) and [orchestration/tasks/monitor_model_drift.py](https://github.com/Maxkaizo/milk_price_prediction/blob/main/orchestration/tasks/monitor_model_drift.py)
     - Also you can find some Telegram notifications in [walkthrough](https://github.com/Maxkaizo/milk_price_prediction/blob/main/reproducibility/walkthrough.md)
     - There's also some report examples in [monitors/reports](https://github.com/Maxkaizo/milk_price_prediction/tree/main/monitor/reports)
 - [ ] Reproducibility
-    - On top of this [README]() file
-
-
-    [README]()
-    [README]()
-    [README]()
-
+    - Checkout the [instructions](https://github.com/Maxkaizo/milk_price_prediction/blob/main/reproducibility/instructions.md)
 - [ ] Best practices
- There are unit tests (1 point)
- There is an integration test (1 point)
- Linter and/or code formatter are used (1 point)
- There's a Makefile (1 point)
- There are pre-commit hooks (1 point)
- There's a CI/CD pipeline (2 points)
-    - On top of this [README]() file
+  - [ ] There are unit tests (1 point)
+  - [ ] There is an integration test (1 point)
+  - [ ] Linter and/or code formatter are used (1 point)
+  - [ ] There's a Makefile (1 point)
+  - [ ] There are pre-commit hooks (1 point)
+  - [ ] There's a CI/CD pipeline (2 points)
