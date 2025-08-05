@@ -25,7 +25,7 @@ def daily_prediction_flow():
 
 if __name__ == "__main__":
     daily_prediction_flow.serve(
-        name="daily-milk-predictor",
+        name="daily-milk-batch",
         cron="0 23 * * *",  # Todos los días a las 11 PM
         tags=["milk", "batch", "prediction"],
     )

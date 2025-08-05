@@ -116,6 +116,9 @@ make start-prefect
 ```bash
 # Background mode
 prefect server start --background
+
+prefect config set PREFECT_API_URL=http://127.0.0.1:4200/api
+
 ```
 
 **✅ Validation:**
@@ -152,6 +155,8 @@ python orchestration/flows/master_daily_flow.py &
 
 # To manualy launch a run you can also do:
 prefect deployment run 'daily-mlops-pipeline/daily-milk-predictor'
+
+
 ```
 - For testing purposes we can force the proces by using a past date and deleting files in the datalake (local backup and s3 bucket), for example
 
@@ -177,7 +182,7 @@ prefect deployment run 'daily-mlops-pipeline/daily-milk-predictor' \
 python orchestration/flows/daily_predictions_flow.py &
 
 # To manualy launch a run you can also do:
-prefect deployment run 'daily_prediction_flow/daily-milk-predictor' &
+prefect deployment run 'daily_prediction_flow_batch/daily-milk-batch'
 ```
 
 

@@ -201,3 +201,8 @@ The project is organized into a modular structure where each directory has a cle
 ### Reproducibility
 
 You can find a Makefile in the root folder of the repo and the detailed instructions and walkthrough in reproducibility/folder
+
+Also in the deployment/notes/README.MD file, you can find the deployment on AWS cloud in a hardcoded config 
+
+You can find also the files related to Infra as Code under the iac/ folder, where the service was succesfully deployed for staging and prod envs
+

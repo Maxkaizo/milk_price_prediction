@@ -60,9 +60,22 @@
 ![alt text](screenshots/batch_deploy.png)
 
 * Run
+- The training pipeline runs completely
 
 ![alt text](screenshots/batch_run_terminal.png)
+
+![alt text](screenshots/daily_predictions_webui.png)
+
+
+* A full set of notifications is sent to Telegram, providing a complete audit trail of the run.
+![alt text](screenshots/batch_tg.png)
+
 - A full set of predictions is created and stored at reports/
+
+![alt text](screenshots/batch_preds.png)
+
+
+
 
 
 
