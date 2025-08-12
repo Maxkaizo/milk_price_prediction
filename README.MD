@@ -32,7 +32,7 @@ Rubric [checklist](https://github.com/Maxkaizo/milk_price_prediction/tree/main?t
 ---
 
 ## Project Overview
-This project delivers a complete MLOps pipeline to forecast the monthly price of milk in Mexico. It is designed as a production-ready, automated system capable of managing the entire machine learning lifecycle with minimal human intervention.
+This project delivers a complete MLOps pipeline to forecast the daily price of milk in Mexico. It is designed as a production-ready, automated system capable of managing the entire machine learning lifecycle with minimal human intervention.
 The core purpose is to move beyond a static model and implement a dynamic solution that automatically adapts to new data. The system achieves this by:
 - **Training and versioning models** continuously.
 - **Deploying the best model** to a production-ready API.
@@ -88,6 +88,10 @@ This layer performs the crucial one-time "bootstrapping" of our data lake. Since
 ### Development & Training Layer
 
 This is where our models are born and refined. The process begins by fetching the latest prepared data from the S3 data lake. We employ powerful libraries like **scikit-learn** and **XGBoost** to build our predictive models. To ensure peak performance, we automate the search for the best model configuration using **Hyperopt** for hyperparameter tuning. The entire journey, from data ingestion to model evaluation, is orchestrated as a seamless, repeatable pipeline by **Prefect**. Crucially, every experiment's parameters and metrics are logged with **MLflow**, which also serves as our Model Registry to version and store the final model candidates. To maintain code quality, we use **Black** for automated code formatting.
+
+<p align="center">
+  <img src="images/training_layer.png" width="100%" alt="Training Layer" />
+</p>
 
 **Training Flow Breakdown**
 The training pipeline, orchestrated by Prefect, follows these sequential steps:

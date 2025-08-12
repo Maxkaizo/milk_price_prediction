@@ -85,7 +85,7 @@
 
 * Test service
 
-![alt text](image.png)
+![alt text](screenshots/test_lambda.png)
 
 
 
