@@ -72,6 +72,10 @@ Instead of a single, monolithic process, our MLOps approach is designed with a m
 
 ## Architecture
 
+<p align="center">
+  <img src="images/architecture.png" width="100%" alt="Main Architechture" />
+</p>
+
 ### Data Preparation - Simulating a Datalake
 
 This layer performs the crucial one-time "bootstrapping" of our data lake. Since the official government data is a single, non-tabular Excel file, it's unsuitable for direct use in a daily pipeline. Our simulate_publication script is executed once to solve this: it processes the entire historical file, converts it into a clean, tabular structure, and partitions the data into daily files stored in AWS S3. This initial setup establishes the structured data lake that the day-to-day training pipelines will interact with, allowing them to simply focus on updating the current day's information.
