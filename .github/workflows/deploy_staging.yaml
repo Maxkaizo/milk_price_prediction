@@ -1,9 +1,9 @@
 name: Deploy Lambda to Staging on handler.py change
 
-on:
-  push:
-    paths:
-      - 'iac/code/handler.py'
+# on:
+#  push:
+#    paths:
+#      - 'iac/code/handler.py'
 
 jobs:
   deploy:
