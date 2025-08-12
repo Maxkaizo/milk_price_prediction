@@ -2,7 +2,7 @@
 ## MLOps Zoomcamp Capstone
 
 <p align="center">
-  <img src="images/banner.png" width="100%" alt="Milk Price Prediction in Mexico" />
+  <img src="images/white_banner.png" width="100%" alt="Milk Price Prediction in Mexico" />
 </p>
 
 <p align="center">
@@ -74,7 +74,7 @@ Instead of a single, monolithic process, our MLOps approach is designed with a m
 
 <p align="center">
   <img src="images/architecture.png" width="100%" alt="Main Architechture" />
-</p>
+</p>}
 
 ### Data Preparation - Simulating a Datalake
 
