@@ -9,7 +9,7 @@ from datetime import datetime
 from io import BytesIO
 
 # Config
-EXCEL_URL = "https://www.economia-sniim.gob.mx/SNIIM-Archivosfuente/Comentarios/Otros/Leche30072025.xlsx"
+EXCEL_URL = "https://www.economia-sniim.gob.mx/SNIIM-Archivosfuente/Comentarios/Otros/Leche20112026.xlsx"
 EXCEL_FILE = "raw/milk_prices.xlsx"
 UPLOAD_TO_S3 = True
 S3_BUCKET = "mlops-milk-datalake"

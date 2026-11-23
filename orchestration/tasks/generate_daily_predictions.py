@@ -64,8 +64,12 @@ def generate_daily_predictions() -> str:
     )
     meta = json.load(response["Body"])
 
-    model_id = meta["artifact_uri"].split("/")[-1]
-    model_s3_path = f"s3://mlflow-models-milk-price-dev/2/models/{model_id}/artifacts/"
+    model_s3_path = meta.get("artifact_s3_path")
+    if not model_s3_path:
+        raise KeyError(
+            "daily_model.json no tiene 'artifact_s3_path'. "
+            "Re-promueve el modelo con la versión actual de master_daily_flow."
+        )
     model = mlflow.pyfunc.load_model(model_s3_path)
 
     # --- Generar predicciones ---

@@ -96,7 +96,11 @@ def daily_pipeline(execution_date: Optional[str] = None):
             name=best_model_name, version=model_version
         )
 
-        artifact_uri = registered_model.source  # ✅ this is the correct S3 model path
+        artifact_uri = registered_model.source  # models:/m-<id>.
+
+        # MLflow 3: source = "models:/m-<id>". Resolver la ruta física para consumidores sin MLflow
+        model_id = registered_model.model_id or artifact_uri.removeprefix("models:/")
+        artifact_s3_path = mlflow.get_logged_model(model_id).artifact_location
 
         run = client.get_run(run_id)
         rmse = float(run.data.metrics.get("final_rmse", best_rmse))
@@ -107,6 +111,8 @@ def daily_pipeline(execution_date: Optional[str] = None):
             "version": str(model_version),
             "run_id": run_id,
             "artifact_uri": artifact_uri,
+            "model_id": model_id,
+            "artifact_s3_path": artifact_s3_path,
             "rmse": rmse,
             "promoted_stage": "Staging",
             "promotion_time": datetime.utcnow().isoformat(),
